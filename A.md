@@ -23,7 +23,25 @@
 - [UObject 리플리케이션 공식 문서](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/replicating-uobjects-in-unreal-engine)  
   해당 문서에서는 `UObject`를 리플리케이션하려면 `AActor::AddReplicatedSubObject()` 또는 `ReplicatedSubObjects` 배열에 등록해야 하며, `UObject::IsSupportedForNetworking()` 오버라이드 및 `GetLifetimeReplicatedProps()`를 통해 변수 리플리케이션도 가능하다고 설명하고 있음.
 
+  <!-- Markdown content -->
+# Markdown Content Loader
 
+<button id="loadMdButton">Load B.md</button>
+
+<div id="markdown-viewer">
+    <p>Click the button to load content from B.md.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.getElementById('loadMdButton').addEventListener('click', function() {
+        fetch('B.md')
+            .then(response => response.text())
+            .then(markdownContent => {
+                document.getElementById('markdown-viewer').innerHTML = marked.parse(markdownContent);
+            });
+    });
+</script>
 
 
 ## 언리얼 **FastArraySerializer**
@@ -33,8 +51,3 @@
 ### 문제 인식  
 
 ### 문제 해결  
-
-
-
-
-![](A.png)
