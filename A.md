@@ -19,14 +19,7 @@
 
 > 💡 이 경험을 통해 **UObject는 단독으로는 리플리케이션되지 않으며, 반드시 리플리케이션 트리 상에 포함(서브오브젝트 등록 등)** 되어야 한다는 사실을 명확히 인식할 수 있었음
 
-### 참고 자료  
-- [UObject 리플리케이션 공식 문서](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/replicating-uobjects-in-unreal-engine)  
-  해당 문서에서는 `UObject`를 리플리케이션하려면 `AActor::AddReplicatedSubObject()` 또는 `ReplicatedSubObjects` 배열에 등록해야 하며, `UObject::IsSupportedForNetworking()` 오버라이드 및 `GetLifetimeReplicatedProps()`를 통해 변수 리플리케이션도 가능하다고 설명하고 있음.
 
-  <!-- Markdown content -->
-# Markdown Content Loader
-
-<iframe src="https://glowing-silk-3b6.notion.site/ebd/1b4bbbfac3bd804aafcac9d38d91ba80" width="100%" height="600" frameborder="0" allowfullscreen />
 
 
 ## 언리얼 **FastArraySerializer**
