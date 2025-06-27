@@ -1,11 +1,13 @@
 <img src="ProfileImage.webp" width="200" />
 
 
-
 # 언리얼 프로젝트
 > <img src="ㅁㄹgif" width="200" />
+> <details>
+> <summary>언리얼 인벤토리 시스템 제작</summary>
+>  <iframe width="1044" height="587" src="UnrealProject/InventorySystem_Develop" allowfullscreen></iframe>
+> </details>
 >
-> <iframe width="1044" height="587" src="UnrealProject/InventorySystem_Develop" allowfullscreen></iframe>
 > 
 > 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)
 > 1. [언리얼 어빌리티 시스템 사용/분석](UnrealProject/)
