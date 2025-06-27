@@ -1,6 +1,6 @@
 # 언리얼 인벤토리 시스템 제작
-1. [**UObject 리플리케이션**](#**UObject-리플리케이션**)
-1. [**언리얼 FastArraySerializer**](#**언리얼-FastArraySerializer**)
+1. [**UObject 리플리케이션**](#uobject-리플리케이션)
+1. [**언리얼 FastArraySerializer**](#언리얼-fastarrayserializer)
 
 ## **UObject 리플리케이션**
 
