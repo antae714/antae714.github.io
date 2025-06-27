@@ -1,15 +1,40 @@
-# Welcome to Section A
+# 언리얼 인벤토리 시스템 제작
 
-This is some content from your Markdown file.
+## UObject 리플리케이션
 
-You can add more text, **bold** words, *italic* words, and lists here.
+### 배경  
+리썰 컴퍼니와 같은 게임에서 사용 가능한 범용 인벤토리 시스템을 구축하기 위해, 아이템의 데이터 및 동작을 구조체가 아닌 `UObject`로 표현하였다.  
+이는 각 아이템을 클래스로 정의함으로써, 상속을 통해 아이템별 특성을 구분하고, 확장성과 유지보수성을 높이기 위함이었다.  
 
-- Item 1
-- Item 2
-- Item 3
+### 문제 인식  
+- `UObject`는 기본적으로 네트워크 리플리케이션 대상이 아니기 때문에, 서버에서 아이템을 추가해도 클라이언트에는 해당 객체가 생성되지 않음  
+- 구조체 대신 `UObject`를 사용하면서, 기존의 `ReplicatedUsing` 또는 `TArray<ReplicatedStruct>` 방식이 적용되지 않음  
+- 블루프린트를 활용한 아이템 로직 구성도 고려했으나, GAS(Gameplay Ability System)의 영향으로 아이템의 개별 로직을 BP에서 처리할 여지는 거의 없음  
+- 초기에는 `RPC`를 통해 클라이언트에 직접 객체를 생성해 동기화하려 했으나, 이는 유지보수성과 안정성 측면에서 적절하지 않음  
 
-Here's an image:
+### 문제 해결  
+- `UObject` 리플리케이션 문제의 근본적인 해결을 위해, 모든 인벤토리 아이템 객체를 인벤토리 컴포넌트의 **서브오브젝트**로 등록함  
+- `AddReplicatedSubObject()` 또는 `MakeSubobject()`를 통해 객체가 네트워크 리플리케이션 트리에 포함되도록 하여, 서버에서 객체를 생성하면 클라이언트에서도 동일하게 생성되도록 처리함  
+- 이 접근을 통해 `UObject` 기반의 인벤토리 아이템도 구조체처럼 리플리케이션이 가능하게 되었으며, 아이템 클래스의 상속 구조(일반, 던지기, 설치형 등)도 그대로 유지할 수 있었음  
 
-![Description of A.png](A.png)
+> 💡 이 경험을 통해 **UObject는 단독으로는 리플리케이션되지 않으며, 반드시 리플리케이션 트리 상에 포함(서브오브젝트 등록 등)** 되어야 한다는 사실을 명확히 인식할 수 있었음
 
-This is more text below the image in A.md.
+### 참고 자료  
+- [UObject 리플리케이션 공식 문서](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/replicating-uobjects-in-unreal-engine)  
+  해당 문서에서는 `UObject`를 리플리케이션하려면 `AActor::AddReplicatedSubObject()` 또는 `ReplicatedSubObjects` 배열에 등록해야 하며, `UObject::IsSupportedForNetworking()` 오버라이드 및 `GetLifetimeReplicatedProps()`를 통해 변수 리플리케이션도 가능하다고 설명하고 있음.
+
+
+
+
+## 언리얼 **FastArraySerializer**
+
+### 배경  
+
+### 문제 인식  
+
+### 문제 해결  
+
+
+
+
+![](A.png)
