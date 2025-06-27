@@ -19,7 +19,10 @@
     </a>
 </div>
 {% endfor %}
-  
+
+
+
+<!--
 <div class="card-container">
   <a href="_posts/UnrealProject/InventorySystem_Develop.html" class="card">
     <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" alt="인벤토리 시스템">
@@ -46,7 +49,7 @@
     </div>
   </a>
 </div>
-
+-->
 > <img src="ㅁㄹgif" width="200" />
 >
 > <details>
