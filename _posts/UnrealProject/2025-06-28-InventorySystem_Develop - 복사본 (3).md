@@ -2,7 +2,7 @@
 title: "인벤토리 시스템"
 date: 2025-06-25
 layout: post
-image: "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif"
+image: "ㅁㄹ.gif"
 subtitle: "UObject 기반 범용 인벤토리 시스템"
 description: "Unreal Engine에서 UObject 기반으로 제작한 범용 인벤토리 시스템입니다."
 published: true
