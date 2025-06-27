@@ -7,8 +7,8 @@
 # 언리얼 프로젝트
 
 
+{% for post in site.posts %}
 <div class="card-container">
-  {% for post in site.posts %}
     <a href="{{ post.url }}" class="card">
       <img src="{{ post.image | default: 'https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif' }}" alt="{{ post.title }}">
       <div class="card-text">
@@ -17,9 +17,9 @@
         <p>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</p>
       </div>
     </a>
-  {% endfor %}
 </div>
-
+{% endfor %}
+  
 <div class="card-container">
   <a href="_posts/UnrealProject/InventorySystem_Develop.html" class="card">
     <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" alt="인벤토리 시스템">
