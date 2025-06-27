@@ -26,22 +26,7 @@
   <!-- Markdown content -->
 # Markdown Content Loader
 
-<button id="loadMdButton">Load B.md</button>
-
-<div id="markdown-viewer">
-    <p>Click the button to load content from B.md.</p>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-    document.getElementById('loadMdButton').addEventListener('click', function() {
-        fetch('B.md')
-            .then(response => response.text())
-            .then(markdownContent => {
-                document.getElementById('markdown-viewer').innerHTML = marked.parse(markdownContent);
-            });
-    });
-</script>
+<iframe src="https://glowing-silk-3b6.notion.site/ebd/1b4bbbfac3bd804aafcac9d38d91ba80" width="100%" height="600" frameborder="0" allowfullscreen />
 
 
 ## 언리얼 **FastArraySerializer**
