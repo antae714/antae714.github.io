@@ -7,7 +7,7 @@
 # 언리얼 프로젝트
 
 <div class="card-container">
-  <a href="_posts/UnrealProject/InventorySystem_Develop" class="card">
+  <a href="_posts/UnrealProject/InventorySystem_Develop.html" class="card">
     <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" alt="인벤토리 시스템">
     <div class="card-text">
       <h3>인벤토리 시스템</h3>
