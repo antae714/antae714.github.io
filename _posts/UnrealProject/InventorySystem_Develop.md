@@ -1,10 +1,16 @@
+---
+title: "인벤토리 시스템"
+date: 2025-06-25
+layout: post
+image: "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif"
+subtitle: "UObject 기반 범용 인벤토리 시스템"
+description: "Unreal Engine에서 UObject 기반으로 제작한 범용 인벤토리 시스템입니다."
+---
+
 # 언리얼 인벤토리 시스템 제작
 
 <img src="../ㅁㄹgif" style="float: right; margin-left: 15px; width: 250px;">
----
-layout: post
-title: Blogging Like a Hacker
----
+
 
 1. [**언리얼 오브젝트 리플리케이션**](#언리얼-오브젝트-리플리케이션)
 2. [**언리얼 배열 넷직렬화**](#언리얼-배열-넷직렬화)
