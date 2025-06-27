@@ -6,7 +6,7 @@
 >
 > <details>
 > <summary>1. 언리얼 인벤토리 시스템 제작</summary>
-> <iframe width="1280" height="720" src="UnrealProject/InventorySystem_Develop" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/InventorySystem_Develop" scrolling="no" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>2. 언리얼 어빌리티 시스템 사용/분석</summary>
