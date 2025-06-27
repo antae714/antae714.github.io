@@ -5,7 +5,7 @@
 # 언리얼 프로젝트
 > <img src="ㅁㄹgif" width="200" />
 >
-> <iframe width="1044" height="587" src="https://youtu.be/qs2t1G_2_C0?si=1y2OdojrSKFQh4Sw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+> <iframe width="1044" height="587" src="https://youtu.be/qs2t1G_2_C0?si=CgJY3tSxav3fP78e" allowfullscreen></iframe>
 > 
 > 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)
 > 1. [언리얼 어빌리티 시스템 사용/분석](UnrealProject/)
