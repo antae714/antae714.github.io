@@ -1,31 +1,60 @@
 <!DOCTYPE html>
-<!-- saved from url=(0053)file:///D:/VisualStudio/antae714.github.io/index.html -->
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>언리얼 인벤토리 시스템</title>
-		<style>
-        /* CSS를 사용하여 body 태그의 배경색을 하얀색으로 설정 */
-        body {
-            background-color: #FFFFFF; /* 16진수 코드: 순수 하얀색 */
-            /* 또는 background-color: white; (색상 이름) */
-            margin: 30; /* body의 기본 여백 제거 (선택 사항) */
-            padding: 30; /* body의 기본 패딩 제거 (선택 사항) */
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <style>
+        body {            
+			background-color: #FFFFFF;
+            margin: 30;
+            padding: 30;
         }
-		</style>
-	</head>
-	<body>
-		<h1>언리얼 인벤토리 시스템</h1>
-		<p>언리얼 FastArraySerializer</p>
-		<p>문제 인식</p>
-		<p>왜 이기술을 도입햇는지</p>
-		<p>1. 문제 해결 ( 기술 도입으로 )</p>
-		<p>2. 문제 해결 ( 기술 도입으로 )</p>
-		<p>3. 문제 해결 ( 기술 도입으로 )</p>
-		<p>4. 문제 해결 ( 기술 도입으로 )</p>
-		<p>5. 문제 해결 ( 기술 도입으로 )</p>
-		<p>6. 문제 해결 ( 기술 도입으로 )</p>
-		<p>7. 문제 해결 ( 기술 도입으로 )</p>
-		<p>8. 문제 해결 ( 기술 도입으로 )</p>
-	</body>
+        #markdown-viewer {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 20px;
+            max-height: 400px; /* Set a max height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Markdown Content Loader</h1>
+
+    <button id="loadMdButton">Load A.md</button>
+
+    <div id="markdown-viewer">
+        <p>Click the button to load content from A.md.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        document.getElementById('loadMdButton').addEventListener('click', function() {
+            fetch('A.md')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(markdownContent => {
+                    // Use 'marked' library to convert Markdown to HTML
+                    document.getElementById('markdown-viewer').innerHTML = marked.parse(markdownContent);
+                })
+                .catch(error => {
+                    console.error('Error loading Markdown file:', error);
+                    document.getElementById('markdown-viewer').innerHTML = '<p style="color: red;">Error loading content. Please check the console.</p>';
+                });
+        });
+    </script>
+
+</body>
 </html>
