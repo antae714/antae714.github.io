@@ -27,34 +27,7 @@
 </head>
 <body>
 
-    <h1>Markdown Content Loader</h1>
-
-    <button id="loadMdButton">Load A.md</button>
-
-    <div id="markdown-viewer">
-        <p>Click the button to load content from A.md.</p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        document.getElementById('loadMdButton').addEventListener('click', function() {
-            fetch('A.md')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.text();
-                })
-                .then(markdownContent => {
-                    // Use 'marked' library to convert Markdown to HTML
-                    document.getElementById('markdown-viewer').innerHTML = marked.parse(markdownContent);
-                })
-                .catch(error => {
-                    console.error('Error loading Markdown file:', error);
-                    document.getElementById('markdown-viewer').innerHTML = '<p style="color: red;">Error loading content. Please check the console.</p>';
-                });
-        });
-    </script>
+    <h1>안태현 安泰賢</h1>
 
 </body>
 </html>
