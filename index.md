@@ -106,7 +106,7 @@
 .card {
   display: flex;
   width: 400px;
-  height: 240px;
+  height: 180px;
   border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
@@ -123,12 +123,12 @@
 }
 
 .card img {
-  width: 50%;
+  width: 70%;
   object-fit: cover;
 }
 
 .card-text {
-  width: 50%;
+  width: 30%;
   padding: 10px;
   box-sizing: border-box;
   display: flex;
