@@ -2,24 +2,29 @@
 layout: default
 
 ---
+{% include head.html %}
+
 <img src="ProfileImage.webp" width="200" />
 
 
 # 언리얼 프로젝트
 
-
-{% for post in site.posts %}
 <div class="card-container">
+{% for post in site.posts %}
+  {% if post.path contains 'UnrealProject' %}
     <a href="{{ post.url }}" class="card">
-      <img src="{{ post.image | default: 'https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif' }}" alt="{{ post.title }}">
+      <img src="{{ post.image | default: 'ㅁㄹ.gif' }}" alt="{{ post.title }}">
       <div class="card-text">
         <h3>{{ post.title }}</h3>
         <p>{{ post.subtitle | default: post.excerpt | strip_html | truncate: 80 }}</p>
         <p>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</p>
       </div>
     </a>
-</div>
+  {% endif %}
 {% endfor %}
+</div>
+
+
 
 
 
@@ -51,7 +56,7 @@ layout: default
   </a>
 </div>
 -->
-> <img src="ㅁㄹgif" width="200" />
+> <img src="ㅁㄹ.gif" width="200" />
 >
 > <details>
 > <summary>1. 언리얼 인벤토리 시스템 제작</summary>
@@ -99,7 +104,7 @@ layout: default
 -->
 
 # 자체엔진 프로젝트
-> <img src="ㅁㄹgif" width="200" />
+> <img src="ㅁㄹ.gif" width="200" />
 >
 > 1. [머리티얼 노드 에디터 제작](InHouseEngineProject/없음.md)
 > 1. [파티클 시스템 제작](InHouseEngineProject/없음.md)
@@ -115,57 +120,3 @@ layout: default
 > 1. [FMOD](ThirdParty/없음.md)
 > 1. [Git Hub](ThirdParty/없음.md)
 > 1. [SVN](ThirdParty/없음.md)
-
-<style>
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 10px;
-}
-
-.card {
-  display: flex;
-  width: 30%;
-  aspect-ratio: 1.618 / 1;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: sans-serif;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.card img {
-  width: 60%;
-  object-fit: cover;
-}
-
-.card-text {
-  width: 40%;
-  padding: 10px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card-text h3 {
-  margin: 0 0 6px;
-  font-size: 1.1em;
-  color: #333;
-}
-
-.card-text p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #666;
-}
-</style>
