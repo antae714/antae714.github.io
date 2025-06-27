@@ -1,13 +1,17 @@
+---
+
+---
 <img src="ProfileImage.webp" width="200" />
 
 
 # 언리얼 프로젝트
 
 <div class="card-container">
-  <a href="UnrealProject/InventorySystem_Develop" class="card">
+  <a href="_posts/UnrealProject/InventorySystem_Develop" class="card">
     <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" alt="인벤토리 시스템">
     <div class="card-text">
       <h3>인벤토리 시스템</h3>
+      <p>UObject 기반 범용 인벤토리 시스템</p>
       <p>UObject 기반 범용 인벤토리 시스템</p>
     </div>
   </a>
@@ -99,14 +103,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
   padding: 10px;
 }
 
 .card {
   display: flex;
-  width: 500px;
-  height: 240px;
+  width: 30%;
+  aspect-ratio: 1.618 / 1;
   border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
@@ -123,12 +126,12 @@
 }
 
 .card img {
-  width: 70%;
+  width: 60%;
   object-fit: cover;
 }
 
 .card-text {
-  width: 30%;
+  width: 40%;
   padding: 10px;
   box-sizing: border-box;
   display: flex;
