@@ -6,38 +6,39 @@
 >
 > <details>
 > <summary>1. 언리얼 인벤토리 시스템 제작</summary>
-> <iframe width="1044" height="587" src="UnrealProject/InventorySystem_Develop" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/InventorySystem_Develop" scrolling="no" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>2. 언리얼 어빌리티 시스템 사용/분석</summary>
-> <iframe width="1044" height="587" src="UnrealProject/" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>3. 언리얼 현지화 시스템 사용/분석</summary>
-> <iframe width="1044" height="587" src="UnrealProject/" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>4. 언리얼 게임 매칭 하기</summary>
-> <iframe width="1044" height="587" src="UnrealProject/" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>5. 언리얼 게임 진행도 저장하기</summary>
-> <iframe width="1044" height="587" src="UnrealProject/" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>6. 언리얼 UI 팁</summary>
-> <iframe width="1044" height="587" src="UnrealProject/" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>7. 언리얼 애니메이션 팁</summary>
-> <iframe width="1044" height="587" src="UnrealProject/" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
 > </details>
 > <details>
 > <summary>8. 언리얼 에셋 C++에서 사용하기</summary>
-> <iframe width="1044" height="587" src="UnrealProject/" allowfullscreen></iframe>
+> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
 > </details>
->
-> 
+
+
+<!--
 > 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)
 > 1. [언리얼 어빌리티 시스템 사용/분석](UnrealProject/)
 > 2. [언리얼 현지화 시스템 사용/분석](UnrealProject/)
@@ -46,6 +47,7 @@
 > 1. [언리얼 UI 팁](UnrealProject/)
 > 1. [언리얼 애니메이션 팁](UnrealProject/)
 > 1. [언리얼 에셋 C++에서 사용하기](UnrealProject/)
+-->
 
 # 자체엔진 프로젝트
 > <img src="ㅁㄹgif" width="200" />
