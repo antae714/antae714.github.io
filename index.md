@@ -5,6 +5,19 @@
 
 
 # 언리얼 프로젝트
+---
+<div class="card-container">
+  {% for post in site.posts %}
+    <a href="{{ post.url }}" class="card">
+      <img src="{{ post.image | default: 'https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif' }}" alt="{{ post.title }}">
+      <div class="card-text">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.subtitle | default: post.excerpt | strip_html | truncate: 80 }}</p>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>
 
 <div class="card-container">
   <a href="_posts/UnrealProject/InventorySystem_Develop.html" class="card">
