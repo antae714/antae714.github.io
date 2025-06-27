@@ -1,4 +1,5 @@
 ---
+layout: default
 
 ---
 <img src="ProfileImage.webp" width="200" />
