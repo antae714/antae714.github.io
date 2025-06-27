@@ -105,8 +105,8 @@
 
 .card {
   display: flex;
-  width: 300px;
-  height: 180px;
+  width: 400px;
+  height: 240px;
   border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
