@@ -12,7 +12,7 @@ published: true
 order: 101
 ---
 
-{% capture a1 %}
+{% capture paragraph %}
 
 ## **언리얼 오브젝트 리플리케이션 처리**
 
@@ -38,8 +38,9 @@ RPC를 통한 동기화 방법도 검토했지만, 객체 상태의 일관성 �
 <br><br>
 
 {% endcapture %}
+{% include paragraph.html content=paragraph %}
 
-{% capture a2 %}
+{% capture paragraph %}
 
 ## **언리얼 배열 네트워크 직렬화**
 
@@ -63,8 +64,9 @@ RPC를 통한 동기화 방법도 검토했지만, 객체 상태의 일관성 �
 <br><br>
 
 {% endcapture %}
+{% include paragraph.html content=paragraph %}
 
-{% capture a3 %}
+{% capture paragraph %}
 
 ## **언리얼 어빌리티 시스템**
 
@@ -91,30 +93,29 @@ RPC를 통한 동기화 방법도 검토했지만, 객체 상태의 일관성 �
 <br><br>
 
 {% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
+
 
 <!-- 
-
-
-
-
-
-
-{% include paragraph.html content=a2 %} 
-
-
-
--->
-
-<!--
+{% comment %}
+------------------------------------------------------
+{% capture paragraph %}
 ## **제목**
+<br><br>
 
 ### 배경  
+<br><br>
 
 ### 문제 인식  
+<br><br>
 
-### 문제 해결  
+### 문제 해결 
+<br><br>
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+------------------------------------------------------
+{% endcomment %}
 -->
-
-{% include paragraph.html content=a1 %}
-{% include paragraph.html content=a2 %}
-{% include paragraph.html content=a3 %}

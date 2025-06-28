@@ -48,7 +48,25 @@ title: 메인 페이지
 <h1>써드파티</h1>
 </div>
 
+{% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
+{% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
+<div class="Paragraph">
+<h1>테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</h1>
+<div class="post-list-container">
+  {% for post in sorted_posts %}
+    <div class="post-list-element">
+        <a href="{{ post.url }}" class="Link">
+            <div class="post-list-image">
+	            <img src="{{ post.image | default: 'ㅁㄹ.gif' }}" alt="{{ post.title }}" style="float: right;">
+            </div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</p>
+        </a>
+    </div>
+  {% endfor %}
+</div>
 
+</div>
 
 <!--
 > 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)
