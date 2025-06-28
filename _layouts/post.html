@@ -1,0 +1,22 @@
+﻿---
+layout: default
+---
+
+{% include head.html %}
+{% include PageStyle.html %}
+
+<article class="post">
+	<div class="post-content">
+		<img src="{{ site.baseurl }}/{{ page.image }}" style="float: right; width: 250px;">
+		<div class="Paragraph">
+			<div class="post-title">{{ page.title }}</div>
+			<ol class="subtitle-list">
+				{% for item in page.subtitle %}
+				<li><a class="Link" href="#{{ item | slugify }}">{{ item }}</a></li>
+				{% endfor %}
+			</ol>
+		</div>
+
+		{{ content }}
+	</div>
+</article>
