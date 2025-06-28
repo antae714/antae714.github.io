@@ -1,9 +1,21 @@
-.container {
-	padding: 0 24px;
-	margin: 0 auto;
+---
+---
+
+/* ì§ì ‘ ìŠ¤íƒ€ì¼ ì •ì˜ */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
 }
 
-/* Æ÷½ºÆ® º»¹® ¿µ¿ª ³ĞÀÌ Á¶Á¤ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .post-content {
-	margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
