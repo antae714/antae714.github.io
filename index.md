@@ -51,7 +51,7 @@ title: 메인 페이지
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
 <div class="Paragraph">
-<h1>테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</h1>
+<h1>테스트용 언리얼 프로젝트</h1>
 <div class="post-list-container">
   {% for post in sorted_posts %}
     <div class="post-list-element">
