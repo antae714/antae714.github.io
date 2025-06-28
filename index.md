@@ -6,15 +6,16 @@ title: 메인 페이지
 
 {% include head.html %}
 
-<img src="images/ProfileImage.webp" width="200" />
 
-**즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
+<div class="Paragraph">
+    <img src="images/ProfileImage.webp" width="200" />
+    <strong>즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.</strong>
+</div>
 
----
-# 언리얼 프로젝트
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
-
+<div class="Paragraph">
+<h1>언리얼 프로젝트</h1>
 <div class="card-container">
   {% for post in sorted_posts %}
     <a href="{{ post.url }}" class="card">
@@ -35,14 +36,19 @@ title: 메인 페이지
     </a>
   {% endfor %}
 </div>
----
+</div>
   
 
+<div class="Paragraph">
+<h1>자체엔진 프로젝트</h1>
+</div>
 
-# 자체엔진 프로젝트
+
+<div class="Paragraph">
+<h1>써드파티</h1>
+</div>
 
 
-# 써드파티
 
 <!--
 > 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)
