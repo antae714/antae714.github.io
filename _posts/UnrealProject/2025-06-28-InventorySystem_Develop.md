@@ -1,22 +1,30 @@
 ---
-title: "인벤토리 시스템"
-date: 2025-06-25
+title: "인벤토리 시스템 제작"
+date: 2025-06-27 00:00:00
 layout: post
-image: "ㅁㄹ.gif"
-subtitle: "UObject 기반 범용 인벤토리 시스템"
-description: "Unreal Engine에서 UObject 기반으로 제작한 범용 인벤토리 시스템입니다."
+image: "images/icon_6.gif"
+subtitle: 
+ - "언리얼 오브젝트 리플리케이션"
+ - "언리얼 배열 넷직렬화"
+ - "언리얼 게임 어빌리티 시스템"
+description: "언리얼 인벤토리 제작에 필요했던 기술들 소개합니다"
 published: true
+order: 0
 ---
 
 # 언리얼 인벤토리 시스템 제작
 
-<img src="../ㅁㄹgif" style="float: right; margin-left: 15px; width: 250px;">
+<img src="{{ site.baseurl }}/{{ page.image }}" style="float: right; margin-left: 15px; width: 250px;">
 
+{% for item in page.subtitle %}
+1. [**{{ item }}**](#{{item | slugify}})
+{% endfor %}
 
+<!-- 
 1. [**언리얼 오브젝트 리플리케이션**](#언리얼-오브젝트-리플리케이션)
 2. [**언리얼 배열 넷직렬화**](#언리얼-배열-넷직렬화)
 3. [**언리얼 게임 어빌리티 시스템**](#언리얼-게임-어빌리티-시스템)
-
+-->
 
 ## **언리얼 오브젝트 리플리케이션**
 

@@ -1,71 +1,92 @@
 <style>
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap; /* 자동 줄바꿈 활성화 */
-  gap: 20px;
-  padding: 10px;
-}
+	.card-container {
+		display: flex;
+		flex-wrap: wrap; /* 자동 줄바꿈 활성화 */
+		gap: 20px;
+		padding: 10px;
+	}
 
 
-.card {
-  display: flex;
-  gap: 1rem; /* 카드 간격이 필요하다면 */
-  width: 30%;
-  aspect-ratio: 1.618 / 1;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: sans-serif;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease;
-}
+	.card {
+		display: flex;
+		width: 30%;
+		aspect-ratio: 1.618 / 1;
+		border: 2px solid #ccc;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		font-family: sans-serif;
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s ease;
+	}
 
 /* 화면 너비가 1024px 이하일 때 */
-@media (max-width: 1024px) {
-  .card {
-    width: 48%;
-  }
-}
+	@media (max-width: 1024px) {
+		.card {
+			width: 48%;
+		}
+	}
 
 /* 화면 너비가 768px 이하일 때 */
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
+	@media (max-width: 768px) {
+		.card {
+			width: 100%;
+		}
+	}
+	.card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+	}
 
-.card img {
-  width: 60%;
-  object-fit: cover;
-}
+	.card img {
+		width: 60%;
+		object-fit: cover;
+		border: 1px solid #FAFAFA;
+	}
 
-.card-text {
-  width: 40%;
-  padding: 10px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+	.card-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 40%;
+		box-sizing: border-box;
+	}
 
-.card-text h3 {
-  margin: 0 0 6px;
-  font-size: 1.1em;
-  color: #333;
-}
+		.card-text h3 {
+			padding: 8px 0 0 0;
+			margin: 0 0 6px 0;
+			font-size: 1.4em;
+			color: #333;
+		}
 
-.card-text p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #666;
-}
+		.card-text desc {
+			margin: 0 0 12px;
+			font-size: 0.9em;
+			color: #999;
+		}
 
+	.card-text p {
+			margin: 0;
+			font-size: 0.9em;
+			color: #666;
+		}
+
+	.card-Title {
+		min-height: 38.1966011231047%;
+		background-color: #FAFAFF;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.card-Content {
+		height: 61.8033988768953%;
+		background-color: #F0F0FF;
+		padding: 10px;
+		overflow: auto;
+	}
 
 </style>

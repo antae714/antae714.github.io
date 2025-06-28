@@ -4,93 +4,36 @@ layout: default
 ---
 {% include head.html %}
 
-<img src="ProfileImage.webp" width="200" />
+<img src="images/ProfileImage.webp" width="200" />
 
 
 # 언리얼 프로젝트
+{% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
+{% assign sorted_posts = filtered_posts | sort: "order" %}
 
 <div class="card-container">
-{% for post in site.posts %}
-  {% if post.path contains 'UnrealProject' %}
+  {% for post in sorted_posts %}
     <a href="{{ post.url }}" class="card">
       <img src="{{ post.image | default: 'ㅁㄹ.gif' }}" alt="{{ post.title }}">
       <div class="card-text">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.subtitle | default: post.excerpt | strip_html | truncate: 80 }}</p>
-        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</p>
+        <div class="card-Title">
+          <h3>{{ post.title }}</h3>
+          <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
+        </div>
+        <div class="card-Content">
+          {% for SubTitleItem in post.subtitle %}
+            <p>1. {{ SubTitleItem | default: post.excerpt | strip_html | truncate: 80 }}</p>
+          {% endfor %}
+        </div>
       </div>
     </a>
-  {% endif %}
-{% endfor %}
+  {% endfor %}
 </div>
 
+# 자체엔진 프로젝트
 
 
-
-
-<!--
-<div class="card-container">
-  <a href="_posts/UnrealProject/InventorySystem_Develop.html" class="card">
-    <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" alt="인벤토리 시스템">
-    <div class="card-text">
-      <h3>인벤토리 시스템</h3>
-      <p>UObject 기반 범용 인벤토리 시스템</p>
-      <p>UObject 기반 범용 인벤토리 시스템</p>
-    </div>
-  </a>
-
-  <a href="UnrealProject/AbilitySystem.html" class="card">
-    <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="어빌리티 시스템">
-    <div class="card-text">
-      <h3>어빌리티 시스템</h3>
-      <p>GAS 기반 능력 설계 및 활용 예시</p>
-    </div>
-  </a>
-
-  <a href="UnrealProject/Localization.html" class="card">
-    <img src="https://media.giphy.com/media/3oKIPwoeGErMmaI43C/giphy.gif" alt="현지화 시스템">
-    <div class="card-text">
-      <h3>현지화 시스템</h3>
-      <p>다국어 지원을 위한 언리얼 현지화 방법</p>
-    </div>
-  </a>
-</div>
--->
-> <img src="ㅁㄹ.gif" width="200" />
->
-> <details>
-> <summary>1. 언리얼 인벤토리 시스템 제작</summary>
-> <iframe width="100%" height="100%" src="UnrealProject/InventorySystem_Develop" scrolling="no" allowfullscreen></iframe>
-> </details>
-> <details>
-> <summary>2. 언리얼 어빌리티 시스템 사용/분석</summary>
-> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
-> </details>
-> <details>
-> <summary>3. 언리얼 현지화 시스템 사용/분석</summary>
-> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
-> </details>
-> <details>
-> <summary>4. 언리얼 게임 매칭 하기</summary>
-> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
-> </details>
-> <details>
-> <summary>5. 언리얼 게임 진행도 저장하기</summary>
-> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
-> </details>
-> <details>
-> <summary>6. 언리얼 UI 팁</summary>
-> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
-> </details>
-> <details>
-> <summary>7. 언리얼 애니메이션 팁</summary>
-> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
-> </details>
-> <details>
-> <summary>8. 언리얼 에셋 C++에서 사용하기</summary>
-> <iframe width="1280" height="720" src="UnrealProject/" allowfullscreen></iframe>
-> </details>
-
+# 써드파티
 
 <!--
 > 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)
@@ -101,7 +44,6 @@ layout: default
 > 1. [언리얼 UI 팁](UnrealProject/)
 > 1. [언리얼 애니메이션 팁](UnrealProject/)
 > 1. [언리얼 에셋 C++에서 사용하기](UnrealProject/)
--->
 
 # 자체엔진 프로젝트
 > <img src="ㅁㄹ.gif" width="200" />
@@ -120,3 +62,5 @@ layout: default
 > 1. [FMOD](ThirdParty/없음.md)
 > 1. [Git Hub](ThirdParty/없음.md)
 > 1. [SVN](ThirdParty/없음.md)
+
+-->
