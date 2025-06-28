@@ -9,7 +9,7 @@ title: 메인 페이지
 
 <div class="Paragraph">
     <img src="images/ProfileImage.webp" width="200" />
-    <strong>즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.</strong>
+    <h3><strong>즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.</strong></h3>
 </div>
 
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
