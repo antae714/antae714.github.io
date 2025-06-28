@@ -10,6 +10,7 @@ title: 메인 페이지
 
 **즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
 
+---
 # 언리얼 프로젝트
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
@@ -21,17 +22,22 @@ title: 메인 페이지
       <div class="card-text">
         <div class="card-Title">
           <h3>{{ post.title }}</h3>
-          <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
         </div>
         <div class="card-Content">
+          <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
+          {% comment %}
           {% for SubTitleItem in post.subtitle %}
             <p>1. {{ SubTitleItem | default: post.excerpt | strip_html | truncate: 80 }}</p>
           {% endfor %}
+          {% endcomment %}
         </div>
       </div>
     </a>
   {% endfor %}
 </div>
+---
+  
+
 
 # 자체엔진 프로젝트
 
