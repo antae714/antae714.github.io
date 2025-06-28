@@ -6,6 +6,7 @@ layout: default
 
 <img src="images/ProfileImage.webp" width="200" />
 
+**즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
 
 # 언리얼 프로젝트
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
