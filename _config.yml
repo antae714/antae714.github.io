@@ -2,3 +2,5 @@
 
 future: true
 
+plugins:
+  - jekyll-github-metadata
