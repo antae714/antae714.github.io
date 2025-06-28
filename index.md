@@ -4,6 +4,9 @@ title: 메인 페이지
 ---
 
 
+<pre>{{ site.github | jsonify }}</pre>
+
+
 {% include head.html %}
 
 <img src="images/ProfileImage.webp" width="200" />
