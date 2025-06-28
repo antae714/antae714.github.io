@@ -7,7 +7,7 @@ subtitle:
  - "언리얼 게임 어빌리티 시스템"
 description: "언리얼 GAS의 사용기, 분석결과를 소개합니다"
 published: true
-order: 1
+order: 100
 ---
 
 # 언리얼 게임플레이 어빌리티 시스템

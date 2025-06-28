@@ -10,7 +10,7 @@ layout: default
 
 # 언리얼 프로젝트
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
-{% assign sorted_posts = filtered_posts | sort: "order" %}
+{% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
 
 <div class="card-container">
   {% for post in sorted_posts %}

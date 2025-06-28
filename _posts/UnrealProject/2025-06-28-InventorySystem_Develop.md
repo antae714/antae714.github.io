@@ -9,7 +9,7 @@ subtitle:
  - "언리얼 게임 어빌리티 시스템"
 description: "언리얼 인벤토리 제작에 필요했던 기술들 소개합니다"
 published: true
-order: 0
+order: 101
 ---
 
 # 언리얼 인벤토리 시스템 제작
