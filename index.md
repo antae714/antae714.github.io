@@ -1,7 +1,9 @@
 ---
 layout: default
-
+title: 메인 페이지
 ---
+
+
 {% include head.html %}
 
 <img src="images/ProfileImage.webp" width="200" />

@@ -1,12 +1,10 @@
 ---
 ---
-
 /* 직접 스타일 정의 */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
+	font-family: sans-serif;
+	padding: 0;
+	background: #fff;
 }
 
 .container {
@@ -16,6 +14,12 @@ body {
 }
 
 .post-content {
-  max-width: 1000px;
-  margin: 0 auto;
+	max-width: 1200px;
+	margin: 0 auto;
 }
+
+.site-title {
+	color: blue;
+	font-size: 50px;
+}
+
