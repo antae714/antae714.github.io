@@ -1,6 +1,6 @@
 ---
 title: "인벤토리 시스템 제작"
-description: "언리얼 인벤토리 제작에 필요했던 기술들 소개합니다"
+description: "언리얼 인벤토리 제작에 필요했던 기술들을 소개합니다"
 date: 2025-06-27 00:00:00
 layout: post
 image: "images/icon_6.gif"
