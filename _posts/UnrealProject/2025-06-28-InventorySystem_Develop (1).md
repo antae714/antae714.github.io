@@ -7,7 +7,7 @@ image: "images/UObjectReplicated.gif"
 subtitle: 
  - "언리얼 오브젝트 리플리케이션 처리"
 published: true
-order: 1001
+order: 10002
 AutoContents: false
 ---
 

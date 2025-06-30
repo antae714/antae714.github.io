@@ -13,6 +13,7 @@ subtitle:
  - "게임플레이 태그 (Gameplay Tag)"
 published: true
 order: 9900
+AutoContents: true
 ---
 
 {% capture paragraph %}

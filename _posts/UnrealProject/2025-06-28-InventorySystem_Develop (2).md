@@ -7,7 +7,7 @@ image: "images/icon_6.gif"
 subtitle: 
  - "언리얼 배열 네트워크 직렬화"
 published: true
-order: 1002
+order: 10001
 ---
 
 {% capture paragraph %}
