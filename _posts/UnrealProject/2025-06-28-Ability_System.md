@@ -12,7 +12,7 @@ subtitle:
  - "게임플레이 이펙트 (Gameplay Effect)"
  - "게임플레이 태그 (Gameplay Tag)"
 published: true
-order: 100
+order: 9900
 ---
 
 {% capture paragraph %}
@@ -27,7 +27,7 @@ order: 100
 <br><br>
 C++ 관점에서 비유하면 다음과 같습니다.
 - **Gameplay Ability**: 함수 객체
-- **Gameplay Effect**: Get/Set 인터페이스
+- **Gameplay Effect**: 상태변화를 위한 Get/Set 인터페이스
 - **Gameplay Attribute**: 변수
 <br>
 이 세 가지 요소를 통해 다양한 게임 콘텐츠를 모듈화하여 제작할 수 있습니다.
