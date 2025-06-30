@@ -1,21 +1,45 @@
 ---
-layout: default
+layout: MainPost
 title: 메인 페이지
 ---
 
 {% include head.html %}
 
+<div style="
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  overflow: hidden;
+">
+  <!-- 블러 이미지 -->
+  <img src="images/CoverImage.png" 
+       style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px);" />
+
+  <!-- 순백색 오버레이 (밝은 분위기용) -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* 밝기 조절: 0.2 ~ 0.5 */
+    mix-blend-mode: lighten; /* 또는 screen */
+  "></div>
+</div>
+
+
 
 {% capture paragraph %}
 
-<img src="images/ProfileImage.webp" width = 300 height = 300/>
+<img src="images/ProfileImage2.png" 
+     width="300" height="300"
+     style="border-radius: 50%; border: 5px solid white; " />
 ### **즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
 
 ## 연혁
 - 2020.01.26 ~ 2021.08.01: 육군 병장 만기제대
 - 2021.08.01 ~ 2024.03.01: 학점은행제 게암프로그래밍과 수료
 - 2024.03.01 ~ 현재: 게임인재원
-
+<br><br><br>
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
