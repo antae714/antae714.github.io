@@ -3,7 +3,8 @@ title: "인벤토리 시스템 제작 (1/3)"
 description: "언리얼 오브젝트 리플리케이션 처리에대해 이야기합니다"
 date: 2025-06-27 00:00:00
 layout: post
-image: "images/UObjectReplicated.gif"
+image: "images/UObjectReplicated.png"
+hover_image: "images/UObjectReplicated_Hover.png"
 subtitle: 
  - "언리얼 오브젝트 리플리케이션 처리"
 published: true

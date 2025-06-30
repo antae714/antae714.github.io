@@ -35,27 +35,25 @@ title: 메인 페이지
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
 <div class="Paragraph">
-<h1>언리얼 프로젝트</h1>
-<div class="card-container">
-  {% for post in sorted_posts %}
-    <a href="{{ post.url }}" class="card">
-      <img src="{{ post.image | default: 'ㅁㄹ.gif' }}" alt="{{ post.title }}">
-      <div class="card-text">
-        <div class="card-Title">
-          <h3>{{ post.title }}</h3>
+    <h1>언리얼 프로젝트</h1>
+    <div class="card-container">
+        {% for post in sorted_posts %}
+        <a href="{{ post.url }}" class="card">
+        <div class="card-image-wrapper">
+            <img class="card-image default-image" src="{{ post.image | default: 'ㅁㄹ.gif' }}" alt="{{ post.title }}">
+            <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}">
         </div>
+        <div class="card-text">
+            <div class="card-Title">
+                <h3>{{ post.title }}</h3>
+            </div>
         <div class="card-Content">
-          <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
-          {% comment %}
-          {% for SubTitleItem in post.subtitle %}
-            <p>1. {{ SubTitleItem | default: post.excerpt | strip_html | truncate: 80 }}</p>
-          {% endfor %}
-          {% endcomment %}
+            <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
         </div>
-      </div>
-    </a>
-  {% endfor %}
-</div>
+    </div>
+</a>
+    {% endfor %}
+    </div>
 </div>
   
 
