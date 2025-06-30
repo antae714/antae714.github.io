@@ -1,65 +1,70 @@
 ---
 layout: MainPost
 title: 메인 페이지
+subtitle: 
+  - "소개"
+  - "참여 프로젝트"
+  - "언리얼 프로젝트"
+  - "자체엔진 프로젝트"
+  - "써드파티"
 ---
 
 {% include head.html %}
 
+
+
+{% comment %}
 <div style="
-  position: absolute;
+  position: fixed;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100%; height: 100vh;
   z-index: -1;
   overflow: hidden;
 ">
-  <!-- 블러 이미지 -->
   <img src="images/CoverImage.png" 
        style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px);" />
 
-  <!-- 순백색 오버레이 (밝은 분위기용) -->
   <div style="
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* 밝기 조절: 0.2 ~ 0.5 */
+    background-color: rgba(255, 255, 255, 0.53); /* 밝기 조절: 0.2 ~ 0.5 */
     mix-blend-mode: lighten; /* 또는 screen */
   "></div>
 </div>
+{% endcomment %}
 
 
-
+<a id="소개"></a>
 {% capture paragraph %}
-
 <img src="images/ProfileImage2.png" 
      width="300" height="300"
      style="border-radius: 50%; border: 5px solid white; " />
 ### **즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
 
 ## 연혁
-- 2020.01.26 ~ 2021.08.01: 육군 병장 만기제대
-- 2021.08.01 ~ 2024.03.01: 학점은행제 게암프로그래밍과 수료
-- 2024.03.01 ~ 현재: 게임인재원
-<br><br><br>
+- **2020.01.26 ~ 2021.08.01: 육군 병장 만기제대**
+- **2021.08.01 ~ 2024.03.01: 학점은행제 게임프로그래밍과 수료**
+- **2024.03.01 ~ 현재: 게임인재원**
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 
 
-<div class="Paragraph">
-<h1>참여 프로젝트</h1>
 
+<div class="Paragraph">
+<h1 id="참여-프로젝트" >참여 프로젝트</h1>
 
 
 </div>
 
 
 
-
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
 <div class="Paragraph">
-    <h1>언리얼 프로젝트</h1>
+    <h1 id = "언리얼-프로젝트">언리얼 프로젝트</h1>
     <div class="card-container">
         {% for post in sorted_posts %}
         <a href="{{ post.url }}" class="card">
@@ -82,12 +87,12 @@ title: 메인 페이지
   
 
 <div class="Paragraph">
-<h1>자체엔진 프로젝트</h1>
+<h1 id="자체엔진-프로젝트">자체엔진 프로젝트</h1>
 </div>
 
 
 <div class="Paragraph">
-<h1>써드파티</h1>
+<h1 id="써드파티">써드파티</h1>
 </div>
 
 {% comment %}
