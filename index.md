@@ -3,15 +3,24 @@ layout: default
 title: 메인 페이지
 ---
 
-
 {% include head.html %}
 
 
+{% capture paragraph %}
 
-<div class="Paragraph">
-    <img src="images/ProfileImage.webp" width="200" />
-    <h3><strong>즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.</strong></h3>
-</div>
+<img src="images/ProfileImage.webp" width = 300 height = 300/>
+### **즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
+
+## 연혁
+- 2020.01.26 ~ 2021.08.01: 육군 병장 만기제대
+- 2021.08.01 ~ 2024.03.01: 학점은행제 게암프로그래밍과 수료
+- 2024.03.01 ~ 현재: 게임인재원
+
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
 
 <div class="Paragraph">
 <h1>참여 프로젝트</h1>
