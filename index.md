@@ -7,10 +7,21 @@ title: 메인 페이지
 {% include head.html %}
 
 
+
 <div class="Paragraph">
     <img src="images/ProfileImage.webp" width="200" />
     <h3><strong>즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.</strong></h3>
 </div>
+
+<div class="Paragraph">
+<h1>참여 프로젝트</h1>
+
+
+
+</div>
+
+
+
 
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
@@ -48,6 +59,7 @@ title: 메인 페이지
 <h1>써드파티</h1>
 </div>
 
+{% comment %}
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
 <div class="Paragraph">
@@ -65,8 +77,9 @@ title: 메인 페이지
     </div>
   {% endfor %}
 </div>
-
 </div>
+{% endcomment %}
+
 
 <!--
 > 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)

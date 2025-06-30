@@ -7,14 +7,16 @@ layout: default
 
 <article class="post">
 	<div class="post-content">
-		<img src="{{ site.baseurl }}/{{ page.image }}" style="float: right; width: 250px;">
-		<div class="Paragraph">
+		<div class="Paragraph" style="overflow: hidden;">
+			<img src="{{ site.baseurl }}/{{ page.image }}" style="float: right; margin-left: 20px; margin-bottom: 10px;">
 			<div class="post-title">{{ page.title }}</div>
+			{% if page.AutoContents %}
 			<ol class="subtitle-list">
 				{% for item in page.subtitle %}
 				<li><a class="Link" href="#{{ item | slugify }}">{{ item }}</a></li>
 				{% endfor %}
 			</ol>
+			{% endif %}
 		</div>
 
 		{{ content }}
