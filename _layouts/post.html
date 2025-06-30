@@ -10,6 +10,8 @@ layout: default
 		<div class="Paragraph" style="overflow: hidden;">
 			<img src="{{ site.baseurl }}/{{ page.image }}" style="float: right; min-height: 250px; margin-left: 20px; margin-bottom: 10px;">
 			<div class="post-title">{{ page.title }}</div>
+			<div class="post-description"> {{ page.description }}</div>
+			
 			{% if page.AutoContents %}
 			<ol class="subtitle-list">
 				{% for item in page.subtitle %}
