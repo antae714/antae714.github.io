@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "D:\\VisualStudio\\antae714.github.io\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-SaveGame.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-SaveGame.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-UI (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-UI (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (3).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (3).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-UI (2).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-UI (2).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\assets\\css\\style.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\style.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_layouts\\post.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_layouts\\post.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -15,24 +43,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (2).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Ability_System.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-Ability_System.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-UI (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-UI (1).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-AnimationTip.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-AnimationTip.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-SaveGame.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-SaveGame.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Matching.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -43,24 +59,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-Localize.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-UI (2).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\UnrealProject\\2025-06-28-UI (2).md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_config.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_config.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_includes\\head.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_includes\\head.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_layouts\\post.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_layouts\\post.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualStudio\\antae714.github.io\\_layouts\\default.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -82,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,46 +110,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "2025-06-28-Localize.md",
-              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Localize.md",
-              "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-Localize.md",
-              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Localize.md",
-              "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-Localize.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-06-30T08:51:34.082Z",
+              "DocumentIndex": 5,
+              "Title": "style.scss",
+              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\assets\\css\\style.scss",
+              "RelativeDocumentMoniker": "assets\\css\\style.scss",
+              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\assets\\css\\style.scss",
+              "RelativeToolTip": "assets\\css\\style.scss",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-06-30T09:43:42.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "2025-06-28-UI (1).md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-UI (1).md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-UI (1).md",
               "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-UI (1).md",
               "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-UI (1).md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-06-30T08:39:22.237Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "2025-06-28-InventorySystem_Develop (1).md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md",
               "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md",
               "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (1).md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-06-29T05:37:34.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "2025-06-28-InventorySystem_Develop (2).md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (2).md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (2).md",
@@ -158,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "2025-06-28-InventorySystem_Develop.md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop.md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop.md",
@@ -171,46 +175,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "2025-06-28-InventorySystem_Develop (3).md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (3).md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (3).md",
               "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (3).md",
               "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-InventorySystem_Develop (3).md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-06-29T05:37:59.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "2025-06-28-Matching.md",
-              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Matching.md",
-              "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-Matching.md",
-              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Matching.md",
-              "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-Matching.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-06-30T08:50:04.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "2025-06-28-SaveGame.md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-SaveGame.md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-SaveGame.md",
               "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-SaveGame.md",
               "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-SaveGame.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-06-30T08:50:05.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "2025-06-28-AnimationTip.md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-AnimationTip.md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-AnimationTip.md",
@@ -223,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "2025-06-28-Ability_System.md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Ability_System.md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-Ability_System.md",
@@ -236,20 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "index.md",
-              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\index.md",
-              "RelativeDocumentMoniker": "index.md",
-              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\index.md",
-              "RelativeToolTip": "index.md",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-06-30T07:39:22.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "2025-06-28-UI (2).md",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-UI (2).md",
               "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-UI (2).md",
@@ -262,7 +240,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "post.html",
+              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_layouts\\post.html",
+              "RelativeDocumentMoniker": "_layouts\\post.html",
+              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_layouts\\post.html",
+              "RelativeToolTip": "_layouts\\post.html",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-30T07:25:44.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.md",
+              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\index.md",
+              "RelativeDocumentMoniker": "index.md",
+              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\index.md",
+              "RelativeToolTip": "index.md",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-30T07:39:22.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "2025-06-28-Matching.md",
+              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Matching.md",
+              "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-Matching.md",
+              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Matching.md",
+              "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-Matching.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-30T08:50:04.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "2025-06-28-Localize.md",
+              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Localize.md",
+              "RelativeDocumentMoniker": "_posts\\UnrealProject\\2025-06-28-Localize.md",
+              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_posts\\UnrealProject\\2025-06-28-Localize.md",
+              "RelativeToolTip": "_posts\\UnrealProject\\2025-06-28-Localize.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-30T08:51:34.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "_config.yml",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_config.yml",
               "RelativeDocumentMoniker": "_config.yml",
@@ -275,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "head.html",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_includes\\head.html",
               "RelativeDocumentMoniker": "_includes\\head.html",
@@ -288,20 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "post.html",
-              "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_layouts\\post.html",
-              "RelativeDocumentMoniker": "_layouts\\post.html",
-              "ToolTip": "D:\\VisualStudio\\antae714.github.io\\_layouts\\post.html",
-              "RelativeToolTip": "_layouts\\post.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-30T07:25:44.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "default.html",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_layouts\\default.html",
               "RelativeDocumentMoniker": "_layouts\\default.html",
@@ -314,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -327,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "paragraph.html",
               "DocumentMoniker": "D:\\VisualStudio\\antae714.github.io\\_includes\\paragraph.html",
               "RelativeDocumentMoniker": "_includes\\paragraph.html",

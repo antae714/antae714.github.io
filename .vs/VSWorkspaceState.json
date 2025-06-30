@@ -1,10 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
+    "\\assets\\css",
     "\\_includes",
+    "\\_layouts",
     "\\_posts",
     "\\_posts\\UnrealProject"
   ],
-  "SelectedNode": "\\_includes\\head.html",
+  "SelectedNode": "\\_layouts\\default.html",
   "PreviewInSolutionExplorer": false
 }
