@@ -33,7 +33,8 @@
 		background: white;
 		justify-content: center;
 		width: 100%;
-		aspect-ratio: 1.618;
+		/* 최대 높이를 제한하여 스크롤 가능하게 */
+		max-height: 110vh;
 		overflow-y: auto;
 		padding: 10px 0 35px 0;
 	}
@@ -50,7 +51,7 @@
 		text-decoration: none;
 		color: inherit;
 		transition: transform 0.3s ease;
-		font-size: 75%;
+		font-size: 100%;
 	}
 
 /* 화면 너비가 1024px 이하일 때 */
@@ -75,7 +76,7 @@
 
 	.card-image-wrapper {
 		position: relative;
-		width: 61.8033988768953%;
+		flex: 1.618;
 		height: auto;
 		object-fit: cover;
 		border: 1px solid #FAFAFA;
@@ -108,43 +109,35 @@
 		opacity: 0;
 	}
 
-		.card-text {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			width: 40%;
-			box-sizing: border-box;
-		}
-
-		.card-text h3 {
-			padding: 8px 0 0 0;
-			margin: 6px 6px 6px 6px;
-			font-size: 1.3em;
-			color: #333;
-		}
-
-		.card-text desc {
-			margin: 6px 6px 6px 6px;
-			font-size: 1.0em;
-			color: #666;
-		}
-
-		.card-text p {
-			margin: 0;
-			font-size: 0.6em;
-			color: #666;
-		}
-
-	.card-Title {
-		height: 38.1966011231047%;
-		background-color: #FAFAFF;
-		font-weight: bold;
+	.card-text {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		box-sizing: border-box;
+		height: 100%;
 	}
 
-	.card-Content {
-		height: 61.8033988768953%;
+	.card-text-Title {
+		flex: 1;
+		background-color: #FAFAFF;
+		font-weight: bold;
+		padding: 10px;
+		margin: 0 0 0 0;
+		font-size: 0.85em;
+		color: #000;
+		line-height: 1.2; /* 줄 간격 최소화 */
+		display: flex;
+		box-sizing: border-box;
+	}
+
+	.card-text-Content {
+		flex: 1.85;
 		background-color: #F0F0FF;
 		padding: 10px;
+		margin: 0 0 0 0;
+		font-size: 0.7em;
+		color: #666;
+		box-sizing: border-box;
 	}
 
 	.post-list-container {

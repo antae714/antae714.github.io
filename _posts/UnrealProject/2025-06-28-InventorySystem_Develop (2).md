@@ -4,6 +4,7 @@ description: "언리얼 배열 네트워크 직렬화에 대해 이야기합니�
 date: 2025-06-27 00:00:01
 layout: post
 image: images/Unreal Net Serialize.png
+hover_image: images/Unreal Net Serialize_Hover.png
 subtitle: 
  - "언리얼 배열 네트워크 직렬화"
 published: true

@@ -74,23 +74,41 @@ subtitle:
             <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
         </div>
         <div class="card-text">
-            <div class="card-Title">
-                <h3>{{ post.title }}</h3>
+            <div class="card-text-Title">
+                {{ post.title }}
             </div>
-            <div class="card-Content">
-                <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
+            <div class="card-text-Content">
+                {{ post.description | default: post.excerpt | strip_html | truncate: 80 }}
             </div>
         </div>
         </a>
         {% endfor %}
     </div>
 </div>
-  
 
+{% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'PotionAtelier'" %}
+{% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
 <div class="Paragraph">
-<h1 id="자체엔진-프로젝트">자체엔진 프로젝트</h1>
+    <h1 id="자체엔진-프로젝트">자체엔진 프로젝트</h1>
+    <div class="card-container">
+        {% for post in sorted_posts %}
+        <a href="{{ post.url }}" class="card">
+        <div class="card-image-wrapper">
+            <img class="card-image default-image" src="{{ post.image | default: 'images/UnrealLogo.png' }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
+            <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
+        </div>
+        <div class="card-text">
+            <div class="card-text-Title">
+                {{ post.title }}
+            </div>
+            <div class="card-text-Content">
+                {{ post.description | default: post.excerpt | strip_html | truncate: 80 }}
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
-
 
 <div class="Paragraph">
 <h1 id="써드파티">써드파티</h1>
