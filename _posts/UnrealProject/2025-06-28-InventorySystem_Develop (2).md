@@ -3,7 +3,7 @@ title: "인벤토리 시스템 제작 (2/3)"
 description: "언리얼 배열 네트워크 직렬화에 대해 이야기합니다"
 date: 2025-06-27 00:00:01
 layout: post
-image: images/UnrealLogo.png
+image: images/Unreal Net Serialize.png
 subtitle: 
  - "언리얼 배열 네트워크 직렬화"
 published: true

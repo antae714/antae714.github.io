@@ -1,6 +1,6 @@
 ---
 layout: MainPost
-title: 메인 페이지
+title: 안태현
 subtitle: 
   - "소개"
   - "참여 프로젝트"
@@ -77,12 +77,12 @@ subtitle:
             <div class="card-Title">
                 <h3>{{ post.title }}</h3>
             </div>
-        <div class="card-Content">
-            <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
+            <div class="card-Content">
+                <desc>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</desc>
+            </div>
         </div>
-    </div>
-</a>
-    {% endfor %}
+        </a>
+        {% endfor %}
     </div>
 </div>
   

@@ -3,7 +3,7 @@ title: "게임 어빌리티 시스템 사용/분석"
 description: "언리얼 GAS의 사용기, 분석결과를 소개합니다"
 date: 2025-06-28 00:00:00
 layout: post
-image: "images/icon_37.gif"
+image: "images/AbilitySystem.png"
 subtitle: 
  - "언리얼 게임플레이 어빌리티 시스템 (GAS)"
  - "UAbilitySystemComponent (ASC)"
