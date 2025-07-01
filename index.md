@@ -70,8 +70,8 @@ subtitle:
         {% for post in sorted_posts %}
         <a href="{{ post.url }}" class="card">
         <div class="card-image-wrapper">
-            <img class="card-image default-image" src="{{ post.image | default: 'ㅁㄹ.gif' }}" alt="{{ post.title }}">
-            <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}">
+            <img class="card-image default-image" src="{{ post.image | default: 'images/UnrealLogo.png' }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
+            <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
         </div>
         <div class="card-text">
             <div class="card-Title">
