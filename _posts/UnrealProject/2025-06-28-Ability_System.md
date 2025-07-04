@@ -5,20 +5,19 @@ date: 2025-06-28 00:00:00
 layout: post
 image: "images/AbilitySystem.png"
 subtitle: 
- - "언리얼 게임플레이 어빌리티 시스템 (GAS)"
- - "UAbilitySystemComponent (ASC)"
- - "게임플레이 어빌리티 (Gameplay Ability)"
- - "게임플레이 어트리뷰트 (Gameplay Attribute)"
- - "게임플레이 이펙트 (Gameplay Effect)"
- - "게임플레이 태그 (Gameplay Tag)"
+ - "1️⃣ 언리얼 게임플레이 어빌리티 시스템 (GAS)"
+ - "2️⃣ UAbilitySystemComponent (ASC)"
+ - "3️⃣ 게임플레이 어빌리티 (Gameplay Ability)"
+ - "4️⃣ 게임플레이 어트리뷰트 (Gameplay Attribute)"
+ - "5️⃣ 게임플레이 이펙트 (Gameplay Effect)"
+ - "6️⃣ 게임플레이 태그 (Gameplay Tag)"
 published: true
 order: 9900
 AutoContents: true
 ---
+
 {% capture paragraph %}
-
-
-## **언리얼 게임플레이 어빌리티 시스템 (GAS)**
+## **1️⃣ 언리얼 게임플레이 어빌리티 시스템 (GAS)**
 
 ### GAS 구성 요소 간단히 알아보기
 언리얼의 게임플레이 어빌리티 시스템(GAS)은 크게 3가지 요소로 구성됩니다.
@@ -32,9 +31,12 @@ C++ 관점에서 비유하면 다음과 같습니다.
 - **Gameplay Attribute**: 변수
 <br>
 이 세 가지 요소를 통해 다양한 게임 콘텐츠를 모듈화하여 제작할 수 있습니다.
-<br><br>
 
-## **UAbilitySystemComponent (ASC)**
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+## **2️⃣ UAbilitySystemComponent (ASC)**
 `UAbilitySystemComponent`는 GAS의 핵심으로, 캐릭터가 어빌리티를 실행하고 효과를 적용하는 기능을 담당합니다. 
 액터가 `IAbilitySystemInterface`를 구현하여 사용할 수 있으며, 다음과 같은 기능을 제공합니다.
 - 네트워크 리플리케이션
@@ -50,7 +52,7 @@ C++ 관점에서 비유하면 다음과 같습니다.
 
 
 {% capture paragraph %}
-## **게임플레이 어빌리티 (Gameplay Ability)**
+## **3️⃣ 게임플레이 어빌리티 (Gameplay Ability)**
 Gameplay Ability는 ASC를 통해 캐릭터에게 부여되며, 태그나 이벤트 기반으로 실행됩니다. 
 어빌리티는 즉시 실행하거나 부여 후 조건에 따라 활성화할 수 있습니다.
 <br><br>
@@ -80,7 +82,7 @@ Gameplay Ability는 ASC를 통해 캐릭터에게 부여되며, 태그나 이벤
 
 {% capture paragraph %}
 
-## **게임플레이 어트리뷰트 (Gameplay Attribute)**
+## **4️⃣ 게임플레이 어트리뷰트 (Gameplay Attribute)**
 Gameplay Attribute는 어트리뷰트 세트를 통해 정의되고 관리됩니다. 
 세트의 초기값은 `DefaultStartingData`를 통해 설정 가능합니다. 
 어트리뷰트 값의 변경 사항은 `UAbilitySystemComponent::GetGameplayAttributeValueChangeDelegate`를 통해 구독할 수 있으며, 
@@ -94,7 +96,7 @@ Gameplay Attribute는 어트리뷰트 세트를 통해 정의되고 관리됩니
 
 {% capture paragraph %}
 
-## **게임플레이 이펙트 (Gameplay Effect)**
+## **5️⃣ 게임플레이 이펙트 (Gameplay Effect)**
 Gameplay Effect는 어빌리티 실행 결과로 발생하는 효과입니다. 다음과 같은 기능을 제공합니다.
 * **DurationPolicy**를 통한 지속성 설정
 - **Modifier**를 통한 어트리뷰트 값 변경 및 태그 추가/제거
@@ -112,7 +114,7 @@ Gameplay Effect는 어빌리티 실행 결과로 발생하는 효과입니다. �
 
 {% capture paragraph %}
 
-## **게임플레이 태그 (Gameplay Tag)**
+## **6️⃣ 게임플레이 태그 (Gameplay Tag)**
 Gameplay Tag는 어빌리티, 이펙트, 어트리뷰트에 적용할 수 있는 메타데이터로 ASC가 관리합니다. 
 이를 통해 게임 로직과 실행 흐름을 유연하게 제어할 수 있습니다.
 <br><br>
