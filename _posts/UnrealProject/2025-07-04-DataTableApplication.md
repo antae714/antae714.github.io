@@ -16,7 +16,7 @@ AutoContents: true
 
 {% capture paragraph %}
 
-# 📄 CSV 기반 데이터테이블의 에셋 경로 불편함 해결
+# **📄 CSV 기반 데이터테이블의 에셋 경로 불편함 해결**
 언리얼엔진의 데이터테이블은 기본적으로 UClass나 UObject를 직접 행에 저장할 수 있습니다. 
 하지만 이 데이터를 CSV로 익스포트하거나 외부에서 편집하려고 할 때, 경로(예: /Game/...) 형식으로 노출되기 때문에 편집이 번거로워지고, 
 CSV 편집의 이점이 줄어듭니다.
@@ -29,7 +29,7 @@ CSV 편집의 이점이 줄어듭니다.
 
 {% capture paragraph %}
 
-# 😊 ID → 경로 매핑 방식
+# **😊 ID → 경로 매핑 방식**
 이 문제를 해결하기 위해 ID와 에셋 경로를 연결하는 맵을 만들었습니다.
 ``` cpp
 TMap<FName, FSoftObjectPath> AssetPathMap;
@@ -52,7 +52,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 
 {% capture paragraph %}
 
-# 😨 수동 매핑의 한계
+# **😨 수동 매핑의 한계**
 하지만 이 방식에도 단점이 있습니다. `TMap`을 블루프린트에서 수동 편집할 경우:
 - 오타나 경로 누락 등 실수가 발생하기 쉽고
 - 에셋 변경 시마다 수동으로 동기화해야 합니다.
@@ -63,7 +63,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 {% capture paragraph %}
 
 
-# 😀 에셋 레지스트리 기반 자동 매핑
+# **😀 에셋 레지스트리 기반 자동 매핑**
 이 문제를 해결하기 위해 에셋 레지스트리를 활용해 매핑 정보를 자동 생성하는 방법을 도입했습니다.
 
 `AssetRegistry`는 프로젝트 내 모든 에셋의 정보를 관리하며,
