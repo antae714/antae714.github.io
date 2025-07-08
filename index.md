@@ -56,7 +56,18 @@ subtitle:
 
 <div class="Paragraph">
 <h1 id="참여-프로젝트" >참여 프로젝트</h1>
-
+<video
+  width="640"
+  height="360"
+  controls
+  autoplay
+  muted
+  loop
+  playsinline
+>
+  <source src="{{ '/assets/MyLittleStorage/Temp.mp4' | relative_url }}" type="video/mp4">
+  브라우저가 video 태그를 지원하지 않습니다.
+</video>
 
 </div>
 
