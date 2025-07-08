@@ -5,7 +5,9 @@ date: 2025-06-27 00:00:00
 layout: post
 image: "images/ItemAbility.png"
 subtitle: 
- - "언리얼 어빌리티 시스템"
+ - "📄 어빌리티 시스템의 도입"
+ - "✅ 어빌리티 시스템의 장점"
+ - "😀 어빌리티 시스템의 실무 활용"
 published: true
 order: 10000
 AutoContents: true
@@ -43,8 +45,13 @@ AutoContents: true
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
+{% capture paragraph %}
+## 🔎 더보기
+{% assign other_post = site.posts | where: "title", "게임 어빌리티 시스템 사용/분석" | first %}
+<a class="Link" href="{{ other_post.url | relative_url }}">{{ other_post.title }}</a>
 
-
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
 
 <!-- 
 {% comment %}

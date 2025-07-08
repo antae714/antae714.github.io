@@ -7,3 +7,6 @@ github_username: antae714
 Projects:
  - "UnrealProject"
 
+include:
+ - assets
+
