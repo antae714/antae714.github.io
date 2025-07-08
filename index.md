@@ -57,8 +57,7 @@ subtitle:
 <div class="Paragraph">
 <h1 id="참여-프로젝트" >참여 프로젝트</h1>
 <video
-  width="640"
-  height="360"
+  width="100%"
   controls
   autoplay
   muted
