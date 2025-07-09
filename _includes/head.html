@@ -170,12 +170,14 @@
 		justify-content: center;
 		align-items: center;
 		z-index: 1000;
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px); /* 사파리 호환 */
 	}
 
 	.popup-content {
 		background: white;
 		width: 70vw;
-		height: 95vh;
+		height: 90vh;
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
@@ -220,41 +222,30 @@
 </style>
 
 <script>
-	document.getElementById('popup-iframe').addEventListener('load', function () {
-		try {
-			const iframeDoc = this.contentDocument || this.contentWindow.document;
-			const links = iframeDoc.querySelectorAll('a');
 
-			links.forEach(link => {
-				link.addEventListener('click', function (e) {
-					e.preventDefault(); // 원래 링크 막고
-					e.stopPropagation();
 
-					// 부모 창에서 새 탭으로 열기
-					const href = link.getAttribute('href');
-					if (href && href !== '#') {
-						window.parent.open(href, '_blank');
-					}
-				});
-
-				// 시각적 스타일 유지 (필요 없다면 제거 가능)
-				link.style.color = 'blue';
-				link.style.cursor = 'pointer';
-			});
-		} catch (err) {
-			console.warn('iframe 링크 제어 실패 (CORS?):', err);
+	const params = new URLSearchParams(window.location.search);
+	if (params.get("iframe") === "true") {
+		const titleLink = document.querySelector('.TitleText');
+		if (titleLink) {
+			titleLink.style.pointerEvents = 'none';
+			titleLink.style.textDecoration = 'none';
 		}
-	});
+	}
 
 	function openPopup(element) {
-		const url = element.getAttribute('data-url');
+		// 원래 포스트 URL을 가져온 뒤
+		const rawUrl = element.getAttribute('data-url');
+		// URL 객체로 만들고 query string에 iframe=true 추가
+		const url = new URL(rawUrl, window.location.origin);
+		url.searchParams.set('iframe', 'true');
+
 		const popup = document.getElementById('popup');
 		const iframe = document.getElementById('popup-iframe');
 
-		iframe.src = url;
+		iframe.src = url.toString();
 		popup.style.display = 'flex';
 
-		document.body.style.overflow = 'hidden';
 		document.documentElement.style.overflow = 'hidden';
 
 		const header = document.querySelector('.site-header');
@@ -268,7 +259,6 @@
 		popup.style.display = 'none';
 		iframe.src = '';
 
-		document.body.style.overflow = '';
 		document.documentElement.style.overflow = '';
 
 		const header = document.querySelector('.site-header');
@@ -282,7 +272,7 @@
 		}
 	}
 
-	// ESC 키로 팝업 닫기
+		// ESC 키로 팝업 닫기
 	document.addEventListener('keydown', function (event) {
 		if (event.key === 'Escape') {
 			closePopup();

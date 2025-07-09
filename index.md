@@ -15,7 +15,6 @@ subtitle:
 <!-- 팝업 본체 -->
 <div class="popup-overlay" id="popup" onclick="closePopup()">
   <div class="popup-content" onclick="event.stopPropagation()">
-
     <!-- iframe wrapper -->
     <div class="iframe-wrapper">
       <!-- 우측 상단 버튼 -->
