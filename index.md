@@ -12,6 +12,23 @@ subtitle:
 {% include head.html %}
 
 
+<!-- 팝업 본체 -->
+<div class="popup-overlay" id="popup" onclick="closePopup()">
+  <div class="popup-content" onclick="event.stopPropagation()">
+
+    <!-- iframe wrapper -->
+    <div class="iframe-wrapper">
+      <!-- 우측 상단 버튼 -->
+      <div class="popup-buttons">
+        <button onclick="expandPopup()" title="전체 페이지로 이동">🔗</button>
+        <button onclick="closePopup()" title="닫기">❌</button>
+      </div>
+      <!-- 실제 iframe -->
+      <iframe id="popup-iframe" src=""></iframe>
+    </div>
+
+  </div>
+</div>
 
 {% comment %}
 <div style="
@@ -52,6 +69,9 @@ subtitle:
 {% include paragraph.html content=paragraph %}
 
 
+<!-- 팝업 트리거 -->
+
+
 
 
 <div class="Paragraph">
@@ -78,20 +98,18 @@ subtitle:
     <h1 id = "언리얼-프로젝트">언리얼 프로젝트</h1>
     <div class="card-container">
         {% for post in sorted_posts %}
-        <a href="{{ post.url }}" class="card">
-        <div class="card-image-wrapper">
-            <img class="card-image default-image" src="{{ post.image | default: 'images/UnrealLogo.png' }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
-            <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
-        </div>
-        <div class="card-text">
-            <div class="card-text-Title">
-                {{ post.title }}
-            </div>
-            <div class="card-text-Content">
-                {{ post.description | default: post.excerpt | strip_html | truncate: 80 }}
-            </div>
-        </div>
-        </a>
+        <div class="card" onclick="openPopup(this)" data-url="{{ post.url }}" style="cursor: pointer;">
+  <div class="card-image-wrapper">
+      <img class="card-image default-image" src="{{ post.image | default: 'images/UnrealLogo.png' }}" alt="{{ post.title }}" onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
+      <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}" onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
+  </div>
+  <div class="card-text">
+      <div class="card-text-Title">{{ post.title }}</div>
+      <div class="card-text-Content">
+          {{ post.description | default: post.excerpt | strip_html | truncate: 80 }}
+      </div>
+  </div>
+</div>
         {% endfor %}
     </div>
 </div>

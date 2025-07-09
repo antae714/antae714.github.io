@@ -4,21 +4,27 @@
 	<meta charset="utf-8">
 	<title>{{ page.title }}</title>
 	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+	{% include head.html %}
+	{% include PageStyle.html %}
 </head>
 <body>
 	<div class="post-content">
-		<header class="site-title ">
-			<a href="{{ '/' | relative_url }}" class="TitleText">
-				{{ site.github.owner.name | default: '유저이름' }}
-			</a>
-			{% if page.layout == "MainPost" %}
-			<div style="display: flex; gap: 25px;">
-				{% for item in page.subtitle %}
-				<a class="Link" href="#{{ item | slugify }}">{{ item }}</a>
-				{% endfor %}
-			</div>
-			{% endif %}
-		</header>
+		{% if page.layout == "MainPost" %}
+		<header class="site-title" style="position: sticky;">
+		{% else %}
+		<header class="site-title" style="position: static; margin-top:0;">
+		{% endif %}
+				<a href="{{ '/' | relative_url }}" class="TitleText">
+					{{ site.github.owner.name | default: '유저이름' }}
+				</a>
+				{% if page.layout == "MainPost" %}
+				<div style="display: flex; gap: 25px;">
+					{% for item in page.subtitle %}
+					<a class="Link" href="#{{ item | slugify }}">{{ item }}</a>
+					{% endfor %}
+				</div>
+				{% endif %}
+			</header>
 
 		<div style="height:80px;"></div>
 		{{ content }}
