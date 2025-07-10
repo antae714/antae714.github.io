@@ -20,8 +20,8 @@ subtitle:
     <div class="iframe-wrapper">
       <!-- 우측 상단 버튼 -->
       <div class="popup-buttons">
-        <button onclick="expandPopup()" title="전체 페이지로 이동">🔗</button>
-        <button onclick="closePopup()" title="닫기">❌</button>
+        <button onclick="expandPopup()" title="전체 페이지로 이동">🗖</button>
+        <button onclick="closePopup()" title="닫기">🗙</button>
       </div>
       <!-- 실제 iframe -->
       <iframe id="popup-iframe" src=""></iframe>
