@@ -3,6 +3,7 @@ layout: MainPost
 title: 안태현
 subtitle: 
   - "소개"
+  - "프리뷰"
   - "참여 프로젝트"
   - "언리얼 프로젝트"
   - "자체엔진 프로젝트"
@@ -74,7 +75,7 @@ subtitle:
 
 
 <div class="Paragraph">
-<h1 id="참여-프로젝트" >참여 프로젝트</h1>
+<h1 id="프리뷰" >프리뷰</h1>
 <video
   width="100%"
   controls
@@ -83,13 +84,16 @@ subtitle:
   loop
   playsinline
 >
-  <source src="{{ '/assets/MyLittleStorage/Temp.mp4' | relative_url }}" type="video/mp4">
+  <source src="{{ '/assets/MyLittleStorage/Temp_2.mp4' | relative_url }}" type="video/mp4">
   브라우저가 video 태그를 지원하지 않습니다.
 </video>
 
 </div>
 
 
+<div class="Paragraph">
+<h1 id="참여-프로젝트" >참여 프로젝트</h1>
+</div>
 
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
