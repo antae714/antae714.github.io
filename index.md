@@ -69,32 +69,49 @@ subtitle:
 {% include paragraph.html content=paragraph %}
 
 
-<!-- 팝업 트리거 -->
+{% capture paragraph %}
+# FRankHunter
+<p align="center">
+ <img src = "images/CoverImage.png" style="width: 100%;">
+</p>
+## 게임설명
+## 작업내용
+- **[게임플레이 어빌리티 시스템(GAS)을 이용한 캐릭터 능력 제작](2025/06/28/Ability_System.html)**
+- **[아이템시스템 제작](2025/06/28/InventorySystem_Develop.html)**
+- **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025-07-08-StoneDestroy.html)**
+- **[UI 제작]()**
+- **[게임 진행도 저장 시스템 제작]()**
+- **[현지화 구현]()**
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+# Porion Atelier
+<p align="center">
+ <img src = "images/PorionAtelier.png" style="width: 100%;">
+</p>
+## 게임설명
+## 작업내용
+- **[머티리얼 노드 에디터 제작]()**
+- **[파티클 시스템 제작]()**
+- **[PBR & IBL 구현]()**
+- **[헤일로3 블룸 제작]()**
+- **[외곽선 추출 알고리즘 제작 (Laplacian Filter)]()**
+- **[쉐도우 맵핑 제작]()**
+- **[FBX 임포트 파이프라인 제작]()**
+- **[스키닝 제작]()**
+- **[자원관리 기법 구현]()**
+- **[텍스처에 압축 툴 제작]()**
+- **[Fmod Sound Bank 사용]()**
 
 
 
 
-<div class="Paragraph">
-<h1 id="프리뷰" >프리뷰</h1>
-<video
-  width="100%"
-  controls
-  autoplay
-  muted
-  loop
-  playsinline
->
-  <source src="{{ '/assets/MyLittleStorage/Temp_2.mp4' | relative_url }}" type="video/mp4">
-  브라우저가 video 태그를 지원하지 않습니다.
-</video>
-
-</div>
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
 
 
-<div class="Paragraph">
-<h1 id="참여-프로젝트" >참여 프로젝트</h1>
-</div>
-
+{% comment %}
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
 <div class="Paragraph">
@@ -145,6 +162,7 @@ subtitle:
 <h1 id="써드파티">써드파티</h1>
 </div>
 
+{% endcomment %}
 {% comment %}
 {% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
 {% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}

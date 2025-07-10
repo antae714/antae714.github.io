@@ -21,7 +21,6 @@ body {
 }
 
 .site-title {
-	position: sticky;
 	top: 0;
 	background: #fff;
 	border-bottom: 2px solid #ccc; /* 아래쪽 구분선 */
@@ -31,7 +30,7 @@ body {
 	align-items: center;
 	
 	height: 80px; /* 스티키 헤더 높이 */
-	margin-top: -80px;
+
 }
 
 .site-title .TitleText {
