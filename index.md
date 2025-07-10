@@ -75,11 +75,11 @@ subtitle:
 
 
 {% capture paragraph %}
-# FRankHunter
+# **F Rank Hunter**
+헌터물 생존 게임입니다.
 <p align="center">
  <img src = "images/CoverImage.png" style="width: 100%;">
 </p>
-## 게임설명
 ## 작업내용
 - **[게임플레이 어빌리티 시스템(GAS)을 이용한 캐릭터 능력 제작](2025/06/28/Ability_System.html)**
 - **[아이템시스템 제작](2025/06/28/InventorySystem_Develop.html)**
@@ -91,7 +91,7 @@ subtitle:
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-# Porion Atelier
+# **Porion Atelier**
 <p align="center">
  <img src = "images/PorionAtelier.png" style="width: 100%;">
 </p>
@@ -114,6 +114,15 @@ subtitle:
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+
+# **Rail Way To Hell**
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
 
 
 {% comment %}
