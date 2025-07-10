@@ -65,6 +65,11 @@ subtitle:
 - **2021.08.01 ~ 2024.03.01: 학점은행제 게임프로그래밍과 수료**
 - **2024.03.01 ~ 현재: 게임인재원**
 
+<br>
+
+## 기술
+**C, C++, C#, WINAPI, Direct11, Unreal Engine, SVN, FMod**
+
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
@@ -78,7 +83,7 @@ subtitle:
 ## 작업내용
 - **[게임플레이 어빌리티 시스템(GAS)을 이용한 캐릭터 능력 제작](2025/06/28/Ability_System.html)**
 - **[아이템시스템 제작](2025/06/28/InventorySystem_Develop.html)**
-- **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025-07-08-StoneDestroy.html)**
+- **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)**
 - **[UI 제작]()**
 - **[게임 진행도 저장 시스템 제작]()**
 - **[현지화 구현]()**
