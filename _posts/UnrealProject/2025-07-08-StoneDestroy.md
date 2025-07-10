@@ -86,19 +86,6 @@ Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
 
-```cpp
-#include <iostream> // C++ 표준 입출력 라이브러리 포함
-
-int main() {
-    std::cout << "안녕하세요, Jekyll C++ 코드 강조입니다!" << std::endl; // 콘솔에 메시지 출력
-    return 0; // 프로그램 종료
-}
-```
-```		ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
 
 ``` cpp
 void AAnchorFieldSystemActor::Enable()

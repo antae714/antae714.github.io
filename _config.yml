@@ -10,5 +10,8 @@ Projects:
 include:
  - assets
  
-highlighter: rouge
+ 
 markdown: kramdown
+kramdown:
+  input: GFM           # GitHub Flavored Markdown 사용
+  syntax_highlighter: null   # 서버측 하이라이팅 끄기

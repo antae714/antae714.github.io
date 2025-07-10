@@ -1,6 +1,50 @@
+<head>
+	<link rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
 
 <style>
+	/* 전체 코드 블록 스타일 */
+	.hljs {
+		background-color: #ffffff; /* 순수 화이트 배경 */
+		border: 1px solid #e1e1e8; /* 연한 회색 테두리 */
+		border-left: 4px solid #007acc; /* VS 블루 강조선 */
+		border-radius: 6px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 미묘한 그림자 */
+		padding: 1rem;
+		overflow-x: auto;
+		font-family: 'Consolas', monospace;
+		font-size: 0.8em;
+		line-height: 1.5;
+		tab-size: 4;
+		-moz-tab-size: 4;
+		-o-tab-size: 4;
+	}
 
+	/* 인라인 코드 스타일 */
+	code {
+		background-color: #f5f5f5; /* 살짝 밝은 배경 */
+		color: #c7254e; /* 기존 레드 포인트 */
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		padding: 0.2em 0.4em;
+		font-family: 'Consolas', monospace;
+		font-size: 0.9em;
+		line-height: 1.4;
+		tab-size: 4;
+		-moz-tab-size: 4;
+		-o-tab-size: 4;
+	}
+
+	/* pre > code (만약 별도 hljs 클래스가 없으면) */
+	pre code {
+		display: block;
+		background: transparent; /* hljs 배경이 있으므로 투명 처리 */
+		padding: 0;
+		border: none;
+	}
 
 	[id] {
 		scroll-margin-top: 110px; /* 스티키 헤더가 80px 높이라면 */
@@ -40,6 +84,7 @@
 		border: none;
 		display: block;
 	}
+
 	.card-container {
 		display: flex;
 		flex-wrap: wrap;
@@ -295,7 +340,7 @@
 		}
 	}
 
-		// ESC 키로 팝업 닫기
+	// ESC 키로 팝업 닫기
 	document.addEventListener('keydown', function (event) {
 		if (event.key === 'Escape') {
 			closePopup();
