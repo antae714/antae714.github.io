@@ -15,3 +15,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: null
+  math_engine: mathjax
+  parse_block_html: true
+

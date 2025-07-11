@@ -74,9 +74,14 @@ subtitle:
 {% include paragraph.html content=paragraph %}
 
 
+
 {% capture paragraph %}
 # **F Rank Hunter**
-헌터물 생존 게임입니다.
+
+<p style="text-align: right;">
+  헌터물 생존 게임입니다.
+</p>
+
 <p align="center">
  <img src = "images/CoverImage.png" style="width: 100%;">
 </p>
@@ -118,6 +123,12 @@ subtitle:
 {% capture paragraph %}
 
 # **Rail Way To Hell**
+<p align="center">
+ <img src = "images/2.png" style="width: 100%;">
+</p>
+
+
+
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
