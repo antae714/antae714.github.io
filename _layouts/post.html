@@ -5,20 +5,20 @@ layout: default
 
 
 <article class="post">
-	<div class="post-content">
-		<div class="Paragraph" style="overflow: hidden;">
-			<div class="post-title">{{ page.title }}</div>
-			<div class="post-description"> {{ page.description }}</div>
+	<div class="Paragraph" style="overflow: hidden;">
+		<div class="post-title">{{ page.title }}</div>
+		<div class="post-description"> {{ page.description }}</div>
 
-			{% if page.AutoContents %}
-			<ol class="subtitle-list">
-				{% for item in page.subtitle %}
-				<li><a class="Link" href="#{{ item | slugify }}">{{ item }}</a></li>
-				{% endfor %}
-			</ol>
-			{% endif %}
-		</div>
-
-		{{ content }}
+		{% if page.AutoContents %}
+		<ol class="subtitle-list">
+			{% for item in page.subtitle %}
+			<li><a class="Link" href="#{{ item | slugify }}">{{ item }}</a></li>
+			{% endfor %}
+		</ol>
+		{% endif %}
 	</div>
+
+	{{ content }}
 </article>
+
+{% include Post.html %}

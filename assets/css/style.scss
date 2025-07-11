@@ -14,23 +14,29 @@ body {
 	padding: 0 24px;
 }
 
-.post-content {
+.post-container {
 	max-width: 1080px;
 	margin: 0 auto;
+	padding: 0px 50px 50px 50px;
 	font-family: sans-serif;
 	font-size: 1.2em;
+	background: #fff;
+	border-radius: 20px;
+}
+
+.post-content {
+
 }
 
 .site-title {
 	top: 0;
-	background: #fff;
 	border-bottom: 2px solid #ccc; /* 아래쪽 구분선 */
 	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	
-	height: 80px; /* 스티키 헤더 높이 */
+	//height: 80px; /* 스티키 헤더 높이 */
 
 }
 

@@ -3,10 +3,36 @@ layout: default
 ---
 
 
-<article class="post">
-	<div class="post-content">
+<article class="Main-post">
 
-		{{ content }}
+    <div style="
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  padding: 0; margin: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+">
+        <img src="images/CoverImage.png"
+             style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 0; margin: 0;
+        " />
 
-	</div>
+        <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.53);
+    mix-blend-mode: lighten;
+  ">
+
+        </div>
+    </div>
+
+    {{ content }}
 </article>
+
+{% include MainPost.html %}

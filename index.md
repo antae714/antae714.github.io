@@ -30,27 +30,8 @@ subtitle:
   </div>
 </div>
 
-{% comment %}
-<div style="
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-">
-  <img src="images/CoverImage.png" 
-       style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px);" />
 
-  <div style="
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(255, 255, 255, 0.53); /* 밝기 조절: 0.2 ~ 0.5 */
-    mix-blend-mode: lighten; /* 또는 screen */
-  "></div>
-</div>
 
-{% endcomment %}
 
 
 <a id="소개"></a>
@@ -78,13 +59,13 @@ subtitle:
 {% capture paragraph %}
 # **F Rank Hunter**
 
+<p align="center">
+ <img src = "images/CoverImage.png" style="width: 100%;">
+</p>
 <p style="text-align: right;">
   헌터물 생존 게임입니다.
 </p>
 
-<p align="center">
- <img src = "images/CoverImage.png" style="width: 100%;">
-</p>
 ## 작업내용
 - **[게임플레이 어빌리티 시스템(GAS)을 이용한 캐릭터 능력 제작](2025/06/28/Ability_System.html)**
 - **[아이템시스템 제작](2025/06/28/InventorySystem_Develop.html)**
@@ -100,7 +81,10 @@ subtitle:
 <p align="center">
  <img src = "images/PorionAtelier.png" style="width: 100%;">
 </p>
-## 게임설명
+<p style="text-align: right;">
+  음
+</p>
+
 ## 작업내용
 - **[머티리얼 노드 에디터 제작]()**
 - **[파티클 시스템 제작]()**
@@ -126,7 +110,8 @@ subtitle:
 <p align="center">
  <img src = "images/2.png" style="width: 100%;">
 </p>
-
+## 작업내용
+-  **[턴제관리 시스템 제작]()**
 
 
 

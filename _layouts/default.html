@@ -7,30 +7,23 @@
 
 </head>
 <body>
-	<div class="post-content">
+	<div class="post-container">
 		<header class="site-title ">
 			<a href="{{ '/' | relative_url }}" class="TitleText">
 				{{ site.github.owner.name | default: '유저이름' }}
 			</a>
-			{% if page.layout == "MainPost" %}
-			<div style="display: flex; gap: 25px;">
-				{% for item in page.subtitle %}
-				<a class="Link" href="#{{ item | slugify }}">{{ item }}</a>
-				{% endfor %}
-			</div>
-			{% endif %}
 		</header>
-
-		<div style="height:80px;"></div>
-		{{ content }}
+		<div class="post-content">
+			{{ content }}
+		</div>
 	</div>
 
-	<hr>
-	<footer style="text-align: center; margin: 40px 0;">
-		<p>이메일: <a href="mailto:{{ site.email }}" class="Link">{{ site.email }}</a></p>
-		<p>전화번호: <a href="tel:{{ site.PoneNumber }}" class="Link">{{ site.PoneNumber }}</a></p>
-		<p>GitHub: <a href="https://github.com/{{ site.github_username }}" class="Link">{{ site.github_username }}</a></p>
-	</footer>
+		<hr>
+		<footer style="text-align: center; margin: 40px 0;">
+			<p>이메일: <a href="mailto:{{ site.email }}" class="Link">{{ site.email }}</a></p>
+			<p>전화번호: <a href="tel:{{ site.PoneNumber }}" class="Link">{{ site.PoneNumber }}</a></p>
+			<p>GitHub: <a href="https://github.com/{{ site.github_username }}" class="Link">{{ site.github_username }}</a></p>
+		</footer>
 
 </body>
 </html>
