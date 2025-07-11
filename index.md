@@ -36,6 +36,11 @@ subtitle:
 
 <a id="소개"></a>
 {% capture paragraph %}
+  
+  
+{% include SiteTitle.html %}
+
+
 <img src="images/ProfileImage2.png" 
      width="300" height="300"
      style="border-radius: 50%; border: 5px solid white; " />
