@@ -76,14 +76,6 @@ AutoContents: true
 - `UUniformInteger`를 활용하여 상태 변경
 - `UCullingField`를 사용하여 평가 영역 지정
 - 평가 필드를 `DynamicState`로 설정하여 적용
-  
-
-First Term
-: This is the definition of the first term.
-
-Second Term
-: This is one definition of the second term.
-: This is another definition of the second term.
 
 
 ``` cpp
