@@ -7,16 +7,20 @@
 
 </head>
 <body>
+
+	{% include BackGroundImage.html %}
+
 	<div class="post-content">
+		{% include SiteTitle.html %}
 		{{ content }}
 	</div>
 
-		<hr>
-		<footer style="text-align: center; margin: 40px 0;">
-			<p>이메일: <a href="mailto:{{ site.email }}" class="Link">{{ site.email }}</a></p>
-			<p>전화번호: <a href="tel:{{ site.PoneNumber }}" class="Link">{{ site.PoneNumber }}</a></p>
-			<p>GitHub: <a href="https://github.com/{{ site.github_username }}" class="Link">{{ site.github_username }}</a></p>
-		</footer>
+	<hr>
+	<footer style="text-align: center; margin: 40px 0;">
+		<p>이메일: <a href="mailto:{{ site.email }}" class="Link">{{ site.email }}</a></p>
+		<p>전화번호: <a href="tel:{{ site.PoneNumber }}" class="Link">{{ site.PoneNumber }}</a></p>
+		<p>GitHub: <a href="https://github.com/{{ site.github_username }}" class="Link">{{ site.github_username }}</a></p>
+	</footer>
 
 </body>
 </html>

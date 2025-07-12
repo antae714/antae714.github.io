@@ -38,7 +38,6 @@ subtitle:
 {% capture paragraph %}
   
   
-{% include SiteTitle.html %}
 
 
 <img src="images/ProfileImage2.png" 
