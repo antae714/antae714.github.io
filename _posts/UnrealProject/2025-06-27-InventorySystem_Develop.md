@@ -67,7 +67,27 @@ RPC를 통한 동기화 방법도 검토했지만, 객체 상태의 일관성 �
 
 
 {% capture Fold %}
-ddsad
+아이템 테이블 예시
+
+|ItemID|CurrentHoldAbilityID|PrePareUseAbilityID|UseAbilityID|
+|-|
+|ManaStone_A|None|GA_ManaStoneUse_A|None|
+|Pickaxe_Steel|GA_Pickaxe_Steel|GA_PlayerPrePareAttack|GA_PlayerAttack|
+|Throwable_Dynamite|None|GA_ShowProjectilePath|GA_ThrowItem|
+|Installable_Sensor|None|GA_PreViewInstallMesh|GA_InstallItem|
+|Consumable_HPBig|None|GA_Healing_Big|None
+
+던지기 아이템 테이블 예시
+
+
+
+|ItemID|ImpactAbilityID|
+|-|
+Throwable_Shock|GA_Shock
+Throwable_Paint|GA_Paint
+Throwable_Dynamite|GA_Damage_Dynamite
+
+
 {% endcapture %}
 
 {% capture paragraph %}
@@ -87,13 +107,17 @@ ddsad
 <br><br>
 
 ### 😀 어빌리티 시스템의 실무 활용
-아이템 데이터 테이블을 구성할 때, 
-각 데이터 행에 어빌리티 클래스의 참조를 추가하여 
-아이템의 패시브 효과, 착용 효과, 사용 효과 등 다양한 기능을 CSV 데이터로 관리할 수 있습니다. 
-이를 통해 데이터 주도적인 아이템 관리가 가능해져, 
-게임 개발 과정에서 생산성을 높이고 관리 효율성을 극대화할 수 있었습니다.
+아이템 데이터 테이블을 구성할 때, 각 아이템의 데이터 행에 어빌리티 클래스 참조를 추가할 수 있습니다. 이를 통해
+- 패시브 효과
+- 착용 효과
+- 사용 효과
 
-{% include fold.html title="예시" content =Fold  %}
+등 다양한 기능을 CSV 형식의 데이터로 효율적으로 관리할 수 있습니다.
+
+이 방식은 데이터 중심의 아이템 관리가 가능하도록 도와줍니다. 따라서 게임 개발 과정에서 생산성을 높이고 관리 효율성을 극대화할 수 있었습니다.
+
+{% include fold.html title="실제 사용 예시" content =Fold  %}
+
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
