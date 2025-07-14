@@ -72,9 +72,10 @@ subtitle:
 
 ## 작업내용
 - **[게임플레이 어빌리티 시스템(GAS)을 이용한 캐릭터 능력 제작](2025/06/28/Ability_System.html)**
-- **[아이템시스템 제작](2025/06/28/InventorySystem_Develop.html)**
+- **[아이템시스템 제작](2025/06/27/InventorySystem_Develop.html)**
+- **[언리얼 데이터 테이블 응용](2025/07/04/DataTableApplication)**
 - **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)**
-- **[UI 제작]()**
+- **[UI 제작](2025/06/28/UI)**
 - **[게임 진행도 저장 시스템 제작](2025/06/28/SaveGame.html)**
 - **[현지화 구현]()**
 {% endcapture %}

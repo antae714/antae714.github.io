@@ -20,10 +20,4 @@ kramdown:
   math_engine: mathjax
   parse_block_html: true
   
-plugins:
-  - jekyll-mermaid
-
-
-mermaid:
-  src: "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"
 
