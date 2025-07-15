@@ -77,7 +77,8 @@ subtitle:
 - **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)**
 - **[UI 제작](2025/06/28/UI)**
 - **[게임 진행도 저장 시스템 제작](2025/06/28/SaveGame.html)**
-- **[현지화 구현]()**
+- **[현지화 구현](2025/06/28/Localize.html)**
+- **[AI 시스템 제작](2025/07/15/AI.html)**
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
