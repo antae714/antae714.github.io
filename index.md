@@ -10,28 +10,30 @@ subtitle:
   - "써드파티"
 ---
 
-{% include head.html %}
+
+
 
 
 <!-- 팝업 본체 -->
 <div class="popup-overlay" id="popup" onclick="closePopup()">
-  <div class="popup-content" onclick="event.stopPropagation()">
-    <!-- iframe wrapper -->
-    <div class="iframe-wrapper">
-      <!-- 우측 상단 버튼 -->
-      <div class="popup-buttons">
-        <button onclick="expandPopup()" title="전체 페이지로 이동">🗖</button>
-        <button onclick="closePopup()" title="닫기">🗙</button>
-      </div>
-      <!-- 실제 iframe -->
-      <iframe id="popup-iframe" src=""></iframe>
-    </div>
-
-  </div>
+<div class="popup-content" onclick="event.stopPropagation()">
+<!-- iframe wrapper -->
+<div class="iframe-wrapper">
+<!-- 우측 상단 버튼 -->
+<div class="popup-buttons">
+<button onclick="expandPopup()" title="전체 페이지로 이동">🗖</button>
+<button onclick="closePopup()" title="닫기">🗙</button>
+</div>
+<!-- 실제 iframe -->
+<iframe id="popup-iframe" src=""></iframe>
+</div>
+</div>
 </div>
 
+{% comment %}
+<a href="#" class="popup-link"  onclick="openPopup(this)" data-url="2025/06/28/Ability_System.html">팝업으로 열기</a>
 
-
+{% endcomment %}
 
 
 <a id="소개"></a>
@@ -79,16 +81,16 @@ subtitle:
 - **[게임 진행도 저장 시스템 제작](2025/06/28/SaveGame.html)**
 - **[현지화 구현](2025/06/28/Localize.html)**
 - **[AI 시스템 제작](2025/07/15/AI.html)**
+- **더 나은 개발환경을 위한 치트매니저**
 <br><br>
 
 ## 트러블 슈팅
-- **뭐넣지**
-- **테스트**
+- **후처리 머티리얼 해상도이슈**
 <br><br>
 
 
 ## 협업 이슈
-- **버전관리툴 바이너리 컨플릭트**
+- **[버전관리툴 바이너리 컨플릭트](2025/07/17/UnrealSVN.html)**
 
 
 {% endcapture %}
