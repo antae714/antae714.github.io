@@ -10,8 +10,14 @@ subtitle:
   - "써드파티"
 ---
 
+{% comment %}
 
+<video width="640" height="360" autoplay loop muted>
+  <source src="/assets/MyLittleStorage/AA.mp4" type="video/mp4">
+  브라우저가 video 태그를 지원하지 않거나 MKV 포맷을 지원하지 않습니다.
+</video>
 
+{% endcomment %}
 
 
 <!-- 팝업 본체 -->
@@ -149,110 +155,3 @@ subtitle:
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
-
-
-
-
-{% comment %}
-{% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
-{% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
-<div class="Paragraph">
-    <h1 id = "언리얼-프로젝트">언리얼 프로젝트</h1>
-    <div class="card-container">
-        {% for post in sorted_posts %}
-        <div class="card" onclick="openPopup(this)" data-url="{{ post.url }}" style="cursor: pointer;">
-  <div class="card-image-wrapper">
-      <img class="card-image default-image" src="{{ post.image | default: 'images/UnrealLogo.png' }}" alt="{{ post.title }}" onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
-      <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}" onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
-  </div>
-  <div class="card-text">
-      <div class="card-text-Title">{{ post.title }}</div>
-      <div class="card-text-Content">
-          {{ post.description | default: post.excerpt | strip_html | truncate: 80 }}
-      </div>
-  </div>
-</div>
-        {% endfor %}
-    </div>
-</div>
-
-{% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'PotionAtelier'" %}
-{% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
-<div class="Paragraph">
-    <h1 id="자체엔진-프로젝트">자체엔진 프로젝트</h1>
-    <div class="card-container">
-        {% for post in sorted_posts %}
-        <a href="{{ post.url }}" class="card">
-        <div class="card-image-wrapper">
-            <img class="card-image default-image" src="{{ post.image | default: 'images/UnrealLogo.png' }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
-            <img class="card-image hover-image" src="{{ post.hover_image | default: post.image }}" alt="{{ post.title }}"  onerror="this.onerror=null; this.src='images/UnrealLogo.png';">
-        </div>
-        <div class="card-text">
-            <div class="card-text-Title">
-                {{ post.title }}
-            </div>
-            <div class="card-text-Content">
-                {{ post.description | default: post.excerpt | strip_html | truncate: 80 }}
-            </div>
-        </div>
-        </a>
-        {% endfor %}
-    </div>
-</div>
-
-<div class="Paragraph">
-<h1 id="써드파티">써드파티</h1>
-</div>
-
-{% endcomment %}
-{% comment %}
-{% assign filtered_posts = site.posts | where_exp: "post", "post.path contains 'UnrealProject'" %}
-{% assign sorted_posts = filtered_posts | sort: "order" | reverse  %}
-<div class="Paragraph">
-<h1>테스트용 언리얼 프로젝트</h1>
-<div class="post-list-container">
-  {% for post in sorted_posts %}
-    <div class="post-list-element">
-        <a href="{{ post.url }}" class="Link">
-            <div class="post-list-image">
-	            <img src="{{ post.image | default: 'ㅁㄹ.gif' }}" alt="{{ post.title }}" style="float: right;">
-            </div>
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.description | default: post.excerpt | strip_html | truncate: 80 }}</p>
-        </a>
-    </div>
-  {% endfor %}
-</div>
-</div>
-{% endcomment %}
-
-
-<!--
-> 1. [언리얼 인벤토리 시스템 제작](UnrealProject/InventorySystem_Develop.md)
-> 1. [언리얼 어빌리티 시스템 사용/분석](UnrealProject/)
-> 2. [언리얼 현지화 시스템 사용/분석](UnrealProject/)
-> 1. [언리얼 게임 매칭 하기](UnrealProject/)
-> 1. [언리얼 게임 진행도 저장하기](UnrealProject/)
-> 1. [언리얼 UI 팁](UnrealProject/)
-> 1. [언리얼 애니메이션 팁](UnrealProject/)
-> 1. [언리얼 에셋 C++에서 사용하기](UnrealProject/)
-
-# 자체엔진 프로젝트
-> <img src="ㅁㄹ.gif" width="200" />
->
-> 1. [머리티얼 노드 에디터 제작](InHouseEngineProject/없음.md)
-> 1. [파티클 시스템 제작](InHouseEngineProject/없음.md)
-> 1. [후처리 기법 구현](InHouseEngineProject/없음.md)
-> 1. [FBX파일 임포트 파이프라인 제작](InHouseEngineProject/없음.md)
-> 1. [스키닝 구현](InHouseEngineProject/없음.md)
-> 1. [쉐도우 맵핑 구현](InHouseEngineProject/없음.md)
-> 1. [물리 기반 렌더링 구현](InHouseEngineProject/없음.md)
-> 1. [자원관리 기법](InHouseEngineProject/없음.md)
-> 1. [텍스처에 대하여](InHouseEngineProject/없음.md)
-
-# 써드파티
-> 1. [FMOD](ThirdParty/없음.md)
-> 1. [Git Hub](ThirdParty/없음.md)
-> 1. [SVN](ThirdParty/없음.md)
-
--->
