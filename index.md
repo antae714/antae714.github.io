@@ -69,6 +69,15 @@ subtitle:
 
 
 {% capture paragraph %}
+# **게임 개발 이야기**
+- **[게임인재원 텐센트 강의](2025/08/07/TencentConference.html)**
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
+
+{% capture paragraph %}
 # **F Rank Hunter**
 
 <p align="center">
@@ -83,15 +92,21 @@ subtitle:
 - **[아이템시스템 제작](2025/06/27/InventorySystem_Develop.html)**
 - **[언리얼 데이터 테이블 응용](2025/07/04/DataTableApplication)**
 - **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)**
+- **[매칭 시스템 제작](2025/06/28/Matching.html)**
 - **[UI 제작](2025/06/28/UI)**
 - **[게임 진행도 저장 시스템 제작](2025/06/28/SaveGame.html)**
 - **[현지화 구현](2025/06/28/Localize.html)**
 - **[AI 시스템 제작](2025/07/15/AI.html)**
 - **더 나은 개발환경을 위한 치트매니저**
+- **[게임 관전하기]()**
 <br><br>
 
 ## 트러블 슈팅
 - **후처리 머티리얼 해상도이슈**
+- **플레이어정보 저장시 가방 미저장이슈**
+- **어빌리티시스템 입력 태그부여이슈**
+- **작은오브젝트 플레이어 밟을시 이슈**
+- **클라이언트에서 UI를 이용한 데이터 조작**
 <br><br>
 
 
