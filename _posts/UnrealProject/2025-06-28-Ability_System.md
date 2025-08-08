@@ -19,32 +19,40 @@ AutoContents: true
 {% capture paragraph %}
 ## **1️⃣ 언리얼 게임플레이 어빌리티 시스템 (GAS)**
 
-### GAS 구성 요소 간단히 알아보기
-언리얼의 게임플레이 어빌리티 시스템(GAS)은 크게 3가지 요소로 구성됩니다.
-- **Gameplay Ability**: 캐릭터가 수행할 수 있는 행동을 정의합니다. 예를 들어 공격, 방어, 회복 등의 기능을 구현할 수 있습니다.
-- **Gameplay Effect**: 어빌리티의 결과를 정의합니다. 피해를 입히거나 상태를 변경하는 등의 효과를 표현할 수 있습니다.
-- **Gameplay Attribute**: 캐릭터의 상태나 속성을 정의합니다. 체력, 마나, 공격력 등의 데이터를 표현합니다.
-<br><br>
-C++ 관점에서 비유하면 다음과 같습니다.
-- **Gameplay Ability**: 함수 객체
-- **Gameplay Effect**: 상태변화를 위한 Get/Set 인터페이스
-- **Gameplay Attribute**: 변수
-<br>
-이 세 가지 요소를 통해 다양한 게임 콘텐츠를 모듈화하여 제작할 수 있습니다.
+### 🔍 GAS 구성 요소
+언리얼의 **Gameplay Ability System(GAS)** 은 크게 세 가지 요소로 구성됩니다.
+
+1. **Gameplay Ability**  
+   - 캐릭터가 수행할 수 있는 행동 정의  
+   - 예: 공격, 방어, 회복
+2. **Gameplay Effect**  
+   - 어빌리티의 결과 정의  
+   - 예: 피해 적용, 상태 변경
+3. **Gameplay Attribute**  
+   - 캐릭터의 상태/속성 정의  
+   - 예: 체력, 마나, 공격력
+
+**C++ 관점 비유**
+- Gameplay Ability → **함수 객체**
+- Gameplay Effect → **상태 변경용 Get/Set 인터페이스**
+- Gameplay Attribute → **변수**
+
+이 세 가지 요소를 조합하면 다양한 게임 콘텐츠를 모듈화해 제작할 수 있습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
 ## **2️⃣ UAbilitySystemComponent (ASC)**
-`UAbilitySystemComponent`는 GAS의 핵심으로, 캐릭터가 어빌리티를 실행하고 효과를 적용하는 기능을 담당합니다. 
-액터가 `IAbilitySystemInterface`를 구현하여 사용할 수 있으며, 다음과 같은 기능을 제공합니다.
-- 네트워크 리플리케이션
-- 어빌리티 실행 관리
-- 이펙트 적용 및 관리   
+`UAbilitySystemComponent` 는 GAS의 핵심으로, **캐릭터의 어빌리티 실행 및 효과 적용**을 담당합니다.
 
-이후부터는 편의상 ASC로 표기합니다.
-<br><br>
+- 사용 조건: 액터가 `IAbilitySystemInterface` 구현
+- 주요 기능
+  - 네트워크 리플리케이션
+  - 어빌리티 실행 관리
+  - 이펙트 적용 및 관리
+  
+> 이후 내용에서는 **ASC** 로 표기합니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -52,28 +60,30 @@ C++ 관점에서 비유하면 다음과 같습니다.
 
 
 {% capture paragraph %}
+
 ## **3️⃣ 게임플레이 어빌리티 (Gameplay Ability)**
-Gameplay Ability는 ASC를 통해 캐릭터에게 부여되며, 태그나 이벤트 기반으로 실행됩니다. 
-어빌리티는 즉시 실행하거나 부여 후 조건에 따라 활성화할 수 있습니다.
-<br><br>
 
-### 어빌리티 실행 정책 (`EGameplayAbilityNetExecutionPolicy`)
-어빌리티가 서버와 클라이언트 중 어디에서 실행될지 결정하는 정책입니다.
-- **LocalPredicted**: 로컬에서 요청하면 로컬과 서버 모두 실행
-- **LocalOnly**: 로컬에서만 실행
-- **ServerInitiated**: 서버에서 요청하면 로컬과 서버 모두 실행
-- **ServerOnly**: 서버에서만 실행.
-<br><br>
+- ASC를 통해 캐릭터에 부여  
+- 태그나 이벤트 기반으로 실행  
+- 즉시 실행 또는 조건부 활성화 가능
 
-### 유용한 어빌리티 태스크
-어빌리티 실행 중 특정 작업을 수행하도록 돕는 기능입니다.
-- **AbilityTask\_NetworkSyncPoint**: 네트워크 동기화 지점 설정
-- **AbilityTask\_WaitDelay**: 지정된 시간 대기
-- **AbilityTask\_WaitGameplayEvent**: 특정 게임플레이 이벤트 대기
-- **UAbilityTask\_PlayMontageAndWait**: 몽타주 애니메이션 실행 후 완료 대기
-- **AbilityTask\_WaitTargetData**: 타겟 데이터 입력 대기
-- **AbilityTask\_WaitConfirm**: 어빌리티 실행 확인 대기
-<br><br>
+### ⚙️ 실행 정책 (`EGameplayAbilityNetExecutionPolicy`)
+어빌리티의 실행 위치(서버/클라이언트)를 결정합니다.
+
+| 정책 | 설명 |
+|------|------|
+| **LocalPredicted** | 로컬 요청 시 로컬+서버 모두 실행 |
+| **LocalOnly** | 로컬에서만 실행 |
+| **ServerInitiated** | 서버 요청 시 로컬+서버 모두 실행 |
+| **ServerOnly** | 서버에서만 실행 |
+
+### 🛠️ 유용한 어빌리티 태스크
+- `AbilityTask_NetworkSyncPoint` : 네트워크 동기화 지점 설정
+- `AbilityTask_WaitDelay` : 지정 시간 대기
+- `AbilityTask_WaitGameplayEvent` : 특정 이벤트 대기
+- `UAbilityTask_PlayMontageAndWait` : 몽타주 실행 후 완료 대기
+- `AbilityTask_WaitTargetData` : 타겟 데이터 입력 대기
+- `AbilityTask_WaitConfirm` : 실행 확인 대기
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -83,11 +93,10 @@ Gameplay Ability는 ASC를 통해 캐릭터에게 부여되며, 태그나 이벤
 {% capture paragraph %}
 
 ## **4️⃣ 게임플레이 어트리뷰트 (Gameplay Attribute)**
-Gameplay Attribute는 어트리뷰트 세트를 통해 정의되고 관리됩니다. 
-세트의 초기값은 `DefaultStartingData`를 통해 설정 가능합니다. 
-어트리뷰트 값의 변경 사항은 `UAbilitySystemComponent::GetGameplayAttributeValueChangeDelegate`를 통해 구독할 수 있으며, 
-값 변경은 ASC를 통해 관리되어 서버-클라이언트 간 동기화됩니다.
-<br><br>
+- 어트리뷰트 세트를 통해 정의 및 관리
+- 초기값: `DefaultStartingData`로 설정
+- 값 변경 감지:  
+  `UAbilitySystemComponent::GetGameplayAttributeValueChangeDelegate` 사용
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -97,15 +106,15 @@ Gameplay Attribute는 어트리뷰트 세트를 통해 정의되고 관리됩니
 {% capture paragraph %}
 
 ## **5️⃣ 게임플레이 이펙트 (Gameplay Effect)**
-Gameplay Effect는 어빌리티 실행 결과로 발생하는 효과입니다. 다음과 같은 기능을 제공합니다.
-* **DurationPolicy**를 통한 지속성 설정
-- **Modifier**를 통한 어트리뷰트 값 변경 및 태그 추가/제거
-  - **즉시(Instant)**: Modifier가 어트리뷰트의 현재값에 즉시 적용됩니다.
-  - **지속시간(Duration)**: Modifier가 일정 시간 동안 어트리뷰트의 베이스값에 적용됩니다.
-  - **무제한(Infinite)**: Modifier가 제거되기 전까지 지속적으로 어트리뷰트의 베이스값에 적용됩니다.
-- **커브 테이블**을 통한 레벨 기반 효과 강도 조정
-- **게임플레이 큐 태그**로 이펙트 실행 제어
-<br><br>
+어빌리티 실행 결과로 발생하는 **효과**를 정의합니다.
+
+- **DurationPolicy** : 지속성 설정
+- **Modifier** : 어트리뷰트 값 변경 & 태그 추가/제거
+  - **즉시(Instant)** : 현재값에 즉시 적용
+  - **지속(Duration)** : 일정 시간 동안 베이스값에 적용
+  - **무제한(Infinite)** : 제거 전까지 지속 적용
+- **커브 테이블** : 레벨 기반 효과 강도 조정
+- **게임플레이 큐 태그** : 이펙트 실행 제어
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -113,11 +122,9 @@ Gameplay Effect는 어빌리티 실행 결과로 발생하는 효과입니다. �
 
 
 {% capture paragraph %}
-
 ## **6️⃣ 게임플레이 태그 (Gameplay Tag)**
-Gameplay Tag는 어빌리티, 이펙트, 어트리뷰트에 적용할 수 있는 메타데이터로 ASC가 관리합니다. 
-이를 통해 게임 로직과 실행 흐름을 유연하게 제어할 수 있습니다.
-<br><br>
+- 어빌리티, 이펙트, 어트리뷰트에 적용 가능한 메타데이터  
+- ASC가 관리하며 게임 로직과 흐름을 유연하게 제어 가능
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
