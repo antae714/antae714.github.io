@@ -60,22 +60,23 @@ APlayerController *-- ShopActionComponent : owns
 
 ```mermaid
 sequenceDiagram
-    participant PlayerAbilitySystemComponent
-    participant ABackPack
+    participant Server as Server BackPack
+    participant ASC as PlayerAbilitySystemComponent
+    participant Client as Client BackPack
 
     rect rgb(191, 223, 255)
-    Note right of PlayerAbilitySystemComponent: 실행 가능 상태
-    ABackPack -->> PlayerAbilitySystemComponent: GiveAbility( BackPackSwapItemAbility )
+    Note right of Server: 실행 가능 상태
+    Server -->> ASC: GiveAbility( BackPackSwapItemAbility )
     end
     
     rect rgb(223, 191, 255)
-    Note right of PlayerAbilitySystemComponent: 어빌리티 실행
-    PlayerAbilitySystemComponent -->> ABackPack: TryActivateAbility( BackPackSwapItemAbility )
+    Note right of ASC: 데이터 변경 요청
+    Client -->> ASC: TryActivateAbility( BackPackSwapItemAbility )
     end
     
     rect rgb(255, 191, 223)
-    Note right of PlayerAbilitySystemComponent: 실행 불가능 상태
-    ABackPack -->> PlayerAbilitySystemComponent: ClearAbility( BackPackSwapItemAbility )
+    Note right of Server: 실행 불가능 상태
+    Server -->> ASC: ClearAbility( BackPackSwapItemAbility )
     end
 ```
 
