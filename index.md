@@ -87,32 +87,23 @@ subtitle:
   헌터물 생존 게임입니다.
 </p>
 
-## 기능 구현
-- **[아이템시스템 제작](2025/06/27/InventorySystem_Develop.html)**
-- **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)**
-- **[매칭 시스템 제작](2025/06/28/Matching.html)**
-- **[UI 제작](2025/06/28/UI)**
-- **[게임 진행도 저장 시스템 제작](2025/06/28/SaveGame.html)**
-- **[현지화 구현](2025/06/28/Localize.html)**
-- **[AI 시스템 제작](2025/07/15/AI.html)**
+## 학습
+- **[게임플레이 어빌리티 시스템](2025/06/28/Ability_System.html)**
+- **[현지화 시스템](2025/06/28/Localize.html)**
+- **[언리얼 UI](2025/06/28/UI.html)**
+- **[매칭 시스템](2025/07/31/UnrealMatching.html)**
+- **게임 관전**
 - **더 나은 개발환경을 위한 치트매니저**
-- **게임 관전하기**
-<br><br>
+<br><br><br>
 
-## 트러블 슈팅
-- **후처리 머티리얼 해상도 불일치**
-- **[언리얼 데이터 테이블 경로데이터 CSV이용시 애로사항](2025/07/04/DataTableApplication)**
-- **플레이어정보 저장시 가방 액터 미저장**
-- **어빌리티시스템 클라이언트 입력 태그부여**
-- **작은 물리 오브젝트 플레이어가 밟을시 문제**
-- **클라이언트에서 UI를 이용한 서버 데이터 조작 블가능**
-- **자식액터 컴포넌트 리플리케이션 문제**
-- **클라이언트의 접속 종료시 폰삭제 문제**
-- **[버전관리툴 바이너리 컨플릭트](2025/07/17/UnrealSVN.html)**
-<br><br>
+# **기능 제작**
+- **[아이템, 인벤토리 시스템 제작](2025/06/27/InventorySystem_Develop.html)**
+- **[AI 시스템 제작](2025/07/15/AI.html)**
+- **[게임 진행도 저장 시스템 제작](2025/06/28/SaveGame.html)**
+- **[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)**
+<br><br><br>
 
-
-## 컨텐츠 작업
+# **컨텐츠 작업**
 - **곡괭이 아이템 제작**
 - **다이너마이트 아이템 제작**
 - **HP포션 아이템 제작**
@@ -126,18 +117,25 @@ subtitle:
 - **아이템 툴팁UI 제작**
 - **아이템 카트 제작**
 - **아이템 가방 제작**
-<br><br>
+<br><br><br>
 
-
-## 학습
-- **[게임플레이 어빌리티 시스템](2025/06/28/Ability_System.html)**
-<br><br>
+# **문제 해결**
+- **후처리 머티리얼 해상도 불일치**
+- **[언리얼 데이터 테이블 경로데이터 CSV이용시 애로사항](2025/07/04/DataTableApplication.html)**
+- **[플레이어정보 저장시 가방 액터 미저장](2025/08/09/SaveMissing.html)**
+- **어빌리티시스템 클라이언트 입력 태그부여**
+- **[물리 오브젝트의 의도치 않은 플랫폼 효과 개선](2025/08/09/UnintendedPhysicsPlatformEffects.html)**
+- **[오너십 없는 객체의 서버 상호작용 경로 설계](2025/08/09/ObjectsWithoutOwnership.html)**
+- **자식액터 컴포넌트 리플리케이션 문제**
+- **클라이언트의 접속 종료시 폰삭제 문제**
+- **[버전관리툴 바이너리 컨플릭트](2025/07/17/UnrealSVN.html)**
+<br><br><br>
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-# **Porion Atelier**
+# **Potion Atelier**
 <p align="center">
  <img src = "images/PorionAtelier.png" style="width: 100%;">
 </p>
@@ -145,7 +143,7 @@ subtitle:
   음
 </p>
 
-## 작업내용
+## 기능 제작
 - **[머티리얼 노드 에디터 제작](2025/07/26/MaterialEditor.html)**
 - **파티클 시스템 제작**
 - **PBR & IBL 구현**
@@ -160,7 +158,7 @@ subtitle:
 <br><br>
 
 
-## 트러블 슈팅
+## 문제 해결
 - **수많은 머티리얼 쉐이더 컴파일**
 - **ConsumeStructuredBuffer 데드락**
 <br><br>
@@ -179,11 +177,11 @@ subtitle:
  <img src = "images/2.png" style="width: 100%;">
 </p>
 
-## 작업내용
+## 기능 제작
 -  **턴제관리 시스템 제작**
 <br><br>
 
-## 트러블 슈팅
+## 문제 해결
 <br><br>
 
 ## 컨텐츠 작업
