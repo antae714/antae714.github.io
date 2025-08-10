@@ -71,7 +71,7 @@
 			secondaryBorderColor: '#000',
 		},
 		flowchart: {
-			useMaxWidth: false,
+			useMaxWidth: true,
 			htmlLabels: true
 		}
 	};
@@ -89,6 +89,7 @@
 			loader: () => fetch(url).then((res) => res.json()),
 		}))
 	);
+
 	mermaid.run({
 		nodes: document.querySelectorAll('.language-mermaid')
 	});

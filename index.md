@@ -159,7 +159,7 @@ subtitle:
 
 
 ## 문제 해결
-- **수많은 머티리얼 쉐이더 컴파일**
+- **[수많은 머티리얼 쉐이더 컴파일](2025/08/10/MaterialEditorTrouble.html)**
 - **ConsumeStructuredBuffer 데드락**
 <br><br>
 

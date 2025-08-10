@@ -52,6 +52,7 @@ APlayerController *-- ShopActionComponent : owns
 ```
 
 <br>
+<br>
 
 ### GAS 활용
 플레이어의 `UAbilitySystemComponent`에 어빌리티를 부여하고
