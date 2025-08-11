@@ -55,6 +55,7 @@ flowchart LR
 데이터 흐름은 다음과 같습니다.
 
 ``` mermaid
+%%{init: {"sequence": {"rightAngles": true}} }%%
 flowchart LR
   subgraph NodeEditor
     ED[(Editor Data)]
@@ -62,14 +63,16 @@ flowchart LR
     GBD[(Game Binary Data)]
     GA[Game Application]
   end
-
+  
   ED e1@==> |uses|MNE
-  MNE e2@==>|compiles| GBD
-  GBD e3@==>|uses| GA
+  MNE e2@==> |saves|ED
+  MNE e3@==>|compiles| GBD
+  GBD e4@==>|uses| GA
   
   e1@{ animate: true, animation: slow }
   e2@{ animate: true, animation: slow }
   e3@{ animate: true, animation: slow }
+  e4@{ animate: true, animation: slow }
 ```
 
 추가로, 타 작업자 요청으로 **맵 에디터 내에서 머티리얼 에디터를 패널 형태로 호출**할 수 있도록 임베디드 UI로 지원했습니다.
