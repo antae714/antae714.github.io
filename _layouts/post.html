@@ -17,6 +17,13 @@ layout: default
 			{% endfor %}
 		</ol>
 		{% endif %}
+
+		{% if page.TitleVideo %}
+		<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
+			<source src="{{ page.TitleVideo | relative_url }}" type="video/mp4">
+		</video>
+		{% endif %}
+
 	</div>
 
 	{{ content }}

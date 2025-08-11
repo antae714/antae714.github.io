@@ -109,6 +109,15 @@ AutoContents: true
 {% assign other_post = site.posts | where: "title", "게임 어빌리티 시스템 사용/분석" | first %}
 <a class="Link" href="{{ other_post.url | relative_url }}">{{ other_post.title }}</a>
 
+
+
+<!--
+일반형, 투척형, 설치형 구현했던거
+-->
+
+
+
+
 <!-- 
 {% comment %}
 ------------------------------------------------------
