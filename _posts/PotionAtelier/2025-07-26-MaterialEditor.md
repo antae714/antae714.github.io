@@ -72,7 +72,7 @@ flowchart LR
   e3@{ animate: true, animation: slow }
 ```
 
-추가로, 타 팀 요청으로 **맵 에디터 내에서 머티리얼 에디터를 패널 형태로 호출**할 수 있도록 임베디드 UI로 지원했습니다.
+추가로, 타 작업자 요청으로 **맵 에디터 내에서 머티리얼 에디터를 패널 형태로 호출**할 수 있도록 임베디드 UI로 지원했습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
