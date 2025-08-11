@@ -84,7 +84,7 @@ subtitle:
  <img src = "images/CoverImage.png" style="width: 100%;">
 </p>
 <p style="text-align: right;">
-  헌터물 생존 게임입니다.
+  멀티플레이 헌터물 3D생존 게임입니다.
 </p>
 
 ## 학습
@@ -140,7 +140,7 @@ subtitle:
  <img src = "images/PorionAtelier.png" style="width: 100%;">
 </p>
 <p style="text-align: right;">
-  음
+  탑다운뷰 3D타이쿤 게임입니다.
 </p>
 
 ## 기능 제작
