@@ -12,22 +12,15 @@ TitleVideo: "/assets/MyLittleStorage/Temp.mp4"
 ---
 
 
-
-
-
 {% capture paragraph %}
 ## **초기 목표**
-모델링툴에서 사용하는 쉐이더코드와 게임엔진의 쉐이더코드, 후처리 절차가 다르기에
-게임엔진에서는 모델링툴과	동일한 색이표현되지 않는 문제를 알게 되었습니다.  
-아트작업자가 게임엔진에서 원하는 색표현을 위해, 
-의도된 표현을 정확히 표현하기위해 꼭 필요한 기술이라 생각되어 제작하게 되었습니다.
 
-오픈소스 라이브러리를 찾아보았으나 `MaterialX`는 OpenGL기반으로 제작되어있어
-DirectX기반의 엔진에서 사용하기에는 무리가 있어 직접 제작하게 되었습니다.
+모델링 툴과 게임 엔진은 **셰이더 코드·후처리·감마 처리**가 달라 동일 색을 재현하기 어렵습니다. 
+아티스트가 의도한 색을 **엔진 내에서도 동일하게** 표현하기 위해 머티리얼 노드 에디터를 제작했습니다.
 
-언리얼 엔진처럼 `MaterialX`의 포맷을 읽어서 엔진에맞게 생성할수도있지만
-그전에 머티리얼관련 기술이 엔진에 있어야 이식할수 있다고 생각햇기떄문에
-머티리얼 노드 에디터를 제작하게 되었습니다.
+오픈소스 대안으로 `MaterialX`를 검토했지만 **OpenGL 기반**이라 DirectX 기반 엔진에 바로 적용하기 어려웠습니다. 
+언리얼처럼 `MaterialX` 포맷을 읽어 **엔진 규격으로 변환**하는 방안도 검토했으나, 
+그 전에 엔진 내부에 **머티리얼 노드 체계와 코드 생성 기술**이 먼저 있어야 한다고 판단하여 **직접 제작**을 진행했습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -35,9 +28,8 @@ DirectX기반의 엔진에서 사용하기에는 무리가 있어 직접 제작�
 {% capture paragraph %}
 ## **설계**
 
-소스엔진의 Hammer에디터처럼
-에디터 데이터를 컴파일하는 과정을거쳐 게임에서 쓸수있는 바이너리데이터로 변환하는 툴을 만드는것이 목표였습니다.
-하지만 렌더링에 관련된 라이브러리가 일치해야 같은 결과를 얻을수있기에 렌더링 관련 코드를 라이브러리로 분리하였습니다.
+소스 엔진의 Hammer 에디터처럼, **에디터 데이터 → 바이너리 게임 데이터**로 컴파일하는 툴체인을 목표로 했습니다. 
+렌더 일치성을 위해 **렌더링 코드를 공유 라이브러리**로 분리했습니다.
 
 ``` mermaid
 flowchart LR
@@ -60,6 +52,7 @@ flowchart LR
 
 ```
 
+데이터 흐름은 다음과 같습니다.
 
 ``` mermaid
 flowchart LR
@@ -79,13 +72,15 @@ flowchart LR
   e3@{ animate: true, animation: slow }
 ```
 
+추가로, 타 팀 요청으로 **맵 에디터 내에서 머티리얼 에디터를 패널 형태로 호출**할 수 있도록 임베디드 UI로 지원했습니다.
+
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-## **노드 에디터로 픽셀쉐이더 생성하는방법**
+## **노드 에디터 → 픽셀 셰이더 생성**
 
-기존 픽셀 쉐이더 스테이지에서 사용되는 데이터를 `GBufferMaterial`하나의 구조체로 모아서
+픽셀 셰이더에서 사용하는 주요 항목을 `GBufferMaterial` 구조체로 묶고, **노드 그래프 → HLSL 문자열**을 생성해 채워 넣습니다.
 
 ``` hlsl
 #ifndef __GBUFFERMATERIAL_HLSL__
@@ -136,8 +131,8 @@ GBufferMaterial GetDefaultGBufferMaterial(PS_INPUT input)
 #endif // __GBUFFERMATERIAL_HLSL__
 ```
 
-<br>
-`GBufferMaterial` 구조체를 어떻게 구성할지를 텍스트 생성하게 하였습니다.
+<br><br>  
+템플릿에 들어갈 **가변 슬롯**은 노드 그래프에서 생성합니다. 
 
 {% raw %}
 ``` hlsl
@@ -178,9 +173,8 @@ GBufferMaterial GetCustomGBufferMaterial(PS_INPUT input)
 ```
 {% endraw %}
 
-### 노드 에디터로 문자열 생성
+### **슬롯 채우기 규칙**
 포맷 슬롯에 들어갈 문자열을 **노드 기반**으로 생성합니다.
-
 #### 노드 종류 (0–4)
 
 | ID | 이름                         | 역할(한 줄 요약)                          |
@@ -199,8 +193,8 @@ GBufferMaterial GetCustomGBufferMaterial(PS_INPUT input)
 
 #### 기록(출력) 규칙
 
-* **디테일 패널에서 설정:** `0(CustomValue)`, `1(Define)`
-* **최종 노드 핀에 연결되어 있을 때만 기록:** `2(RegisterValue)`, `3(Declaration LocalValue)`, `4(Execution)`
+* 디테일 패널에서 직접 설정되어 **항상 기록**: `0(CustomValue)`, `1(Define)`
+* **최종 출력 핀과 연결된 경우에만 기록**: `2(RegisterValue)`, `3(Declaration LocalValue)`, `4(Execution)`
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -208,8 +202,8 @@ GBufferMaterial GetCustomGBufferMaterial(PS_INPUT input)
 
 {% capture paragraph %}
 
-## 노드 팩토리 제작
-노드를 스트링으로 생성하여 **에디터용 데이터**로 **저장, 로드**할수있도록 제작하였습니다.
+## **노드 팩토리 & 직렬화**
+노드를 **문자열로 직렬화**하여 에디터 데이터에 **저장/로드**할 수 있도록 팩토리를 구성했습니다.
 
 <br><br>
 
@@ -265,11 +259,9 @@ GBufferMaterial GetCustomGBufferMaterial(PS_INPUT input)
 
 
 {% capture paragraph %}
-
-### 에디터 작업시 필수사항
-에디터제작 작업은 사용자가 작업을 하면서 병렬적으로 개발이 진행되어야 한다는것을 알게되었습니다.
-에디터에 아무리 많은 기능이 있다고 해도 사용자가 다른기능을 원하면 도로묵이되며 시간이라는 비용을 다른곳에 쓴꼴이 됩니다.
-
+## **에디터 제작 시 배운 점**
+* 기능을 많이 넣는 것보다, **실사용 흐름에서 꼭 필요한 것**부터 병렬적으로 개발하는 편이 효율적입니다.
+* 에디터 제작은 **사용자 피드백**을 반영하여 **점진적으로 개선**하는 것이 중요합니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
