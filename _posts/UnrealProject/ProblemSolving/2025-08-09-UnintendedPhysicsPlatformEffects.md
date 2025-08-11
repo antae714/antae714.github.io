@@ -14,7 +14,11 @@ AutoContents: false
 플레이어가 이를 플랫폼처럼 인식하여 물리 상호작용 중 **위치·회전이 갑작스럽게 이동하는** 현상이 발생했습니다.  
 이는 플레이 감각과 조작 안정성을 저해하는 문제였습니다.
 
-![플랫폼 효과 일어나는 움짤]()
+<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
+  <source src="{{ '/assets/MyLittleStorage/Platform.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
@@ -26,7 +30,13 @@ AutoContents: false
 그러나 이 방식은 부작용이 있었는데, **플레이어가 이동 중 물리 오브젝트를 밀어내지 못하는 문제**가 발생했습니다.  
 즉, 플랫폼 효과는 사라졌지만 물리 상호작용이 손실되었습니다.  
 
-![오브젝트랑 상호작용 안하는 움짤]()
+
+<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
+  <source src="{{ '/assets/MyLittleStorage/NoPlatform.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+
+
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
@@ -43,7 +53,10 @@ AutoContents: false
 이 방식으로 **의도치 않은 플랫폼 효과를 제거하면서도**
 물리 오브젝트와의 자연스러운 상호작용을 유지할 수 있었습니다.
 
-![오브젝트 밀어내는 움짤]()
+<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
+  <source src="{{ '/assets/MyLittleStorage/Physics.mp4' | relative_url }}" type="video/mp4">
+</video>
+
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
