@@ -6,6 +6,7 @@ layout: post
 image: "images/UObjectReplicated.png"
 hover_image: "images/UObjectReplicated_Hover.png"
 subtitle: 
+ - "언리얼 플러그인"
  - "언리얼 리플리케이션"
  - "FastArraySerializer"
  - "어빌리티 시스템사용"
@@ -13,6 +14,15 @@ published: true
 order: 10002
 AutoContents: true
 ---
+
+{% capture paragraph %}
+# **언리얼 플러그인**
+인벤토리 시스템을 제작하면서 다른 게임에서 사용할수 있는 부분은 **언리얼 플러그인**으로 분리하였습니다.
+
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
 
 {% capture paragraph %}
 # **언리얼 리플리케이션**

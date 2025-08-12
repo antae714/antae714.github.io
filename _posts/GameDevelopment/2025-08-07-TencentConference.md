@@ -31,20 +31,11 @@ AutoContents: false
 
 
 {% capture paragraph %}
-## **하나의 메세지**
-
-
-
-
-{% endcapture %}
-{% include paragraph.html content=paragraph %}
-
-
-{% capture paragraph %}
 ## **짐작하지말고 질문해라**
+내가 이해한것이 잘못 이해한것일수도 있습니다.
+만약 잘못이해하고 작업을진행했다면 해당 작업물은 다시 작업해야하는 경우가 생깁니다.
 
-
-
+그리고 제대로 이해했더라도 한번더 질문함으로써 더좋은 방식을 생각할 시간을 가지게 됩니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
