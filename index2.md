@@ -125,7 +125,7 @@ subtitle:
 
 
 
->## **[에디터 제작](2025/07/26/MaterialEditor.html)**
+>## **[에디터/툴 제작](2025/07/26/MaterialEditor.html)**
 >![사진]()  
 >![사진]()  
 >![사진]()  

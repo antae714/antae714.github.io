@@ -140,6 +140,8 @@ subtitle:
 
 {% endcomment %}
 
+# **작업내용**
+
 >## **[인벤토리, 아이템 시스템](2025/06/27/InventorySystem_Develop.html)**
 >![사진]()  
 >![사진]()  
@@ -189,7 +191,7 @@ subtitle:
 
 
 
->## **[에디터 제작](2025/07/26/MaterialEditor.html)**
+>## **[에디터/툴 제작](2025/07/26/MaterialEditor.html)**
 >![사진]()  
 >![사진]()  
 >![사진]()  
