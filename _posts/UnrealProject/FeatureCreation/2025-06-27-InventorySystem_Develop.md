@@ -19,7 +19,7 @@ subtitle:
  - "오너십 없는 객체의 서버 상호작용 경로 설계"
 published: true
 order: 10002
-AutoContents: true
+AutoContents: false
 ---
 
 {% capture paragraph %}
