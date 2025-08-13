@@ -68,13 +68,14 @@ subtitle:
 {% include paragraph.html content=paragraph %}
 
 
-
+{% comment %}
 {% capture paragraph %}
 # **게임 개발 이야기**
 >- **[게임인재원 텐센트 강의](2025/08/07/TencentConference.html)**
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
+{% endcomment %}
 
 
 
