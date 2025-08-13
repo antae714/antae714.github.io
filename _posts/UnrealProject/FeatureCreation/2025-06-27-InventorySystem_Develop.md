@@ -10,6 +10,13 @@ subtitle:
  - "언리얼 리플리케이션"
  - "FastArraySerializer"
  - "어빌리티 시스템사용"
+ - "📄 CSV 기반 데이터테이블의 에셋 경로 불편함 해결"
+ - "아이템 물리 오브젝트의 의도치 않은 플랫폼 효과 개선"
+ - "파괴 가능한 프랍"
+ - "플레이어 상호작용 아이템 카트"
+ - "플레이어 상호작용 아이템 가방"
+ - "가방 저장 안되는 문제"
+ - "오너십 없는 객체의 서버 상호작용 경로 설계"
 published: true
 order: 10002
 AutoContents: true
@@ -115,10 +122,51 @@ AutoContents: true
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
-### 🔎 더보기
-{% assign other_post = site.posts | where: "title", "게임 어빌리티 시스템 사용/분석" | first %}
-<a class="Link" href="{{ other_post.url | relative_url }}">{{ other_post.title }}</a>
 
+
+{% capture paragraph %}
+# **📄 CSV 기반 데이터테이블의 에셋 경로 불편함 해결**
+2025-07-04-DataTableApplication
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+# **아이템 물리 오브젝트의 의도치 않은 플랫폼 효과 개선**
+2025-08-09-UnintendedPhysicsPlatformEffects
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+# **파괴 가능한 프랍**
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+# **플레이어 상호작용 아이템 카트**
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+# **플레이어 상호작용 아이템 가방**
+
+### 가방 저장 안되는 문제
+
+### 오너십 없는 객체의 서버 상호작용 경로 설계
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
+
+### 🔎 더보기
+[게임 어빌리티 시스템 사용/분석](2025/06/28/Ability_System.html)  
+[언리얼 UI](2025/06/28/UI.html)  
+[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)  
+더 나은 개발환경을 위한 치트매니저  
 
 
 <!--
