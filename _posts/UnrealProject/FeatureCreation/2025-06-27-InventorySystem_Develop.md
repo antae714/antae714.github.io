@@ -125,15 +125,86 @@ AutoContents: false
 
 
 {% capture paragraph %}
+
 # **📄 CSV 기반 데이터테이블의 에셋 경로 불편함 해결**
-2025-07-04-DataTableApplication
+아이템의 정보들을 구성하기위해 기획자가 CSV로 작성한 데이터를 **데이터테이블**로 읽어와 관리할수있게 하였습니다.  
+하지만 `UClass`나 `UObject`같은 데이터를 CSV로 편집할때,  
+경로(예: `/Game/...`) 형식으로 노출되기 때문에 편집이 번거롭고 **CSV 편집의 장점이 퇴색**듭니다.
+
+<br>
+
+### **😊 ID → 경로 매핑 방식**
+이 문제를 해결하기 위해 기획자는 경로를 입력하는것이 아니라 ID를 입력하여 **ID와 에셋 경로를 연결하는 맵**을 만들었습니다.
+``` cpp
+TMap<FName, FSoftObjectPath> AssetPathMap;
+```
+
+맵은 쉽게 접근가능하며 싱글턴같은 효과를 내야하기때문에 `UDeveloperSettings`를 사용하였습니다.  
+덕분에 기획자가 CSV를 편집할 때는 ID만 입력하면 되고,
+맵에서 ID에 해당하는 경로를 찾아 UClass/UObject로 변환할 수 있습니다.
+
+<br>
+
+### 수동 매핑의 문제점
+그러나 이 방식에는 단점이 있습니다.
+
+- 오타나 경로 누락 등 실수가 발생하기 쉽다.
+- 에셋 변경 시마다 수동으로 동기화해야 한다.
+
+<br>
+
+### 자동 매핑으로 해결
+이 문제를 해결하기 위해 **에셋 레지스트리**를 활용한 자동 매핑 방식을 도입했습니다.
+
+`ID == 에셋 이름`이라는 규칙을 정의하였고
+`AssetRegistry`를사용하여 이름이 일치하는 에셋을 검색해 자동 매핑하였습니다.
+`AssetRegistry`검색시 `AssetRegistrySearchable`프로퍼티를 이용할수 있었지만,
+텍스처, 메시 등 비오브젝트 에셋에는 적용되지 않기 때문에 위와 같은 방법을 사용했습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
 # **아이템 물리 오브젝트의 의도치 않은 플랫폼 효과 개선**
-2025-08-09-UnintendedPhysicsPlatformEffects
+
+작은 물리 오브젝트(파편, 디스트럭션 파티클 등) 위를 밟거나 접촉할 경우,  
+플레이어가 이를 플랫폼처럼 인식하여 물리 상호작용 중 **위치·회전이 갑작스럽게 이동하는** 현상이 발생했습니다.  
+이는 플레이 감각과 조작 안정성을 저해하는 문제였습니다.
+
+<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
+  <source src="{{ '/assets/MyLittleStorage/Platform.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+<br>
+
+## **콜리전 채널 변경**
+플레이어가 작은 물리 오브젝트 위에 설 수 없도록, 해당 오브젝트의 콜리전 채널을 변경했습니다.  
+그러나 이 방식은 부작용이 있었는데, **플레이어가 이동 중 물리 오브젝트를 밀어내지 못하는 문제**가 발생했습니다.  
+즉, 플랫폼 효과는 사라졌지만 물리 상호작용이 손실되었습니다.  
+
+<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
+  <source src="{{ '/assets/MyLittleStorage/NoPlatform.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+
+<br>
+
+## **전용 물리 캡슐 콜리전 추가**
+플레이어의 이동 처리는 기본적으로 **캡슐 콜리전**을 사용합니다.  
+이를 응용하여, 이동용 캡슐과 별도로 **물리 전용 캡슐 콜리전**을 추가하였습니다.  
+
+- **이동용 캡슐** → 작은 물리 오브젝트와의 플랫폼 충돌 무시
+- **물리 전용 캡슐** → 오브젝트 밀기, 파편 반응 등 물리 상호작용 전담
+
+이 방식으로 **의도치 않은 플랫폼 효과를 제거하면서도**
+물리 오브젝트와의 자연스러운 상호작용을 유지할 수 있었습니다.
+
+<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
+  <source src="{{ '/assets/MyLittleStorage/Physics.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+<br>
+
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -161,39 +232,3 @@ AutoContents: false
 {% include paragraph.html content=paragraph %}
 
 
-
-### 🔎 더보기
-[게임 어빌리티 시스템 사용/분석](2025/06/28/Ability_System.html)  
-[언리얼 UI](2025/06/28/UI.html)  
-[카오스디스트럭션 & 피직스필드를 이용한 파괴 시스템 제작](2025/07/08/StoneDestroy.html)  
-더 나은 개발환경을 위한 치트매니저  
-
-
-<!--
-일반형, 투척형, 설치형 구현했던거
--->
-
-
-
-
-<!-- 
-{% comment %}
-------------------------------------------------------
-{% capture paragraph %}
-## **제목**
-<br><br>
-
-### 배경  
-<br><br>
-
-### 문제 인식  
-<br><br>
-
-### 문제 해결 
-<br><br>
-
-{% endcapture %}
-{% include paragraph.html content=paragraph %}
-------------------------------------------------------
-{% endcomment %}
--->
