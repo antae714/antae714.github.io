@@ -20,6 +20,7 @@ subtitle:
 published: true
 order: 10002
 AutoContents: false
+mermaid: true
 ---
 
 {% capture paragraph %}
@@ -211,22 +212,98 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 
 {% capture paragraph %}
 # **파괴 가능한 프랍**
-
-{% endcapture %}
-{% include paragraph.html content=paragraph %}
-
-{% capture paragraph %}
-# **플레이어 상호작용 아이템 카트**
+**단계적으로 파괴**되어 마나석 아이템을 드랍하는 마나석 프랍을 제작하였습니다.  
+체력에따라 단계적으로 파괴되기위해서 **프랙처, 피직스 필드**를 사용하였습니다.  
+피직스 필드를 설정하여 파괴시 파편이 튕겨나가도록 하였고,  
+해당 피직스 필드에서 마나석 아이템을 드랍하도록 설정하였습니다.  
+![사진]()
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
 # **플레이어 상호작용 아이템 가방**
+플레이어가 착용, 사용 가능한 가방을 제작하였습니다.  
+플레이어의 등소켓에 액터를 부착했으며 부착, 미부착합니다.  
+상호작용시 인벤토리컴포넌트를 조작할 UI를 상호작용한 플레이어에게 뛰워줍니다.
 
-### 가방 저장 안되는 문제
+<br>
 
-### 오너십 없는 객체의 서버 상호작용 경로 설계
+## **가방 저장 안되는 문제**
+`APlayerState`의 인벤토리컴포넌트는 저장이 잘되었지만 가방 액터는 저장이 되지않는 이슈가 발생하였습니다.
+디버깅 결과 `APlayerState::SeamlessTravel`시 PS는 살아있지만 다른 액터들이 `Destroy`되어 가방 액터가 사라지는 현상이었습니다.
+이 문제를 해결하기 위해 심리스 트레블이 아닌 맵을 전환하기전에 명시적으로 모든 PS를 저장하도록 하였고
+블루프린트함수 라이브러리로도 제작하여 다른 PS에서도 사용할 수 있도록 하였습니다.
+
+<br>
+
+## **오너십 없는 가방 데이터 다루기**
+가방의 인벤토리UI에서 드래그앤 드랍으로 플레이어 인벤토리로 이동시키는건 상관없지만,
+클라이언트에서 가방정리에 필요한 인벤토리 컴포넌트의 서버RPC함수가 오너십문제로 서버로 전달되지 않는 문제가생겨서
+플레이어 컨트롤러가 가방정리에관한 RPC함수를 포함해야했습니다.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as Client
+    participant Net as UE 네트워크 레이어
+    participant S as Server
+
+    C->>Net: ServerRPC 호출 시도
+    alt 오너십 있음
+        Net->>S: RPC 패킷 전송
+        S->>S: RPC 실행
+    else 오너십 없음
+        Net--xS: 전송 차단
+        Note right of Net: 소유권 없음 → RPC 호출 불가
+    end
+
+```
+
+
+### Server RPC를 모듈화
+하지만 다른 프랍, 프랍에대한UI가 많아지다보니 플레이어컨트롤러가 너무많은 기능을포함해서
+RPC함수만 모아둔 컨트롤러 컴포넌트로 분리하였습니다.
+
+```mermaid
+classDiagram
+BackPackActionComponent: +Server_BackPackSwapItem()
+ShopActionComponent: +Server_BuyItem()
+ShopActionComponent: +Server_SellItem()
+
+APlayerController *-- BackPackActionComponent : owns
+APlayerController *-- ShopActionComponent : owns
+```
+
+
+### GAS 활용
+플레이어의 `UAbilitySystemComponent`에 어빌리티를 부여하고
+어빌리티 **호출 정책을 `LocalPredicted`**로 설정하여
+클라이언트에서 어빌리티를 실행하여 서버에서 반영하도록 할 수 있습니다.
+
+
+```mermaid
+sequenceDiagram
+    participant Server as Server BackPack
+    participant ASC as PlayerAbilitySystemComponent
+    participant Client as Client BackPack
+
+    rect rgb(191, 223, 255)
+    Note right of Server: 실행 가능 상태
+    Server -->> ASC: GiveAbility( BackPackSwapItemAbility )
+    end
+    
+    rect rgb(223, 191, 255)
+    Note right of ASC: 데이터 변경 요청
+    Client -->> ASC: TryActivateAbility( BackPackSwapItemAbility )
+    end
+    
+    rect rgb(255, 191, 223)
+    Note right of Server: 실행 불가능 상태
+    Server -->> ASC: ClearAbility( BackPackSwapItemAbility )
+    end
+```
+
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
