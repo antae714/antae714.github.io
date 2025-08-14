@@ -110,11 +110,36 @@ AutoContents: true
 
 - **DurationPolicy** : 지속성 설정
 - **Modifier** : 어트리뷰트 값 변경 & 태그 추가/제거
+- **커브 테이블** : 레벨 기반 효과 강도 조정
+- **게임플레이 큐 태그** : 이펙트 실행 제어  
+
+<br><br>
+
+### **GEComponents**
+`GEComponents`는 이펙트의 구성 요소로, 이펙트에 추가적으로 적용할 수 있는 기능을 제공합니다.
+
+
+### **Modifier**
+모디파이어는 지속시간 정책에 따라 수정하는 방법이 달라집니다.
+**DurationPolicy**에 따른 모디파이어 적용 방식은 다음과 같습니다.
   - **즉시(Instant)** : 현재값에 즉시 적용
   - **지속(Duration)** : 일정 시간 동안 베이스값에 적용
-  - **무제한(Infinite)** : 제거 전까지 지속 적용
-- **커브 테이블** : 레벨 기반 효과 강도 조정
-- **게임플레이 큐 태그** : 이펙트 실행 제어
+  - **무제한(Infinite)** : 제거 전까지 지속 적용  
+
+방식, 수치또한 다양하게 설정할 수 있습니다.
+수정방식은 다음과 같습니다.
+  - **Add(Base)** : 현재값에 추가
+  - **Multiply** : 현재값에 곱하기
+  - **Add(Final)** : 마지막값에 추가
+  - **Override** : 현재값을 새로운 값으로 대체
+
+수치는 다음과 같이 설정할 수 있습니다.
+  - **Scalable Float** : 단순수치
+  - **Attribute Based** : 어트리뷰트 값 참조
+  - **Custom Calculation** : 사용자 정의 계산식 사용
+  - **Set by Caller** : 호출 시 값 설정
+
+수치에 추가적으로 커브 테이블을 사용하여 레벨에 따라 효과를 조정할 수 있습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -129,6 +154,14 @@ AutoContents: true
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
+
+{% capture paragraph %}
+## **요약**
+GAS는 거창한게 아니라 유연한 구조로 게임 콘텐츠를 모듈화하는 시스템입니다.
+
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
 
 
 <!-- 
