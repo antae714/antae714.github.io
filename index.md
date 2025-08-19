@@ -11,6 +11,8 @@ subtitle:
 ---
 
 
+
+
 {% capture paragraph %}
   
 <img src="images/ProfileImage2.png" 
@@ -44,9 +46,9 @@ subtitle:
 # **F Rank Hunter**
 언리얼엔진을 사용한 멀티플레이 헌터물 3D생존 게임입니다.  
 
-
   </div>
   <div style="flex: 1;">
+
 <p align="center">
  <img src = "images/CoverImage.png" style="width: 100%;">
 </p>
@@ -55,25 +57,24 @@ subtitle:
 </div>
 
 
-
-
-# **작업내용**
-
->## **[인벤토리, 아이템 시스템](2025/06/27/InventorySystem_Develop.html)**
+>## **인벤토리, 아이템 시스템**
+> [자세히 보기](2025/06/27/InventorySystem_Develop.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 
->## **[AI 시스템](2025/07/15/AI.html)**
+>## **AI 시스템**
+> [자세히 보기](2025/07/15/AI.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 
->## **[매칭 시스템](2025/07/31/UnrealMatching.html)**
+>## **매칭 시스템**
+> [자세히 보기](2025/07/31/UnrealMatching.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -87,7 +88,8 @@ subtitle:
 >![사진]()  
 >![사진]()  
 
->## **[게임 진행도 저장 시스템](2025/06/28/SaveGame.html)**
+>## **게임 진행도 저장 시스템**
+> [자세히 보기](2025/06/28/SaveGame.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -98,17 +100,28 @@ subtitle:
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
+
+<div style="display: flex;" align="center">
+  <div style="flex: 1;">
+
+# 팀프로젝트
 # **Potion Atelier**
+자체엔진 탑다운뷰 3D 타이쿤 게임입니다.
+
+  </div>
+  <div style="flex: 1;">
+
 <p align="center">
  <img src = "images/PorionAtelier.png" style="width: 100%;">
 </p>
-<p style="text-align: right;">
-  탑다운뷰 3D 타이쿤 게임입니다.
-</p>
+
+  </div>
+</div>
 
 
 
->## **[에디터/툴 제작](2025/07/26/MaterialEditor.html)**
+>## **에디터/툴 제작**
+> [자세히 보기](2025/07/26/MaterialEditor.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -116,7 +129,8 @@ subtitle:
 <br>
 
 
->## **[그래픽스 렌더링 엔진 제작](2025/08/19/GrapicsRendering.html)**
+>## **그래픽스 렌더링 엔진 제작**
+> [자세히 보기](2025/08/19/GrapicsRendering.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -127,15 +141,27 @@ subtitle:
 
 {% capture paragraph %}
 
+<div style="display: flex;" align="center">
+  <div style="flex: 1;">
+
+# 팀프로젝트
 # **Rail Way To Hell**
+D2D 퍼즐 게임입니다.
+
+  </div>
+  <div style="flex: 1;">
+
 <p align="center">
  <img src = "images/2.png" style="width: 100%;">
 </p>
-<p style="text-align: right;">
-  D2D 퍼즐 게임입니다.
-</p>
 
->## **[턴제관리 시스템 제작](2025/08/19/TurnManager.html)**
+  </div>
+</div>
+
+
+
+>## **턴제관리 시스템 제작**
+> [자세히 보기](2025/08/19/TurnManager.html){: .markdown-Link }  <br>  
 >![사진]() 
 <br>
 
@@ -147,7 +173,25 @@ subtitle:
 
 {% capture paragraph %}
 
-# **언리얼 TPS 게임**
+<div style="display: flex;" align="center">
+  <div style="flex: 1;">
+
+# 팀프로젝트
+# **Project Reload**
+언리얼 TPS 게임입니다.
+
+  </div>
+  <div style="flex: 1;">
+
+<p align="center">
+ <img src = "images/image6.png" style="width: 100%;">
+</p>
+
+  </div>
+</div>
+
+
+
 
 >## **애니메이션**
 >![FSM]()  
@@ -174,9 +218,9 @@ subtitle:
 # **개인 프로젝트**
 
 >## **유니티 마크 인벤토리**
->![UXML]()  
->![ScriptableObject]()
-
+> ![UXML](images/image7.png){: style="max-width: 100%; height: auto;" }
+> ![ScriptableObject]()  
+> ![Linq]()
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
