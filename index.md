@@ -10,44 +10,9 @@ subtitle:
   - "써드파티"
 ---
 
-{% comment %}
 
-<video width="640" height="360" autoplay loop muted>
-  <source src="/assets/MyLittleStorage/AA.mp4" type="video/mp4">
-  브라우저가 video 태그를 지원하지 않거나 MKV 포맷을 지원하지 않습니다.
-</video>
-
-{% endcomment %}
-
-
-<!-- 팝업 본체 -->
-<div class="popup-overlay" id="popup" onclick="closePopup()">
-<div class="popup-content" onclick="event.stopPropagation()">
-<!-- iframe wrapper -->
-<div class="iframe-wrapper">
-<!-- 우측 상단 버튼 -->
-<div class="popup-buttons">
-<button onclick="expandPopup()" title="전체 페이지로 이동">🗖</button>
-<button onclick="closePopup()" title="닫기">🗙</button>
-</div>
-<!-- 실제 iframe -->
-<iframe id="popup-iframe" src=""></iframe>
-</div>
-</div>
-</div>
-
-{% comment %}
-<a href="#" class="popup-link"  onclick="openPopup(this)" data-url="2025/06/28/Ability_System.html">팝업으로 열기</a>
-
-{% endcomment %}
-
-
-<a id="소개"></a>
 {% capture paragraph %}
   
-  
-
-
 <img src="images/ProfileImage2.png" 
      width="300" height="300"
      style="border-radius: 50%; border: 5px solid white; " />
@@ -69,14 +34,28 @@ subtitle:
 
 
 {% capture paragraph %}
-# **F Rank Hunter**
 
+
+
+<div style="display: flex;" align="center">
+  <div style="flex: 1;">
+
+# 팀프로젝트
+# **F Rank Hunter**
+언리얼엔진을 사용한 멀티플레이 헌터물 3D생존 게임입니다.  
+
+
+  </div>
+  <div style="flex: 1;">
 <p align="center">
- <img src = "images/CoverImage.png" style="width: 50%;">
+ <img src = "images/CoverImage.png" style="width: 100%;">
 </p>
-<p style="text-align: right;">
-  멀티플레이 헌터물 3D생존 게임입니다.
-</p>
+
+  </div>
+</div>
+
+
+
 
 # **작업내용**
 
@@ -137,7 +116,7 @@ subtitle:
 <br>
 
 
->## **그래픽스 렌더링 엔진 제작**
+>## **[그래픽스 렌더링 엔진 제작](2025/08/19/GrapicsRendering.html)**
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -156,10 +135,49 @@ subtitle:
   D2D 퍼즐 게임입니다.
 </p>
 
->## **턴제관리 시스템 제작**
+>## **[턴제관리 시스템 제작](2025/08/19/TurnManager.html)**
+>![사진]() 
 <br>
 
  
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
+
+
+{% capture paragraph %}
+
+# **언리얼 TPS 게임**
+
+>## **애니메이션**
+>![FSM]()  
+>![HandIK]()  
+>![FootIK]()  
+>![리타겟]()  
+<br>
+
+
+>## **엄폐 시스템**
+>![실패 경험]()  
+>![시스템 전반 매커니즘]()  
+>![엄폐경로 추적]()  
+
+ 
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
+{% capture paragraph %}
+
+# **개인 프로젝트**
+
+>## **유니티 마크 인벤토리**
+>![UXML]()  
+>![ScriptableObject]()
+
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
