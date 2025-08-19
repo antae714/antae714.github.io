@@ -11,6 +11,8 @@ subtitle:
 ---
 
 
+
+
 {% capture paragraph %}
   
 <img src="images/ProfileImage2.png" 
@@ -60,7 +62,8 @@ subtitle:
 # **작업내용**
 
 >## **인벤토리, 아이템 시스템**
->[자세히 보기](2025/06/27/InventorySystem_Develop.html)  <br>  
+> <a href="/2025/06/27/InventorySystem_Develop.html" style="color:blue;">자세히 보기</a>  
+> <br>
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -68,7 +71,8 @@ subtitle:
 >![사진]()  
 
 >## **AI 시스템**
->[자세히 보기](2025/07/15/AI.html)  <br>  
+> <a href="/2025/07/15/AI.html" style="color:blue;">자세히 보기</a>  
+> <br>
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -114,7 +118,9 @@ subtitle:
 
 
 
->## **[에디터/툴 제작](2025/07/26/MaterialEditor.html)**
+>## **에디터/툴 제작**
+> <a href="/2025/07/26/MaterialEditor.html" style="color:blue;">자세히 보기</a>  
+> <br>
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -122,7 +128,9 @@ subtitle:
 <br>
 
 
->## **[그래픽스 렌더링 엔진 제작](2025/08/19/GrapicsRendering.html)**
+>## **그래픽스 렌더링 엔진 제작**
+> <a href="/2025/08/19/GrapicsRendering.html" style="color:blue;">자세히 보기</a>  
+> <br>
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -141,7 +149,9 @@ subtitle:
   D2D 퍼즐 게임입니다.
 </p>
 
->## **[턴제관리 시스템 제작](2025/08/19/TurnManager.html)**
+>## **턴제관리 시스템 제작**
+> <a href="/2025/08/19/TurnManager.html" style="color:blue;">자세히 보기</a>  
+> <br>
 >![사진]() 
 <br>
 
