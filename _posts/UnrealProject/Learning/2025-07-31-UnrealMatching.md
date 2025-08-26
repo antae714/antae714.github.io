@@ -10,6 +10,29 @@ AutoContents: false
 ---
 
 {% capture paragraph %}
+## **매칭시스템 제작**
+온라인 서브시스템(OSS)의 세션 인터페이스를 이용하여 세션기반으로 매칭하는 시스템을제작하였습니다.
+
+![매칭UI]()
+
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+## **비밀번호(비밀방) 처리 — 해시로 안전하게**
+세션을 검색하면 해당 세션의 `ExtraSettings`에 추가 프로퍼티로 비밀번호를 추가하여 조인전에 접속기능한지를 판별하는 기능이 필요햇습니다 하지만 비밀번호같은 민감한 값은 평문 대신 OpenSSL로 생성한 `SHA-256` 해시를 저장해 노출을 막았습니다.
+클라이언트는 조인 요청 전에 입력한 비밀번호의 해시를 세션에 저장된 해시와 비교해 접속 가능 여부를 확인하고, 
+서버의 `PreLogin` 단계에서는 진짜 비밀번호끼리 한 번 더 검증해 조인을 허용하게 하였습니다.
+
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
+
+{% comment %}
+{% capture paragraph %}
 ## **온라인 서브시스템**
 언리얼의 **온라인 서브시스템(OSS)**은 공통 **인터페이스**를 통해 플랫폼에 종속되지 않는 온라인 기능을 제공합니다.  
 Steam, Xbox Live, PlayStation Network 등 다양한 플랫폼을 동일한 코드 구조로 다룰 수 있어 **플랫폼 전환 비용**을 줄일 수 있습니다.
@@ -71,6 +94,6 @@ Steam, Xbox Live, PlayStation Network 등 다양한 플랫폼을 동일한 코�
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
-
+{% endcomment %}
 
 
