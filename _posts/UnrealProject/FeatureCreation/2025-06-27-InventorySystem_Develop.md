@@ -227,16 +227,20 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 플레이어의 등소켓에 액터를 부착했으며 부착, 미부착합니다.  
 상호작용시 인벤토리컴포넌트를 조작할 UI를 상호작용한 플레이어에게 뛰워줍니다.
 
-<br>
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
 
+{% capture paragraph %}
 ## **가방 저장 안되는 문제**
 `APlayerState`의 인벤토리컴포넌트는 저장이 잘되었지만 가방 액터는 저장이 되지않는 이슈가 발생하였습니다.
 디버깅 결과 `APlayerState::SeamlessTravel`시 PS는 살아있지만 다른 액터들이 `Destroy`되어 가방 액터가 사라지는 현상이었습니다.
 이 문제를 해결하기 위해 심리스 트레블이 아닌 맵을 전환하기전에 명시적으로 모든 PS를 저장하도록 하였고
 블루프린트함수 라이브러리로도 제작하여 다른 PS에서도 사용할 수 있도록 하였습니다.
 
-<br>
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
 
+{% capture paragraph %}
 ## **오너십 없는 가방 데이터 다루기**
 가방의 인벤토리UI에서 드래그앤 드랍으로 플레이어 인벤토리로 이동시키는건 상관없지만,
 클라이언트에서 가방정리에 필요한 인벤토리 컴포넌트의 서버RPC함수가 오너십문제로 서버로 전달되지 않는 문제가생겨서

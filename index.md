@@ -57,24 +57,21 @@ subtitle:
 </div>
 
 
->## **인벤토리, 아이템 시스템**
-> [자세히 보기](2025/06/27/InventorySystem_Develop.html){: .markdown-Link }  <br>  
+>## **인벤토리, 아이템 시스템** [자세히 보기](2025/06/27/InventorySystem_Develop.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 
->## **AI 시스템**
-> [자세히 보기](2025/07/15/AI.html){: .markdown-Link }  <br>  
+>## **AI 시스템** [자세히 보기](2025/07/15/AI.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 
->## **매칭 시스템**
-> [자세히 보기](2025/07/31/UnrealMatching.html){: .markdown-Link }  <br>  
+>## **매칭 시스템** [자세히 보기](2025/07/31/UnrealMatching.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -88,8 +85,7 @@ subtitle:
 >![사진]()  
 >![사진]()  
 
->## **게임 진행도 저장 시스템**
-> [자세히 보기](2025/06/28/SaveGame.html){: .markdown-Link }  <br>  
+>## **게임 진행도 저장 시스템** [자세히 보기](2025/06/28/SaveGame.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -120,8 +116,7 @@ subtitle:
 
 
 
->## **에디터/툴 제작**
-> [자세히 보기](2025/07/26/MaterialEditor.html){: .markdown-Link }  <br>  
+>## **에디터/툴 제작**  [자세히 보기](2025/07/26/MaterialEditor.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -129,8 +124,7 @@ subtitle:
 <br>
 
 
->## **그래픽스 렌더링 엔진 제작**
-> [자세히 보기](2025/08/19/GrapicsRendering.html){: .markdown-Link }  <br>  
+>## **그래픽스 렌더링 엔진 제작**  [자세히 보기](2025/08/19/GrapicsRendering.html){: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -160,8 +154,7 @@ D2D 퍼즐 게임입니다.
 
 
 
->## **턴제관리 시스템 제작**
-> [자세히 보기](2025/08/19/TurnManager.html){: .markdown-Link }  <br>  
+>## **턴제관리 시스템 제작** [자세히 보기](2025/08/19/TurnManager.html){: .markdown-Link }  <br>  
 >![사진]() 
 <br>
 
