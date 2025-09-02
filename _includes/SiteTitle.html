@@ -1,5 +1,13 @@
 ﻿<div class="site-title">
-<a href="{{ '/' | relative_url }}" class="TitleText">
+	{% if page.layout == "MainPostPDF" %}
+	<!-- PDF 페이지일 때 다른 링크 -->
+	<a href="{{ '/index_PDF.html' | relative_url }}" class="TitleText">
+		{{ site.github.owner.name | default: '안태현' }}
+	</a>
+	{% else %}
+	<!-- PDF가 아닌 일반 페이지 -->
+	<a href="{{ site.url | relative_url }}" class="TitleText">
 		{{ site.github.owner.name | default: '유저이름' }}
-</a>
+	</a>
+	{% endif %}
 </div>

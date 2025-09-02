@@ -6,7 +6,7 @@ layout: default
 
 <article class="post">
 	<div class="Paragraph" style="overflow: hidden;">
-		<div class="post-title">{{ page.title }}</div>
+		<div id="{{ page.title | slugify }}" class="post-title">{{ page.title }}</div>
 		<!--
 	<div class="post-description"> {{ page.description }}</div>
 		-->
