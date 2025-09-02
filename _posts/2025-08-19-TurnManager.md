@@ -135,10 +135,53 @@ void GameFlowBehaviorTree::Init()
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-## **csv -> C Struct**
-스테이지정보 로드
+## **CSV 역직렬화 시스템**
+스테이지 정보를 관리하기 위해 `.csv` 파일을 읽어  
+데이터 배열(`std::vector`)로 변환하는 기능을 제작했습니다.  
 
+먼저, 스테이지 데이터 구조는 다음과 같습니다.
 
+```mermaid
+classDiagram
+StageInfo: +Stage
+StageInfo: +StageMaxTurn
+StageInfo: +WaveSpawnInfos
+
+```
+
+<br>
+이를 표현하는 C++ 클래스는 아래와 같습니다.
+
+``` cpp
+class StageInfo : public DataRow
+{
+	int Stage;
+	int StageMaxTurn;
+	std::vector<SpawnInfo*> WaveSpawnInfos;
+
+#define StageInfoReflect(x)			\
+	x(Stage)						\
+	x(StageMaxTurn)					\
+	x(WaveSpawnInfos)				\
+
+	GENERATED_BODY(StageInfo, DataRow)
+};
+```
+
+`GENERATED_BODY` 매크로는 `StageInfoReflect`를 기반으로
+자동 `Deserialize` 함수를 생성하여 역직렬화를 지원합니다.
+
+CSV 파일 로딩은 `DataRow`에서 제공하는 템플릿 함수로 처리됩니다.
+
+<br>
+
+```cpp
+template<class T = DataRow>
+static void LoadCSVData(const char* fileName, std::vector<T>& dataArray)
+```
+
+즉, CSV 파일을 읽으면 `DataRow`를 상속받은 구조체(`StageInfo`)에
+자동으로 역직렬화되어 배열 형태로 저장됩니다.
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 

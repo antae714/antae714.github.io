@@ -58,7 +58,7 @@ subtitle:
 
 
 >## **인벤토리, 아이템 시스템** [자세히 보기](2025/06/27/InventorySystem_Develop.html){: .markdown-Link }  <br>  
->![사진]()  
+>![사진]({{ '/assets/MyLittleStorage/CoolTime.gif' | relative_url }})  
 >![사진]()  
 >![사진]()  
 >![사진]()  

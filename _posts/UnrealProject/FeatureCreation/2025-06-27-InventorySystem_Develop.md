@@ -244,7 +244,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 ## **오너십 없는 가방 데이터 다루기**
 가방의 인벤토리UI에서 드래그앤 드랍으로 플레이어 인벤토리로 이동시키는건 상관없지만,
 클라이언트에서 가방정리에 필요한 인벤토리 컴포넌트의 서버RPC함수가 오너십문제로 서버로 전달되지 않는 문제가생겨서
-플레이어 컨트롤러가 가방정리에관한 RPC함수를 포함해야했습니다.
+플레이어 컨트롤러가 가방정리에관한 모든RPC함수를 포함해야했습니다.
 
 ```mermaid
 sequenceDiagram
@@ -264,10 +264,21 @@ sequenceDiagram
 
 ```
 
+<br>
 
 ### Server RPC를 모듈화
-하지만 다른 프랍, 프랍에대한UI가 많아지다보니 플레이어컨트롤러가 너무많은 기능을포함해서
-RPC함수만 모아둔 컨트롤러 컴포넌트로 분리하였습니다.
+하지만 다른 프랍, 프랍에대한UI가 많아지다보니 플레이어컨트롤러가 너무많은 기능을포함해서 비대해지는 문제가 발생했습니다.
+
+```mermaid
+classDiagram
+APlayerController: +Server_BackPackSwapItem()
+APlayerController: +Server_BuyItem()
+APlayerController: +Server_SellItem()
+```
+
+<br>
+
+때문에 RPC함수만 모아둔 컨트롤러 컴포넌트로 분리하였습니다.
 
 ```mermaid
 classDiagram
