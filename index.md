@@ -58,10 +58,12 @@ subtitle:
 
 
 >## **인벤토리, 아이템 시스템** [자세히 보기](2025/06/27/InventorySystem_Develop.html){: .markdown-Link }  <br>  
->![사진]({{ '/assets/MyLittleStorage/CoolTime.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
->![사진]({{ '/assets/MyLittleStorage/CoolTime2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
->![사진]({{ '/assets/MyLittleStorage/ManaStone.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
->![사진]({{ '/assets/MyLittleStorage/ChaosDestruction.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/CoolTime.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/CoolTime2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/ManaStone.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/ChaosDestruction.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/ManaStoneUse1.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/ManaStoneUse2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 
 >## **AI 시스템** [자세히 보기](2025/07/15/AI.html){: .markdown-Link }  <br>  
 >![사진]()  
