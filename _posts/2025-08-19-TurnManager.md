@@ -35,9 +35,8 @@ RootNode:
 
 ```
 
-<div style="display: flex;" align="center">
-  <div style="flex: 1;">
-    
+<div class="FlexCode" align="center">
+
 ``` mermaid
 flowchart 
 A1[GameFlow_MonsterSpawnActionNode] --> A2[GameFlow_DecideEnemyActionNode]
@@ -45,16 +44,12 @@ A2 --> A3[GameFlow_PlayerActionNode]
 A3 --> A4[GameFlow_ProcessCommandNode]
 ```
 
-  </div>
-  <div style="flex: 1;">
-    
 ``` mermaid
 flowchart 
 A1[몬스터 소환] --> A2[적행동결정]
 A2 --> A3[플레이어 행동 선택]
 A3 --> A4[명령 처리]
 ```
-  </div>
 </div>
 
 ![몬스터 행동 움짤]()

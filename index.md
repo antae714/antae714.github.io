@@ -11,7 +11,15 @@ subtitle:
 ---
 
 {% capture LinkCapture %}
+
 [Link_InventorySystem_Develop]: 2025/06/27/InventorySystem_Develop.html  
+[Link_AI]: 2025/07/15/AI.html
+[Link_UnrealMatching]: 2025/07/31/UnrealMatching.html
+[Link_Spectator]: 2025/08/19/Spectator.html
+[Link_SaveGame]: 2025/06/28/SaveGame.html
+[Link_MaterialEditor]: 2025/07/26/MaterialEditor.html
+[Link_GrapicsRendering]: 2025/08/19/GrapicsRendering.html
+[Link_TurnManager]: 2025/08/19/TurnManager.html
 
 {% endcapture %}
 

@@ -55,29 +55,28 @@
 
 {{ include.Link }}
 
-
->## **AI 시스템** [자세히 보기](2025/07/15/AI.html){: .markdown-Link }  <br>  
+>## **AI 시스템** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 
->## **매칭 시스템** [자세히 보기](2025/07/31/UnrealMatching.html){: .markdown-Link }  <br>  
+>## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 
->## **게임 관전**
+>## **게임 관전** [자세히 보기][Link_Spectator]{: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 >![사진]()  
 
->## **게임 진행도 저장 시스템** [자세히 보기](2025/06/28/SaveGame.html){: .markdown-Link }  <br>  
+>## **게임 진행도 저장 시스템** [자세히 보기][Link_SaveGame]{: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -107,8 +106,9 @@
 </div>
 
 
+{{ include.Link }}
 
->## **에디터/툴 제작**  [자세히 보기](2025/07/26/MaterialEditor.html){: .markdown-Link }  <br>  
+>## **에디터/툴 제작** [자세히 보기][Link_MaterialEditor]{: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -116,7 +116,7 @@
 <br>
 
 
->## **그래픽스 렌더링 엔진 제작**  [자세히 보기](2025/08/19/GrapicsRendering.html){: .markdown-Link }  <br>  
+>## **그래픽스 렌더링 엔진 제작**  [자세히 보기][Link_GrapicsRendering]{: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -145,8 +145,9 @@ D2D 퍼즐 게임입니다.
 </div>
 
 
+{{ include.Link }}
 
->## **턴제관리 시스템 제작** [자세히 보기](2025/08/19/TurnManager.html){: .markdown-Link }  <br>  
+>## **턴제관리 시스템 제작** [자세히 보기][Link_TurnManager]{: .markdown-Link }  <br>  
 >![사진]() 
 <br>
 

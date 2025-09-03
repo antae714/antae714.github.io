@@ -157,9 +157,9 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 ### 자동 매핑으로 해결
 이 문제를 해결하기 위해 **에셋 레지스트리**를 활용한 자동 매핑 방식을 도입했습니다.
 
-`ID == 에셋 이름`이라는 규칙을 정의하였고
-`AssetRegistry`를사용하여 이름이 일치하는 에셋을 검색해 자동 매핑하였습니다.
-`AssetRegistry`검색시 `AssetRegistrySearchable`프로퍼티를 이용할수 있었지만,
+`ID == 에셋 이름`이라는 **규칙을 프로젝트내에 정의**하였고  
+`AssetRegistry`를사용하여 이름이 일치하는 에셋을 검색해 자동 매핑하였습니다.  
+`AssetRegistry`검색시 `AssetRegistrySearchable`프로퍼티를 이용할수 있었지만,  
 텍스처, 메시 등 비오브젝트 에셋에는 적용되지 않기 때문에 위와 같은 방법을 사용했습니다.
 
 {% endcapture %}
@@ -169,7 +169,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 # **아이템 물리 오브젝트의 의도치 않은 플랫폼 효과 개선**
 
 작은 물리 오브젝트(파편, 디스트럭션 파티클 등) 위를 밟거나 접촉할 경우,  
-플레이어가 이를 플랫폼처럼 인식하여 물리 상호작용 중 **위치·회전이 갑작스럽게 이동하는** 현상이 발생했습니다.  
+플레이어가 이를 **플랫폼처럼 인식**하여 물리 상호작용 중 **위치·회전이 갑작스럽게 이동하는** 현상이 발생했습니다.  
 이는 플레이 감각과 조작 안정성을 저해하는 문제였습니다.
 
 <video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
@@ -179,9 +179,9 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 <br>
 
 ## **콜리전 채널 변경**
-플레이어가 작은 물리 오브젝트 위에 설 수 없도록, 해당 오브젝트의 콜리전 채널을 변경했습니다.  
+플레이어가 작은 물리 오브젝트 위에 설 수 없도록, 해당 오브젝트의 **콜리전 채널**을 변경했습니다.  
 그러나 이 방식은 부작용이 있었는데, **플레이어가 이동 중 물리 오브젝트를 밀어내지 못하는 문제**가 발생했습니다.  
-즉, 플랫폼 효과는 사라졌지만 물리 상호작용이 손실되었습니다.  
+즉, 플랫폼 효과는 사라졌지만 **물리 상호작용이 손실**되었습니다.  
 
 <video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
   <source src="{{ '/assets/MyLittleStorage/NoPlatform.mp4' | relative_url }}" type="video/mp4">
@@ -198,7 +198,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 - **물리 전용 캡슐** → 오브젝트 밀기, 파편 반응 등 물리 상호작용 전담
 
 이 방식으로 **의도치 않은 플랫폼 효과를 제거하면서도**
-물리 오브젝트와의 자연스러운 상호작용을 유지할 수 있었습니다.
+물리 오브젝트와의 **자연스러운 상호작용**을 유지할 수 있었습니다.
 
 <video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
   <source src="{{ '/assets/MyLittleStorage/Physics.mp4' | relative_url }}" type="video/mp4">
@@ -215,7 +215,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 **단계적으로 파괴**되어 마나석 아이템을 드랍하는 마나석 프랍을 제작하였습니다.  
 체력에따라 단계적으로 파괴되기위해서 **프랙처, 피직스 필드**를 사용하였습니다.  
 피직스 필드를 설정하여 파괴시 파편이 튕겨나가도록 하였고,  
-해당 피직스 필드에서 마나석 아이템을 드랍하도록 설정하였습니다.  
+해당 피직스 필드에서 마나석 **아이템을 드랍**하도록 설정하였습니다.  
 ![사진]()
 
 {% endcapture %}
@@ -232,19 +232,20 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 
 {% capture paragraph %}
 ## **가방 저장 안되는 문제**
-`APlayerState`의 인벤토리컴포넌트는 저장이 잘되었지만 가방 액터는 저장이 되지않는 이슈가 발생하였습니다.
-디버깅 결과 `APlayerState::SeamlessTravel`시 PS는 살아있지만 다른 액터들이 `Destroy`되어 가방 액터가 사라지는 현상이었습니다.
-이 문제를 해결하기 위해 심리스 트레블이 아닌 맵을 전환하기전에 명시적으로 모든 PS를 저장하도록 하였고
-블루프린트함수 라이브러리로도 제작하여 다른 PS에서도 사용할 수 있도록 하였습니다.
+`APlayerState`의 인벤토리컴포넌트는 저장이 잘되었지만 `APlayerState`의 멤버변수로 참조하고있는 가방 액터는 **저장이 되지않는 이슈**가 발생하였습니다.  
+디버깅 결과 `APlayerState::SeamlessTravel`시 PS는 살아있지만 다른 액터들이 `Destroy`되어 가방 액터가 사라지는 현상이었습니다.  
+이 문제를 해결하기 위해 `APlayerState::SeamlessTravel`이 아닌 **맵을 전환하기전에 명시적**으로 모든 PS를 저장하도록 하였습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
 ## **오너십 없는 가방 데이터 다루기**
-가방의 인벤토리UI에서 드래그앤 드랍으로 플레이어 인벤토리로 이동시키는건 상관없지만,
-클라이언트에서 가방정리에 필요한 인벤토리 컴포넌트의 서버RPC함수가 오너십문제로 서버로 전달되지 않는 문제가생겨서
-플레이어 컨트롤러가 가방정리에관한 모든RPC함수를 포함해야했습니다.
+가방의 인벤토리UI에서 드래그앤 드랍으로 플레이어 인벤토리로 이동시키는건 상관없지만,  
+클라이언트에서 가방정리를위해 **가방액터의 인벤토리만 조작**시 필요한 인벤토리 컴포넌트의 **서버RPC함수가 오너십문제로 서버로 전달되지 않는 문제**가발생하였습니다.  
+
+해당문제는 가방액터가 오너십을 가지않기때문에 발생한 문제였습니다.  
+때문에 플레이어 컨트롤러 클래스가 가방정리에관한 **모든RPC함수를 포함**해야했습니다.
 
 ```mermaid
 sequenceDiagram
@@ -266,7 +267,7 @@ sequenceDiagram
 
 <br>
 
-### Server RPC를 모듈화
+### **Server RPC를 모듈화**
 하지만 다른 프랍, 프랍에대한UI가 많아지다보니 플레이어컨트롤러가 너무많은 기능을포함해서 비대해지는 문제가 발생했습니다.
 
 ```mermaid
@@ -291,9 +292,12 @@ APlayerController *-- ShopActionComponent : owns
 ```
 
 
-### GAS 활용
-플레이어의 `UAbilitySystemComponent`에 어빌리티를 부여하고
-어빌리티 **호출 정책을 `LocalPredicted`**로 설정하여
+<br>
+
+### **GAS 활용**
+컴포넌트로 분리하는것도 유용하지만 GAS의 **어빌리티**를 활용하는것도 유용했습니다.  
+플레이어의 `UAbilitySystemComponent`에 어빌리티를 부여하고  
+어빌리티 **호출 정책을 `LocalPredicted`**로 설정하여  
 클라이언트에서 어빌리티를 실행하여 서버에서 반영하도록 할 수 있습니다.
 
 
