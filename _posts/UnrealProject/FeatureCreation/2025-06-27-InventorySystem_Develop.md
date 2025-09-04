@@ -45,6 +45,29 @@ mermaid: true
 일반적인 언리얼 오브젝트는 기본적으로 복제되지 않기 때문에,
 오브젝트 기반 설계를 고수하면 클라이언트와 서버 사이의 상태 동기화가 어렵습니다.
 단순 구조체를 사용하면 쉽게 복제할 수 있지만 상속을 지원하지 않고, RPC를 통해 상태를 보내려 해도 일관성을 유지하기 힘들다는 한계가 있었습니다.
+
+
+
+``` mermaid
+architecture-beta
+    group Server[Server]
+    group Clinet[Clinet]
+    
+    service Actor(famicons:accessibility-sharp)[Actor] in Server
+    service Actor_Proxy(famicons:accessibility-sharp)[Actor Proxy] in Clinet
+
+    service UObject(famicons:star)[UObject] in Server
+    service UObject_Proxy(famicons:close)[UObject Proxy] in Clinet
+    
+    Actor:B -- T:UObject
+
+    Actor:R --> L:Actor_Proxy
+    UObject:R --> L:UObject_Proxy
+    
+```
+
+
+
 <br><br>
 
 ### ✅ 서브오브젝트를 통한 리플리케이션 해결
@@ -53,6 +76,25 @@ mermaid: true
 이 방식 덕분에 일반 아이템뿐 아니라 **던지기형, 설치형 등의 아이템**도 효과적으로 관리할 수 있었습니다.
 
 
+
+``` mermaid
+architecture-beta
+    group Server[Server]
+    group Clinet[Clinet]
+    
+    service Actor(famicons:accessibility-sharp)[Actor] in Server
+    service Actor_Proxy(famicons:accessibility-sharp)[Actor Proxy] in Clinet
+
+    service SubObject(famicons:star)[SubObject] in Server
+    service SubObject_Proxy(famicons:star)[SubObject Proxy] in Clinet
+    
+    Actor:B -- T:SubObject
+    Actor_Proxy:B -- T:SubObject_Proxy
+
+    Actor:R --> L:Actor_Proxy
+    SubObject:R --> L:SubObject_Proxy
+    
+```
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
@@ -172,9 +214,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 플레이어가 이를 **플랫폼처럼 인식**하여 물리 상호작용 중 **위치·회전이 갑작스럽게 이동하는** 현상이 발생했습니다.  
 이는 플레이 감각과 조작 안정성을 저해하는 문제였습니다.
 
-<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
-  <source src="{{ '/assets/MyLittleStorage/Platform.mp4' | relative_url }}" type="video/mp4">
-</video>
+![사진]({{ '/assets/ItemGIF/Platform.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 
 <br>
 
@@ -183,10 +223,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 그러나 이 방식은 부작용이 있었는데, **플레이어가 이동 중 물리 오브젝트를 밀어내지 못하는 문제**가 발생했습니다.  
 즉, 플랫폼 효과는 사라졌지만 **물리 상호작용이 손실**되었습니다.  
 
-<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
-  <source src="{{ '/assets/MyLittleStorage/NoPlatform.mp4' | relative_url }}" type="video/mp4">
-</video>
-
+![사진]({{ '/assets/ItemGIF/NoPlatform.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 
 <br>
 
@@ -200,9 +237,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 이 방식으로 **의도치 않은 플랫폼 효과를 제거하면서도**
 물리 오브젝트와의 **자연스러운 상호작용**을 유지할 수 있었습니다.
 
-<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
-  <source src="{{ '/assets/MyLittleStorage/Physics.mp4' | relative_url }}" type="video/mp4">
-</video>
+![사진]({{ '/assets/ItemGIF/Physics.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 
 <br>
 
@@ -216,16 +251,21 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 체력에따라 단계적으로 파괴되기위해서 **프랙처, 피직스 필드**를 사용하였습니다.  
 피직스 필드를 설정하여 파괴시 파편이 튕겨나가도록 하였고,  
 해당 피직스 필드에서 마나석 **아이템을 드랍**하도록 설정하였습니다.  
-![사진]()
+<br>
+![사진]({{ '/assets/ItemGIF/ManaStone.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+![사진]({{ '/assets/ItemGIF/ManaStoneBoom.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
 # **플레이어 상호작용 아이템 가방**
-플레이어가 착용, 사용 가능한 가방을 제작하였습니다.  
-플레이어의 등소켓에 액터를 부착했으며 부착, 미부착합니다.  
-상호작용시 인벤토리컴포넌트를 조작할 UI를 상호작용한 플레이어에게 뛰워줍니다.
+플레이어가 착용, 사용 가능한 **가방을 제작**하였습니다.  
+플레이어의 등**소켓에 액터를 부착**했으며 부착, 미부착합니다.  
+상호작용시 인벤토리컴포넌트를 조작할 UI를 상호작용한 플레이어에게 뛰워줍니다.  
+<br>
+![사진]({{ '/assets/ItemGIF/BackpackServer.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
+![사진]({{ '/assets/ItemGIF/BackpackClient.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -328,3 +368,24 @@ sequenceDiagram
 {% include paragraph.html content=paragraph %}
 
 
+{% capture paragraph %}
+## **아이템 컨텐츠 테스트환경 제작**
+아이템 컨텐츠를 제작하면서 테스트하기위해 언리얼 **치트 매니저**를 활용하였습니다.  
+아이템의 생성을 치트 매니저에 구현하여 **콘솔을사용하여 아이템을 생성**할수있게 하였습니다.
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+{% capture paragraph %}
+## **스프레이 아이템 컨텐츠**
+스프레이 아이템을 연속된 점으로 선을 표현하기위해 **언리얼 데칼**시스템을 활용하였습니다.  
+
+데칼 하나마다 서버와 클라이언트에 리플리케이션을 하게되면 **네트워크 비용**이 너무 크기때문에
+매니저액터를 이용하여 **최소한의 데이터**를 받아 로컬에서 복제되지않는 데칼을 생성하였습니다.  
+자동 복제를 해주지 않기때문에 **RPC**가아닌 `FastArraySerializer`의 `PostReplicatedAdd`를이용하여 변경사항마다 데칼을 생성하게 처리해서 뒤늦게 접속한 클라이언트도 데칼을 볼수있게 하였습니다.
+
+언리얼 데칼은 박스공간에 **투영하듯**이 그려지기때문에 **스키닝**, 움직이는 오브젝트에는 적합하지않습니다.  
+생산성과 퀄리티를 위해 팹의 [Skinned Decal Component](https://www.fab.com/listings/7491af07-f541-493d-a78f-d7fa5d466a0d)에셋을 구매하여 활용 하였습니다.  
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
