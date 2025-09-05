@@ -58,16 +58,10 @@
 >## **AI 시스템** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
 >![사진]()  
 >![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
 
 >## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
->![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
+>![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 
 >## **게임 관전** [자세히 보기][Link_Spectator]{: .markdown-Link }  <br>  
 >![사진]()  
@@ -109,10 +103,9 @@
 {{ include.Link }}
 
 >## **에디터/툴 제작** [자세히 보기][Link_MaterialEditor]{: .markdown-Link }  <br>  
->![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
+>![사진]({{ '/assets/MyLittleStorage/NodeEditor.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/NodeEditor.png' | relative_url }}){: style="width: 100%; height: auto;" } 
+
 <br>
 
 
