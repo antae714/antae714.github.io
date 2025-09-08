@@ -13,7 +13,8 @@ AutoContents: false
 ## **매칭시스템 제작**
 **온라인 서브시스템(OSS)**의 **세션 인터페이스**를 이용하여 세션기반으로 방을 **생성, 검색, 조인**하는 매칭 시스템을 제작하였습니다.
 
-![매칭UI]()
+![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}

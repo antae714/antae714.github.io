@@ -104,13 +104,18 @@
 
 >## **에디터/툴 제작** [자세히 보기][Link_MaterialEditor]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/MyLittleStorage/NodeEditor.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+>
 >![사진]({{ '/assets/MyLittleStorage/NodeEditor.png' | relative_url }}){: style="width: 100%; height: auto;" } 
 
 <br>
 
 
 >## **그래픽스 렌더링 엔진 제작**  [자세히 보기][Link_GrapicsRendering]{: .markdown-Link }  <br>  
->![사진]()  
+>![사진]({{ '/assets/MyLittleStorage/Grapic.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+>
+>![사진]({{ '/assets/MyLittleStorage/Grapic2.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+>
+>![사진]({{ '/assets/MyLittleStorage/Grapic.png' | relative_url }}){: style="width: 100%; height: auto;" } 
 >![사진]()  
 >![사진]()  
 >![사진]()  
@@ -141,7 +146,11 @@ D2D 퍼즐 게임입니다.
 {{ include.Link }}
 
 >## **턴제관리 시스템 제작** [자세히 보기][Link_TurnManager]{: .markdown-Link }  <br>  
->![사진]() 
+>![사진]({{ '/assets/MyLittleStorage/RailWaytoHell.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+>
+>![사진]({{ '/assets/MyLittleStorage/RailWaytoHell2.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+>
+>![사진]({{ '/assets/MyLittleStorage/RailWaytoHell2.webp' | relative_url }}){: style="width: 100%; height: auto;" } 
 <br>
 
  
