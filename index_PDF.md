@@ -18,6 +18,7 @@ target_posts:
   - "머티리얼 노드 에디터 제작"
   - "그래픽스 렌더링 엔진 제작"
   - "턴제관리 시스템 제작"
+  - "엄폐시스템 제작"
 ---
 
 {% capture LinkCapture %}
@@ -30,6 +31,8 @@ target_posts:
 [Link_MaterialEditor]: #머티리얼-노드-에디터-제작
 [Link_GrapicsRendering]: #그래픽스-렌더링-엔진-제작
 [Link_TurnManager]: #턴제관리-시스템-제작
+[Link_CoverSystem]: #엄폐시스템-제작
+[Link_Animation]: #애니메이션-시스템-제작
 
 {% endcapture %}
 

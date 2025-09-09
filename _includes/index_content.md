@@ -56,26 +56,16 @@
 {{ include.Link }}
 
 >## **AI 시스템** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
->![사진]()  
->![사진]()  
+>![사진]({{ '/assets/MyLittleStorage/AI1.png' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/AI2.png' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 
 >## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 >![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 
 >## **게임 관전** [자세히 보기][Link_Spectator]{: .markdown-Link }  <br>  
->![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
 
 >## **게임 진행도 저장 시스템** [자세히 보기][Link_SaveGame]{: .markdown-Link }  <br>  
->![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
->![사진]()  
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
@@ -116,9 +106,6 @@
 >![사진]({{ '/assets/MyLittleStorage/Grapic2.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 >
 >![사진]({{ '/assets/MyLittleStorage/Grapic.png' | relative_url }}){: style="width: 100%; height: auto;" } 
->![사진]()  
->![사진]()  
->![사진]()  
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
@@ -149,8 +136,6 @@ D2D 퍼즐 게임입니다.
 >![사진]({{ '/assets/MyLittleStorage/RailWaytoHell.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 >
 >![사진]({{ '/assets/MyLittleStorage/RailWaytoHell2.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
->
->![사진]({{ '/assets/MyLittleStorage/RailWaytoHell2.webp' | relative_url }}){: style="width: 100%; height: auto;" } 
 <br>
 
  
@@ -179,28 +164,26 @@ D2D 퍼즐 게임입니다.
 </div>
 
 
+{{ include.Link }}
 
 
->## **애니메이션**
->![FSM]()  
->![HandIK]()  
->![FootIK]()  
->![리타겟]()  
+>## **애니메이션**  [자세히 보기][Link_Animation]{: .markdown-Link }  <br>  
+>![사진]({{ '/assets/MyLittleStorage/FSM.png' | relative_url }}){: style="max-width: 100%; height: auto;" } 
+>
+>![사진]({{ '/assets/MyLittleStorage/HandIK.png' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/FootIK.png' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 <br>
 
 
->## **엄폐 시스템**
->![실패 경험]()  
->![시스템 전반 매커니즘]()  
->![엄폐경로 추적]()  
->![피킹 시스템]()  
-
- 
+>## **엄폐 시스템**  [자세히 보기][Link_CoverSystem]{: .markdown-Link }  <br>  
+>![사진]({{ '/assets/MyLittleStorage/Cover.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/Cover2.gif' | relative_url }}){: style="width: 49%; height: auto;" }
+>![사진]({{ '/assets/MyLittleStorage/CoverNavigation.png' | relative_url }}){: style="max-width: 100%; height: auto;" } 
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
 
-
+{% comment %}
 {% capture paragraph %}
 
 # **개인 프로젝트**
@@ -212,5 +195,6 @@ D2D 퍼즐 게임입니다.
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
+{% endcomment %}
 
 

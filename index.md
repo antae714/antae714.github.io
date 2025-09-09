@@ -20,6 +20,8 @@ subtitle:
 [Link_MaterialEditor]: 2025/07/26/MaterialEditor.html
 [Link_GrapicsRendering]: 2025/08/19/GrapicsRendering.html
 [Link_TurnManager]: 2025/08/19/TurnManager.html
+[Link_CoverSystem]: 2025/09/09/CoverSystem.html
+[Link_Animation]: 2025/09/09/UnrealAnimation.html
 
 {% endcapture %}
 
