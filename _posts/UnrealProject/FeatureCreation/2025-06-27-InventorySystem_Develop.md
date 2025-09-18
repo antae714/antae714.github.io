@@ -9,24 +9,27 @@ subtitle:
  - "언리얼 플러그인"
  - "언리얼 리플리케이션"
  - "FastArraySerializer"
- - "어빌리티 시스템사용"
- - "📄 CSV 기반 데이터테이블의 에셋 경로 불편함 해결"
+ - "어빌리티 시스템 활용"
+ - "CSV 기반 데이터테이블의 에셋 경로 불편함 해결"
  - "아이템 물리 오브젝트의 의도치 않은 플랫폼 효과 개선"
  - "파괴 가능한 프랍"
- - "플레이어 상호작용 아이템 카트"
  - "플레이어 상호작용 아이템 가방"
- - "가방 저장 안되는 문제"
- - "오너십 없는 객체의 서버 상호작용 경로 설계"
+ - "가방 액터 저장 누락 문제"
+ - "오너십 없는 가방 액터 데이터 다루기"
+ - "아이템 컨텐츠 테스트환경 제작"
+ - "스프레이 아이템 컨텐츠"
 published: true
 order: 10002
-AutoContents: false
+AutoContents: true
 mermaid: true
 ---
 
 {% capture paragraph %}
 # **언리얼 플러그인**
 인벤토리 시스템을 제작하면서 다른 게임에서 사용할수 있는 부분은 **언리얼 플러그인**으로 분리하였습니다.
+인벤토리 컴포넌트의 기본적인동작(추가, 삭제, 바꾸기, 인벤토리간교환)을 제작하였습니다.
 
+아이템간의 확장성을위해 언리얼오브젝트(`UObject`)를 상속하게 하였습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -125,7 +128,7 @@ architecture-beta
 
 
 {% capture paragraph %}
-# **어빌리티 시스템사용**
+# **어빌리티 시스템 활용**
 ### 📄 도입 배경
 팀 프로젝트 과정에서 언리얼 엔진의 **어빌리티 시스템**을 도입했고, 인벤토리 아이템에도 적극 활용했습니다.  
 어빌리티 시스템은 아이템 사용 방식을 모듈화하고 체계적으로 관리할 수 있게 해주는 강력한 도구입니다.
@@ -169,7 +172,7 @@ architecture-beta
 
 {% capture paragraph %}
 
-# **📄 CSV 기반 데이터테이블의 에셋 경로 불편함 해결**
+# **CSV 기반 데이터테이블의 에셋 경로 불편함 해결**
 아이템의 정보들을 구성하기위해 기획자가 CSV로 작성한 데이터를 **데이터테이블**로 읽어와 관리할수있게 하였습니다.  
 하지만 `UClass`나 `UObject`같은 데이터를 CSV로 편집할때,  
 경로(예: `/Game/...`) 형식으로 노출되기 때문에 편집이 번거롭고 **CSV 편집의 장점이 퇴색**듭니다.
@@ -271,7 +274,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-## **가방 저장 안되는 문제**
+## **가방 액터 저장 누락 문제**
 `APlayerState`의 인벤토리컴포넌트는 저장이 잘되었지만 `APlayerState`의 멤버변수로 참조하고있는 가방 액터는 **저장이 되지않는 이슈**가 발생하였습니다.  
 디버깅 결과 `APlayerState::SeamlessTravel`시 PS는 살아있지만 다른 액터들이 `Destroy`되어 가방 액터가 사라지는 현상이었습니다.  
 이 문제를 해결하기 위해 `APlayerState::SeamlessTravel`이 아닌 **맵을 전환하기전에 명시적**으로 모든 PS를 저장하도록 하였습니다.
@@ -280,7 +283,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-## **오너십 없는 가방 데이터 다루기**
+## **오너십 없는 가방 액터 데이터 다루기**
 가방의 인벤토리UI에서 드래그앤 드랍으로 플레이어 인벤토리로 이동시키는건 상관없지만,  
 클라이언트에서 가방정리를위해 **가방액터의 인벤토리만 조작**시 필요한 인벤토리 컴포넌트의 **서버RPC함수가 오너십문제로 서버로 전달되지 않는 문제**가발생하였습니다.  
 
@@ -384,11 +387,19 @@ sequenceDiagram
 매니저액터를 이용하여 **최소한의 데이터**를 받아 로컬에서 복제되지않는 데칼을 생성하였습니다.  
 자동 복제를 해주지 않기때문에 **RPC**가아닌 `FastArraySerializer`의 `PostReplicatedAdd`를이용하여 변경사항마다 데칼을 생성하게 처리해서 뒤늦게 접속한 클라이언트도 데칼을 볼수있게 하였습니다.
 
-이빨빠진배열
+스프레이 데칼에 수명이 존재하기때문에 수명이 지난 데칼에 대한 정보는 지워줘야 했습니다.
+이를위해 큐구조를 사용하면 좋았지만 `FastArraySerializer`는 배열만되어서 이빨빠진 배열을 이용하여 데이터의 추가/삭제정보를 한번만 리플리케이션하게 하였습니다.
 
+
+![사진]({{ '/assets/MyLittleStorage/FastArraySerializer2.png' | relative_url }}){: style="width: 100%; height: auto;" } 
+
+<br>
+
+
+<!--
 
 언리얼 데칼은 박스공간에 **투영하듯**이 그려지기때문에 **스키닝**, 움직이는 오브젝트에는 적합하지않습니다.  
 생산성과 퀄리티를 위해 팹의 [Skinned Decal Component](https://www.fab.com/listings/7491af07-f541-493d-a78f-d7fa5d466a0d)에셋을 구매하여 활용 하였습니다.  
-
+-->
 {% endcapture %}
 {% include paragraph.html content=paragraph %}

@@ -18,6 +18,12 @@ Cook–Torrance 반사모델(BRDF)을 구현하여
 **환경광은 IBL**, **난반사는 Irradiance Map**, **정반사는 Prefiltered Environment Map**과 **BRDF LUT**로 처리해  
 자연스럽고 물리적으로 타당한 간접광 효과를 구현했습니다.
 
+![morning]({{ '/assets/MyLittleStorage/Grapic.png' | relative_url }}){: style="width: 100%;" }
+
+
+
+
+
 IBL을 씬마다 다르게 사용하여
 아침, 저녁, 밤 등 다양한 시간대의 분위기를 연출할 수 있었습니다.
 ![morning]({{ '/assets/MyLittleStorage/morning.png' | relative_url }}){: style="width: 32%;" }
@@ -155,11 +161,15 @@ None시에는 감마 인코딩만 수행하여 톤맵핑 결과물은 감마인�
 {% capture paragraph %}
 ## **파티클 GPU 계산, 렌더링**
 
+![Edge]({{ '/assets/MyLittleStorage/Particle.gif' | relative_url }}){: style="width: 100%;" }
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
 ## **스키닝**
+
+
+
 
 ### 애니메이션
 

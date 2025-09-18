@@ -13,7 +13,7 @@ layout: default
 		{% if page.AutoContents %}
 		<ol class="subtitle-list">
 			{% for item in page.subtitle %}
-			<li><a class="Link" href="#{{ item | slugify }}">{{ item }}</a></li>
+			<a class="Link" href="#{{ item | slugify }}"><li>{{ item }}</li></a>
 			{% endfor %}
 		</ol>
 		{% endif %}
