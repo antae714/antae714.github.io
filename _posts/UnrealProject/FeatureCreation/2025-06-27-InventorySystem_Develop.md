@@ -389,9 +389,11 @@ sequenceDiagram
 
 스프레이 데칼에 수명이 존재하기때문에 수명이 지난 데칼에 대한 정보는 지워줘야 했습니다.
 이를위해 큐구조를 사용하면 좋았지만 `FastArraySerializer`는 배열만되어서 이빨빠진 배열을 이용하여 데이터의 추가/삭제정보를 한번만 리플리케이션하게 하였습니다.
-
-
 ![사진]({{ '/assets/MyLittleStorage/FastArraySerializer2.png' | relative_url }}){: style="width: 100%; height: auto;" } 
+
+![사진]({{ '/assets/ItemGIF/SprayItem.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
+![사진]({{ '/assets/ItemGIF/SprayItem2.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
+
 
 <br>
 
