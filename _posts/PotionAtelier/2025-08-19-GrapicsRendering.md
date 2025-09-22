@@ -7,21 +7,75 @@ subtitle:
  - "부제목 2"
 description: "소개"
 AutoContents: false
+mermaid: true
 ---
+
+
+{% capture paragraph %}
+## **렌더링 라이브러리 제작**
+3D 그래픽 API를 기반으로 **게임 렌더링 라이브러리**를 제작하였습니다.  
+단순히 그래픽 API를 래핑하는 수준이 아니라, **게임 렌더링에 필요한 단위(Command) 중심**으로 구성하는 것을 목표로 했습니다.
+
+예를 들어, 간단한 메쉬를 그릴 때 엔진이 저수준 API 호출을 직접 쓰는 것이 아니라,
+`MeshDrawCommand`를 생성해 렌더러에 제출하면, 렌더러가 **절두체 컬링, 디퍼드 여부, 환경광 처리** 등 필요한 옵션을 자동으로 적용해 렌더링이 진행되도록 설계했습니다.
+
+``` mermaid
+classDiagram
+    class MeshData {
+	    +vertexBuffer : RendererBuffer
+	    +indexBuffer : RendererBuffer
+	    +indexCounts : uint32_t
+	    +vertexStride : uint32_t
+	    +vertexShader : VertexShader
+	    +shaderResources : BinadbleVector
+
+	    +boundingBox : DirectX::BoundingOrientedBox 
+    }
+    
+    class MaterialData {
+	    pixelShader : PixelShader
+	    shaderResources : BinadbleVector
+    }
+
+    class MeshDrawCommand {
+        +meshData : MeshData
+        +materialData : MaterialData
+    }
+    
+    MeshDrawCommand o-- MeshData
+    MeshDrawCommand o-- MaterialData
+
+```
+
+라이브러리는 다음과 같은 다양한 명령(Command)을 제공합니다. 
+* `MeshDrawCommand`
+* `UIDrawCommand`
+* `UIMaterialDrawCommand`
+* `PostProcessCommand`
+* `ParticleDrawCommand`
+* `TextDrawCommand`
+
+기존 그래픽 API는 GPU를 자유롭게 다루기 위해 가능한 모든 기능을 제공하지만,
+**게임 렌더링 라이브러리**는 3D 게임 렌더링 패러다임에 맞춰 **적절한 수준의 추상화**를 제공하도록 설계했습니다.
+이를 통해 엔진 구조가 더욱 깔끔해지고, 실제 게임 제작에서 효율적인 렌더링 파이프라인을 구축할 수 있다고 생각합니다.
+
+
+{% endcapture %}
+{% include paragraph.html content=paragraph %}
+
+
 
 {% capture paragraph %}
 ## **PBR**
 금속성과 거칠기만을 이용해 **빛의 반사**를 계산하는  
-Cook–Torrance 반사모델(BRDF)을 구현하여  
-현실적인 재질 표현을 실현했습니다.  
-
-**환경광은 IBL**, **난반사는 Irradiance Map**, **정반사는 Prefiltered Environment Map**과 **BRDF LUT**로 처리해  
-자연스럽고 물리적으로 타당한 간접광 효과를 구현했습니다.
+Cook–Torrance 반사모델(BRDF)을 사용하여 금속성, 거칠기를 이용한 재질을 표현 하였습니다.  
 
 ![morning]({{ '/assets/MyLittleStorage/Grapic.png' | relative_url }}){: style="width: 100%;" }
 
+<br>
 
-
+**환경광은 IBL을 이용하였으며** 환경광의 **난반사는 Irradiance Map**, **정반사는 Prefiltered Environment Map**과 **BRDF LUT**로 처리해  
+자연스럽고 환경광 효과를 구현했습니다.
 
 
 IBL을 씬마다 다르게 사용하여
@@ -161,17 +215,121 @@ None시에는 감마 인코딩만 수행하여 톤맵핑 결과물은 감마인�
 {% capture paragraph %}
 ## **파티클 GPU 계산, 렌더링**
 
+게임의 다양한 표현을 위해 파티클 시스템을 제작하게되었습니다.  
+빌보드 텍스처를 수많은 점에서 렌더링을 할필요가 있었습니다.
+버텍스버퍼를 세팅하지않고 파티클갯수만큼 그리기명령후 `SV_VERTEXID`를 이용하여 파티클 배열의 인덱스접근하였습니다. 
+
+```cpp
+struct Particle
+{
+	float3 position;
+	float lifeTime;
+	
+	float3 velocity;
+	float elapsedTime;
+	
+	float3 acceleration;
+	float pad;
+	
+	float3x3 rotation;
+};
+
+```
+그다음 점위좌표에서 GS를 이용하여 빌보드텍스처로 변환 하였습니다.
+PS에서는 머티리얼에셋을 셋팅하여 렌더링 하였습니다.
+
+Particle의 포지션, 생명주기는  CS를 이용하여 계산해주었습니다.
+```cpp
+UINT bindUAVCount[3]{ drawCommands.instanceCount, 0, 0 };
+bindUAV[0] = drawCommands.addParticleBuffer[0];
+bindUAV[1] = drawCommands.particleBuffer;
+bindUAV[2] = drawCommands.deadParticleBuffer;
+
+bindSRV[0] = drawCommands.addParticleBuffer[1];
+bindCB[0] = drawCommands.optionBuffer;
+
+immediateContext->CSSetShader(particleComputeShader, nullptr, 0);
+immediateContext->CSSetUnorderedAccessViews(0, std::size(bindUAV), bindUAV, bindUAVCount);
+immediateContext->CSSetShaderResources(0, std::size(bindSRV), bindSRV);
+immediateContext->CSSetConstantBuffers(4, std::size(bindCB), bindCB);
+
+immediateContext->Dispatch(drawCommands.addParticleCount / 64 + 1, 1, 1);
+
+immediateContext->CSSetUnorderedAccessViews(0, std::size(nullUAV), nullUAV, nullptr);
+immediateContext->CSSetShaderResources(0, std::size(nullSRV), nullSRV);
+immediateContext->CSSetConstantBuffers(0, std::size(nullCB), nullCB);
+```
+
+
 ![Edge]({{ '/assets/MyLittleStorage/Particle.gif' | relative_url }}){: style="width: 100%;" }
+
+<br>
+
+빌보드뿐아니라 이동방향으로 텍스처를 회전시키는것까지 만들었습니다.
+
+![Edge]({{ '/assets/MyLittleStorage/Particle3.gif' | relative_url }}){: style="width: 100%;" }
+
+![Edge]({{ '/assets/MyLittleStorage/Particle2.gif' | relative_url }}){: style="width: 100%;" }
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
 ## **스키닝**
+``` mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
+classDiagram
+    class MeshComponent
+    class MeshAsset
+    class SkeletonAsset
+    
+    class MeshComponent {
+        +meshAsset : MeshAsset [0..1]
+        +tranformBuffer : GraphicsBuffer
+    }
+    class MeshAsset {
+        +skeletonAsset : SkeletonAsset [0..1]
+    }
 
+    MeshComponent o-- "0..1" MeshAsset
+    MeshAsset o-- "0..1" SkeletonAsset
+```
 
+메쉬컴포넌트에서 메쉬에셋이 스켈레톤에셋을 가지고있는지 확인하여 **SkeletalMeshVS**을 사용할지 **StaticMeshVS**을 사용할지 선택하게 하였습니다.
+`TranformBuffer`또한 **스켈레톤에셋여부**에따라 오브젝트데이터를 담은**상수버퍼**를 사용할지 본정보를담은 **구조화된 버퍼**를 사용할지 선택하게 하였습니다.
 
+<br>
 
 ### 애니메이션
+
+``` mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
+classDiagram
+    class MeshComponent
+    class AnimationComponent
+    class AnimationAsset
+
+    class AnimationComponent {
+        +meshComponent : MeshComponent
+        +animationAsset : AnimationAsset
+    }
+
+    class MeshComponent {
+        +tranformBuffer : GraphicsBuffer
+    }
+
+    AnimationComponent o-- MeshComponent
+    AnimationComponent o-- AnimationAsset
+```
+
+애니메이션컴포넌트에서 애니메이션에셋을이용해 메쉬컴포넌트의 본정보를 업데이트하게 하였습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}

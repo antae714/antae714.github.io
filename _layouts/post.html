@@ -13,17 +13,15 @@ layout: default
 		{% if page.AutoContents %}
 		<ol class="subtitle-list">
 			{% for item in page.subtitle %}
-			<a class="Link" href="#{{ item | slugify }}"><li>{{ item }}</li></a>
+			<a class="Link" href="#{{ item | slugify }}">
+			<li>{{ item }}</li></a>
 			{% endfor %}
 		</ol>
 		{% endif %}
 		<br />
-		{% if page.TitleVideo %}
-		<video controls autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;">
-			<source src="{{ page.TitleVideo | relative_url }}" type="video/mp4">
-		</video>
+		{% if page.Thumbnail %}
+		<img src="{{ page.Thumbnail }}" , style="width:100%; height:auto;" />
 		{% endif %}
-
 	</div>
 
 	{{ content }}

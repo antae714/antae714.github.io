@@ -52,6 +52,10 @@
 >![사진]({{ '/assets/ItemGIF/ChaosDestruction.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 >![사진]({{ '/assets/ItemGIF/ManaStoneUse1.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 >![사진]({{ '/assets/ItemGIF/ManaStoneUse2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/ManaStoneBoom.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/Physics.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/BackpackClient.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/ItemGIF/BackpackServer.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
 
 {{ include.Link }}
 

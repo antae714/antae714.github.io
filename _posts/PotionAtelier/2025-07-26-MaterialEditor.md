@@ -8,7 +8,7 @@ subtitle:
 description: "머티리얼 에디터 제작경험에 대해 이야기 합니다."
 AutoContents: false
 mermaid: true
-TitleVideo: "/assets/MyLittleStorage/Temp.mp4"
+Thumbnail: "/assets/MyLittleStorage/NodeEditor.gif"
 ---
 
 
@@ -52,6 +52,8 @@ flowchart LR
 
 ```
 
+<br>
+
 데이터 흐름은 다음과 같습니다.
 
 ``` mermaid
@@ -75,7 +77,10 @@ flowchart LR
   e4@{ animate: true, animation: slow }
 ```
 
-추가로, 타 작업자 요청으로 **맵 에디터 내에서 머티리얼 에디터를 패널 형태로 호출**할 수 있도록 임베디드 UI로 지원했습니다.
+<br>
+
+추가로, 타 작업자 요청으로 **맵 에디터 내에서 머티리얼 에디터를 패널 형태로 호출**할 수 있도록 지원했습니다.
+
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
