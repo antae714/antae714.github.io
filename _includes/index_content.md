@@ -2,11 +2,13 @@
 
 
 {% capture paragraph %}
-  
-<img src="images/ProfileImage2.png" 
-     width="300" height="300"
-     style="border-radius: 50%; border: 5px solid white; " />
+
+
+![사진]({{ '/assets/MyLittleStorage/ProfileImage.jpg' | relative_url }}){: style="width: 200px; height: auto;" } 
+
 ### **즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
+
+<br>
 
 ## 연혁
 - **2000.07.14: 출생** 
@@ -85,7 +87,8 @@
 
 # 팀프로젝트
 # **Potion Atelier**
-자체엔진 탑다운뷰 3D 타이쿤 게임입니다.
+자체엔진 탑다운뷰 3D 타이쿤 게임입니다.  
+[깃허브](https://github.com/antae714/PotionAtelier){: .markdown-Link2 }
 
   </div>
   <div style="flex: 1;">
