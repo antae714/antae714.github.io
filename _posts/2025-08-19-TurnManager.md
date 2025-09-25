@@ -59,7 +59,8 @@ A3 --> A4[명령 처리]
 ```
 </div>
 
-![몬스터 행동 움짤]()
+![사진]({{ '/assets/MyLittleStorage/RailWaytoHellTurnEvent.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+
 <br>
 <br>
 <br>
@@ -85,7 +86,8 @@ RootNode:
     - GameFlow_PlayerActionNode
     - GameFlow_ProcessCommandNode
 ```
-![전환 움짤]()
+
+![사진]({{ '/assets/MyLittleStorage/RailWaytoHellSceneEvent.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 
 
 <br><br><br>

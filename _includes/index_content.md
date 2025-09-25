@@ -62,8 +62,10 @@
 {{ include.Link }}
 
 >## **AI 시스템** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
->![사진]({{ '/assets/MyLittleStorage/AI1.png' | relative_url }}){: style="max-width: 49%; height: auto;" } 
->![사진]({{ '/assets/MyLittleStorage/AI2.png' | relative_url }}){: style="max-width: 49%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/CreatureOpenDoor.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/CreatureHorse.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/CreatureRat.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
+>![사진]({{ '/assets/MyLittleStorage/CreatureGhost.gif' | relative_url }}){: style="width: 49%; height: auto;" } 
 
 >## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="max-width: 49%; height: auto;" } 
