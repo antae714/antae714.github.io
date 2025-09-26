@@ -64,8 +64,8 @@
 >![사진]({{ '/assets/MyLittleStorage/CreatureGhost.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
 >## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
->![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="max-width: 49%; height: auto;" loading="lazy" } 
->![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="max-width: 49%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
 >## **게임 관전** [자세히 보기][Link_Spectator]{: .markdown-Link }  <br>  
 
@@ -171,17 +171,17 @@ D2D 퍼즐 게임입니다.
 
 
 >## **애니메이션**  [자세히 보기][Link_Animation]{: .markdown-Link }  <br>  
->![사진]({{ '/assets/MyLittleStorage/FSM.png' | relative_url }}){: style="max-width: 100%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/MyLittleStorage/FSM.png' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
 >
->![사진]({{ '/assets/MyLittleStorage/HandIK.png' | relative_url }}){: style="max-width: 49%; height: auto;" loading="lazy" } 
->![사진]({{ '/assets/MyLittleStorage/FootIK.png' | relative_url }}){: style="max-width: 49%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/MyLittleStorage/HandIK.png' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/MyLittleStorage/FootIK.png' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 <br>
 
 
 >## **엄폐 시스템**  [자세히 보기][Link_CoverSystem]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/MyLittleStorage/Cover.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" }
 >![사진]({{ '/assets/MyLittleStorage/Cover2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" }
->![사진]({{ '/assets/MyLittleStorage/CoverNavigation.png' | relative_url }}){: style="max-width: 100%; height: auto;" loading="lazy" }
+>![사진]({{ '/assets/MyLittleStorage/CoverNavigation.png' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" }
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
