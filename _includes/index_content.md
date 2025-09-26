@@ -82,7 +82,10 @@
 # 팀프로젝트
 # **Potion Atelier**
 자체엔진 탑다운뷰 3D 타이쿤 게임입니다.  
-[깃허브](https://github.com/antae714/PotionAtelier){: .markdown-Link2 }
+
+[![사진]({{ '/assets/GitHub.png' | relative_url }}){: style="width: 50px; height: 50px;" loading="lazy" }](https://github.com/antae714/PotionAtelier){:target="_blank"}
+[![사진]({{ '/assets/Youtube.png' | relative_url }}){: style="width: 50px; height: 50px;" loading="lazy" }](https://youtu.be/Symfl9evOls?si=fJgnMrNLEOgD-BaK){:target="_blank"}
+
 
   </div>
   <div style="flex: 1;">
@@ -122,7 +125,10 @@
 
 # 팀프로젝트
 # **Rail Way To Hell**
-D2D 퍼즐 게임입니다.
+D2D 퍼즐 게임입니다.  
+
+[![사진]({{ '/assets/GitHub.png' | relative_url }}){: style="width: 50px; height: 50px;" loading="lazy" }](https://github.com/antae714/RailwayToHell){:target="_blank"}
+[![사진]({{ '/assets/Youtube.png' | relative_url }}){: style="width: 50px; height: 50px;" loading="lazy" }](https://youtu.be/TYsThMBrRks){:target="_blank"}
 
   </div>
   <div style="flex: 1;">
