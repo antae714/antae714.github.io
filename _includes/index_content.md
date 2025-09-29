@@ -62,6 +62,7 @@
 >![사진]({{ '/assets/MyLittleStorage/CreatureHorse.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureRat.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureGhost.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/MyLittleStorage/CreatureSlime.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
 >## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
