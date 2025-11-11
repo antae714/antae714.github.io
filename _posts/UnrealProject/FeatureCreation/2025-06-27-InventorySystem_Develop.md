@@ -1,23 +1,23 @@
 ---
-title: "인벤토리 시스템 제작"
+title: "인벤토리 시스템, 아이템 컨텐츠 제작"
 description: "언리얼엔진에서 인벤토리 시스템 제작 경험을 공유합니다"
 date: 2025-06-27 00:00:00
 layout: post
 image: "images/UObjectReplicated.png"
 hover_image: "images/UObjectReplicated_Hover.png"
 subtitle: 
- - "언리얼 플러그인"
- - "언리얼 리플리케이션"
- - "FastArraySerializer"
+ - "언리얼 플러그인 제작"
+ - "언리얼 리플리케이션 문제 해결"
+ - "FastArraySerializer 활용"
  - "어빌리티 시스템 활용"
  - "CSV 기반 데이터테이블의 에셋 경로 불편함 해결"
  - "아이템 물리 오브젝트의 의도치 않은 플랫폼 효과 개선"
- - "파괴 가능한 프랍"
- - "플레이어 상호작용 아이템 가방"
- - "가방 액터 저장 누락 문제"
+ - "파괴 가능한 프랍 제작"
+ - "플레이어 상호작용 아이템 가방 제작"
+ - "가방 액터 저장 누락 문제 해결"
  - "오너십 없는 가방 액터 데이터 다루기"
  - "아이템 컨텐츠 테스트환경 제작"
- - "스프레이 아이템 컨텐츠"
+ - "스프레이 아이템 컨텐츠 제작"
 published: true
 order: 10002
 AutoContents: true
@@ -25,7 +25,7 @@ mermaid: true
 ---
 
 {% capture paragraph %}
-# **언리얼 플러그인**
+# **언리얼 플러그인 제작**
 인벤토리 시스템을 제작하면서 다른 게임에서 사용할수 있는 부분은 **언리얼 플러그인**으로 분리하였습니다.
 인벤토리 컴포넌트의 기본적인동작(추가, 삭제, 바꾸기, 인벤토리간교환)을 제작하였습니다.
 
@@ -36,7 +36,7 @@ mermaid: true
 
 
 {% capture paragraph %}
-# **언리얼 리플리케이션**
+# **언리얼 리플리케이션 문제 해결**
 
 ### 🎨 언리얼 오브젝트 기반 아이템 제작
 프로젝트 초기에 **아이템을 간단한 구조체 대신 언리얼 오브젝트로 설계**하려 했습니다. 블루프린트의 장점을 활용하기 위함입니다.  
@@ -103,7 +103,7 @@ architecture-beta
 
 
 {% capture paragraph %}
-# **FastArraySerializer**
+# **FastArraySerializer  활용**
 
 ### ❓배열 직렬화 과정의 의문
 인벤토리 컴포넌트가 아이템을 배열로 관리하는데,  
@@ -249,7 +249,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-# **파괴 가능한 프랍**
+# **파괴 가능한 프랍 제작**
 **단계적으로 파괴**되어 마나석 아이템을 드랍하는 마나석 프랍을 제작하였습니다.  
 체력에따라 단계적으로 파괴되기위해서 **프랙처, 피직스 필드**를 사용하였습니다.  
 피직스 필드를 설정하여 파괴시 파편이 튕겨나가도록 하였고,  
@@ -262,7 +262,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-# **플레이어 상호작용 아이템 가방**
+# **플레이어 상호작용 아이템 가방 제작**
 플레이어가 착용, 사용 가능한 **가방을 제작**하였습니다.  
 플레이어의 등**소켓에 액터를 부착**했으며 부착, 미부착합니다.  
 상호작용시 인벤토리컴포넌트를 조작할 UI를 상호작용한 플레이어에게 뛰워줍니다.  
@@ -274,7 +274,7 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-## **가방 액터 저장 누락 문제**
+## **가방 액터 저장 누락 문제 해결**
 `APlayerState`의 인벤토리컴포넌트는 저장이 잘되었지만 `APlayerState`의 멤버변수로 참조하고있는 가방 액터는 **저장이 되지않는 이슈**가 발생하였습니다.  
 디버깅 결과 `APlayerState::SeamlessTravel`시 PS는 살아있지만 다른 액터들이 `Destroy`되어 가방 액터가 사라지는 현상이었습니다.  
 이 문제를 해결하기 위해 `APlayerState::SeamlessTravel`이 아닌 **맵을 전환하기전에 명시적**으로 모든 PS를 저장하도록 하였습니다.
@@ -380,7 +380,7 @@ sequenceDiagram
 {% include paragraph.html content=paragraph %}
 
 {% capture paragraph %}
-## **스프레이 아이템 컨텐츠**
+## **스프레이 아이템 컨텐츠 제작**
 스프레이 아이템을 연속된 점으로 선을 표현하기위해 **언리얼 데칼**시스템을 활용하였습니다.  
 
 데칼 하나마다 서버와 클라이언트에 리플리케이션을 하게되면 **네트워크 비용**이 너무 크기때문에

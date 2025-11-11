@@ -41,7 +41,7 @@
 </div>
 
 
->## **인벤토리, 아이템 시스템** [자세히 보기][Link_InventorySystem_Develop]{: .markdown-Link }  <br>  
+>## **인벤토리 시스템, 아이템 컨텐츠 제작** [자세히 보기][Link_InventorySystem_Develop]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/ItemGIF/CoolTime.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/CoolTime2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/ManaStone.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
@@ -57,12 +57,13 @@
 
 {{ include.Link }}
 
->## **AI 시스템** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
+>## **AI 시스템, 크리처 컨텐츠 제작** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/MyLittleStorage/CreatureOpenDoor.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureHorse.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureRat.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureGhost.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureSlime.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/MyLittleStorage/CreatureCryAngle.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
 >## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
