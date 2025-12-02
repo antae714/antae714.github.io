@@ -57,7 +57,7 @@ classDiagram
 
 기존 그래픽 API는 GPU를 자유롭게 다루기 위해 가능한 모든 기능을 제공하지만,
 **게임 렌더링 라이브러리**는 3D 게임 렌더링 패러다임에 맞춰 **적절한 수준의 추상화**를 제공하도록 설계했습니다.
-이를 통해 엔진 구조가 더욱 깔끔해지고, 실제 게임 제작에서 효율적인 렌더링 파이프라인을 구축할 수 있다고 생각합니다.
+이를 통해 엔진 구조가 더욱 깔끔해지고, 실제 게임 제작에서 효율적인 렌더링 파이프라인을 구축할 수 있었다고 생각합니다.
 
 
 {% endcapture %}
@@ -67,15 +67,14 @@ classDiagram
 
 {% capture paragraph %}
 ## **PBR**
-금속성과 거칠기만을 이용해 **빛의 반사**를 계산하는  
-Cook–Torrance 반사모델(BRDF)을 사용하여 금속성, 거칠기를 이용한 재질을 표현 하였습니다.  
+금속성과 거칠기만을 이용해 **빛의 반사**를 계산하는 Cook–Torrance 반사모델(BRDF)을 사용하여 재질을 표현 하였습니다.  
 
 ![morning]({{ '/assets/MyLittleStorage/Grapic.png' | relative_url }}){: style="width: 100%;" }
 
 <br>
 
 **환경광은 IBL을 이용하였으며** 환경광의 **난반사는 Irradiance Map**, **정반사는 Prefiltered Environment Map**과 **BRDF LUT**로 처리해  
-자연스럽고 환경광 효과를 구현했습니다.
+자연스러운 환경광 효과를 구현했습니다.
 
 
 IBL을 씬마다 다르게 사용하여
@@ -128,10 +127,79 @@ GBuffer 구성은 다음과 같습니다.
 
 {% capture paragraph %}
 ## **후처리 구조**
-**좋은 퀄리티**의 게임을위해 렌더링 결과물을 변형해주는
-**이미지 후처리** 시스템을 제작했습니다.
+**좋은 퀄리티**의 게임을위해 렌더링 결과물을 변형해주는 **이미지 후처리** 시스템을 제작했습니다.
 
 **팩토리 패턴**을 사용하여 `PostProcessData`를 상속받은 클래스를 **툴에서 생성**하여 후처리 컴포넌트에	서 사용할 수 있도록 했습니다.
+
+{::nomarkdown}
+<details>
+  <summary>예시 코드</summary>
+  <div markdown="1">
+
+```cpp
+struct PostProcesCommand
+{
+	std::vector<ComputeShader> computeShader;
+	std::vector<std::function<void()>> computeShaderSet;
+	std::vector<Binadble> shaderResources;
+	std::vector<DispatchData> dispatchDatas;
+};
+```
+`PostProcesCommand`는 쉐이더 한개가아닌 여러개를 사용할수있도록 설계하여 블룸같은 절차가복잡한 후처리도 쉽게 구현할수있도록 하였습니다.  
+  
+
+```cpp
+struct PostProcessData 
+{
+	virtual ~PostProcessData() = default;
+	virtual void InspectorImguiDraw();
+	virtual void Serialized(std::ofstream& ofs) {};
+	virtual void Deserialized(std::ifstream& ifs) {};
+	virtual std::string_view GetTypeName() = 0;
+
+public:
+	PostProcesCommand postProcesCommand;
+	/** 옵션을위한 상수버퍼  */
+	ConstantBuffer constantBuffer;
+	int drawSpeed;
+};
+```
+
+```cpp
+struct Bloom : public PostProcessData
+{
+public:
+	Bloom();
+	virtual ~Bloom();
+	REGISTER_POST_PROCESS_DATA(Bloom);
+
+public:
+	virtual void InspectorImguiDraw() override;
+	virtual void Serialized(std::ofstream& ofs) override;
+	virtual void Deserialized(std::ifstream& ifs) override;
+
+
+	struct BloomData
+	{
+		int bloomCurveMethod;
+		float curveThreshold;
+		float bloomIntensity;
+		float pad;
+	} value;
+
+private:
+	Texture textureMip[3];
+	Texture tempTexture;
+	Texture blurTexture;
+
+};
+```
+
+
+
+  </div>
+</details>
+{:/nomarkdown}
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}

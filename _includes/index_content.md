@@ -65,11 +65,11 @@
 >![사진]({{ '/assets/MyLittleStorage/CreatureSlime.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureCryAngle.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
->## **매칭 시스템** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
+>## **세션 기반 매칭 시스템 제작** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
->## **게임 진행도 저장 시스템** [자세히 보기][Link_SaveGame]{: .markdown-Link }  <br>  
+>## **게임 진행도 저장 시스템 제작** [자세히 보기][Link_SaveGame]{: .markdown-Link }  <br>  
 >![사진]({{ '/assets/MyLittleStorage/SaveSystem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
 
 {% endcapture %}
