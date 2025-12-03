@@ -261,9 +261,30 @@ TMap<FName, FSoftObjectPath> AssetPathMap;
 체력에따라 단계적으로 파괴되기위해서 **프랙처, 피직스 필드**를 사용하였습니다.  
 피직스 필드를 설정하여 파괴시 파편이 튕겨나가도록 하였고,  
 해당 피직스 필드에서 마나석 **아이템을 드랍**하도록 설정하여서 더욱 몰입감 있는 채굴 환경을 제작 하였습니다.
+
+
+{::nomarkdown}
+<details>
+  <summary>프랙처 사용시 발생했던 문제들</summary>
+  <div markdown="1">
+
+> 언리얼에서 프랙처된 지오메트리컬렉션을 사용할때 해당지오메트리 컬렉션이 **나나이트를 사용한다면 단면 UV가 지원되지않는 문제점**이 있었습니다.
+> 그래서 프랙처될 메쉬들은 나나이트를 지원하지 않는다는 사실을 **아트팀에게 전달**하였습니다.
+
+> 지오메트리 컬렉션의 본 상태는 기본적으로 네트워크로 동기화되지 않으므로 클라이언트에서 **동일 시뮬레이션 실행**되게 하였습니다.  
+완전파괴시 `bIsDie` 변수를 `ReplicatedUsing`하여 클라이언트에서 스스로`CrumbleActiveClusters`를 호출하여 모든 클러스터를 완전히 파괴할 수 있습니다.
+
+  </div>
+</details>
+{:/nomarkdown}
+
+
 <br>
+
 ![사진]({{ '/assets/ItemGIF/ManaStone.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
 ![사진]({{ '/assets/ItemGIF/ManaStoneBoom.gif' | relative_url }}){: style="width: 100%; height: auto;" } 
+
+
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -380,8 +401,14 @@ sequenceDiagram
 
 {% capture paragraph %}
 ## **아이템 컨텐츠 테스트환경 제작**
-아이템 컨텐츠를 제작하면서 테스트하기위해 언리얼 **치트 매니저**를 활용하였습니다.  
-아이템의 생성을 치트 매니저에 구현하여 **콘솔을사용하여 아이템을 생성**할수있게 하였습니다.
+개발도중 기능, 컨텐츠, 디버깅 작업시에 충분한 **테스트를 할수있는 환경의 필요성**을 명확히 인지하게 되었습니다.
+
+1. **기획자**가 원하는 기능을 **직접 테스트**할수있는환경
+2. 컨텐츠 작업시 기능에 문제가 있다고 판단되면 **기능을 다시 점검**할수있는환경
+3. **개발자가 스스로 테스트**할수있는환경  
+
+위와같은 환경을 구성하기위해 언리얼엔진에서 찾은 해결책은 언리얼 **치트 매니저**였습니다.  
+아이템의 생성을 치트 매니저에 구현하여 **콘솔을사용하여 아이템을 생성**할수있게 하여 반복된 아이템 테스트를 어디서든 할수있게 하였습니다.
 
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
@@ -404,11 +431,5 @@ sequenceDiagram
 
 <br>
 
-
-<!--
-
-언리얼 데칼은 박스공간에 **투영하듯**이 그려지기때문에 **스키닝**, 움직이는 오브젝트에는 적합하지않습니다.  
-생산성과 퀄리티를 위해 팹의 [Skinned Decal Component](https://www.fab.com/listings/7491af07-f541-493d-a78f-d7fa5d466a0d)에셋을 구매하여 활용 하였습니다.  
--->
 {% endcapture %}
 {% include paragraph.html content=paragraph %}
