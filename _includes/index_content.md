@@ -41,7 +41,13 @@
 </div>
 
 
->## **인벤토리 시스템, 아이템 컨텐츠 제작** [자세히 보기][Link_InventorySystem_Develop]{: .markdown-Link }  <br>  
+> ## **인벤토리 시스템, 아이템 컨텐츠 제작** [자세히 보기][Link_InventorySystem_Develop]{: .markdown-Link }  <br>  
+>
+> 생존게임에서 필요한 인벤토리 플러그인, GAS기반 아이템 컨텐츠를 제작하였습니다.  
+> 아이템은 드랍하고 상호작용하여 획득할수있습니다.  
+> 아이템을 담을수있고 플레이어가 상호작용하여 착용하는 가방도 제작하였습니다.  
+> 인벤토리, 아이템을 제작하며 필요한 테스트환경도 같이 제작하였습니다.  
+{% comment %}
 >![사진]({{ '/assets/ItemGIF/CoolTime.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/CoolTime2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/ManaStone.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
@@ -54,6 +60,7 @@
 >![사진]({{ '/assets/ItemGIF/BackpackServer.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/SprayItem.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/SprayItem2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
+{% endcomment %}
 
 {{ include.Link }}
 
