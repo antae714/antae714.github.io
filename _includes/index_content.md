@@ -4,15 +4,11 @@
 
 ### **즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
 
-<br>
-
 ## 연혁
 - **2000.07.14: 출생** 
 - **2020.01.26 ~ 2021.08.01: 육군 병장 만기제대**
 - **2021.08.01 ~ 2024.03.01: 학점은행제 게임프로그래밍과 수료**
 - **2024.03.01 ~ 현재: 게임인재원**
-
-<br>
 
 ## 기술
 **C, C++, C#, WINAPI, Direct11, Unreal Engine, SVN, FMod**
@@ -47,11 +43,10 @@
 
 > ## **인벤토리 시스템, 아이템 컨텐츠 제작** [자세히 보기][Link_InventorySystem_Develop]{: .markdown-Link }  <br>  
 >
-> **멀티플레이** 생존게임에서 필요한 **인벤토리 플러그인**, **GAS기반 아이템 컨텐츠**를 제작하였습니다.  
-> 아이템은 **드랍**하고 **상호작용**하여 획득할 수 있습니다.  
-> 아이템을 담을 수 있고 플레이어가 상호작용하여 착용하는 **가방**도 제작하였습니다.  
-> 아이템과 관련된 **UI**또한 제작하였습니다.  
-> 인벤토리, 아이템을 제작하며 필요한 **테스트 환경**도 같이 제작하였습니다.  
+> 멀티플레이 생존게임에 필요한 **인벤토리 플러그인**과 **GAS 기반 아이템 컨텐츠 시스템**을 구축했습니다.  
+> 플레이어는 아이템을 **드랍**, **상호작용**, **장착**하는 과정을 통해 활용할 수 있으며, 아이템을 휴대할 수 있는 **가방 시스템**도 함께 구현했습니다.  
+> 또한 아이템 관련 **UI 구성 요소**와 반복 테스트를 위한 **테스트 환경**도 직접 제작해 개발 효율을 높였습니다.  
+>
 >  <br>
 >![사진]({{ '/assets/ItemGIF/SprayItem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
 
@@ -59,7 +54,7 @@
 >## **세션 기반 매칭 시스템 제작** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >
 > 멀티게임의 매칭을 위한 **온라인 서브시스템**의 **세션 인터페이스**를 이용하여 세션기반으로 방을 **생성, 검색, 조인**하는 매칭 시스템을 제작하였습니다.  
-> `ExtraSettings`를 이용하여 유저친화적인 비밀번호(비밀방) 기능도 제작하였습니다.  
+> `ExtraSettings`를 이용하여 유저친화적인 비밀번호 기능도 제작하였습니다.  
 >  <br>
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
@@ -158,22 +153,39 @@ AI
 {{ include.Link }}
 
 >## **에디터/툴 제작** [자세히 보기][Link_MaterialEditor]{: .markdown-Link }  <br>  
+>
+> 자체엔진에서 게임의 다양한 표현을 위한 **머티리얼 노드 에디터**를 제작하였습니다.  
+> 이미지를 BC1~BC7 텍스처로 압축하는 **텍스처 압축 툴**을 제작하였습니다.  
+>  <br>
+>![사진]({{ '/assets/MyLittleStorage/NodeEditor.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+
+>## **그래픽스 렌더링 라이브러리 제작**  [자세히 보기][Link_GrapicsRendering]{: .markdown-Link }  <br>  
+>
+> 자체엔진의 **그래픽스 렌더링 라이브러리**를 제작하였습니다.  
+> 절두체 컬링, 머티리얼 정렬, PBR, 쉐도우맵핑, 지연된 렌더링, 외곽선 후처리, 블룸 후처리, 톤 매핑, 파티클 시스템 등을 구현하였습니다.  
+>  <br>
+>![사진]({{ '/assets/MyLittleStorage/Grapic.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+
+
+{% comment %}
+에디터
 >![사진]({{ '/assets/MyLittleStorage/NodeEditor.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
 >
 >![사진]({{ '/assets/MyLittleStorage/NodeEditor.png' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
 
-<br>
-
-
->## **그래픽스 렌더링 엔진 제작**  [자세히 보기][Link_GrapicsRendering]{: .markdown-Link }  <br>  
+그래픽스
 >![사진]({{ '/assets/MyLittleStorage/Grapic.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
 >
 >![사진]({{ '/assets/MyLittleStorage/Grapic2.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
 >
 >![사진]({{ '/assets/MyLittleStorage/Grapic.png' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+{% endcomment %}
+
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
+
+
 
 {% capture paragraph %}
 
