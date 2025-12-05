@@ -22,6 +22,7 @@
 
 
 {% capture paragraph %}
+{{ include.Link }}
 
 <div style="display: flex;" align="center">
   <div style="flex: 1;">
@@ -40,14 +41,59 @@
   </div>
 </div>
 
+---
+
+# 게임플레이
 
 > ## **인벤토리 시스템, 아이템 컨텐츠 제작** [자세히 보기][Link_InventorySystem_Develop]{: .markdown-Link }  <br>  
 >
-> 생존게임에서 필요한 인벤토리 플러그인, GAS기반 아이템 컨텐츠를 제작하였습니다.  
-> 아이템은 드랍하고 상호작용하여 획득할수있습니다.  
-> 아이템을 담을수있고 플레이어가 상호작용하여 착용하는 가방도 제작하였습니다.  
-> 인벤토리, 아이템을 제작하며 필요한 테스트환경도 같이 제작하였습니다.  
+> 멀티플레이 생존게임에서 필요한 인벤토리 플러그인, GAS기반 아이템 컨텐츠를 제작하였습니다.  
+> 아이템은 드랍하고 상호작용하여 획득할 수 있습니다.  
+> 아이템을 담을 수 있고 플레이어가 상호작용하여 착용하는 가방도 제작하였습니다.  
+> 아이템과 관련된 UI또한 제작하였습니다.  
+> 인벤토리, 아이템을 제작하며 필요한 테스트 환경도 같이 제작하였습니다.  
+>  <br>
+>![사진]({{ '/assets/ItemGIF/SprayItem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+
+
+>## **세션 기반 매칭 시스템 제작** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
+>
+> 멀티게임의 매칭을 위한 **온라인 서브시스템**의 **세션 인터페이스**를 이용하여 세션기반으로 방을 **생성, 검색, 조인**하는 매칭 시스템을 제작하였습니다.  
+> `ExtraSettings`를 이용하여 유저친화적인 비밀번호(비밀방) 기능도 제작하였습니다.  
+>  <br>
+>![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
+>![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
+
+
+>## **게임 진행도 저장 시스템 제작** [자세히 보기][Link_SaveGame]{: .markdown-Link }  <br>  
+> 
+> 멀티게임에서 호스트의 생성된 게임 진행도를 저장하고 불러오는 시스템을 제작하였습니다.  
+> 게임정보(종료된 레벨, 돈, 플레이상태)와 드랍된 아이템등의 액터정보를 저장하고 불러올수있습니다.
+> 
+>  <br>
+>![사진]({{ '/assets/MyLittleStorage/SaveSystem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+
+
+---
+
+# AI 
+
+>## **AI 시스템, 크리처 컨텐츠 제작** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
+>
+> 멀티생존 게임에서 필요한 **AI 시스템**과 **크리처 컨텐츠**를 제작하였습니다.  
+> 플레이어와의 상호작용을위해 **GAS 어트리뷰트 세트**를 사용	하여 제작하였습니다.  
+> AI의 행동은 다양한 의사결정을위해 **행동트리**와 **블랙보드**를 사용하여 제작하였습니다.  
+> 크리처는 **문을 열고**, 플레이어를 **추적하고**, **공격**하는 행동을 구현하였습니다.  
+> 크리처의 **플레이어 감지**를위해 언리얼의 **퍼셉션컴포넌트**를 사용했습니다.
+>
+>  <br>
+>![사진]({{ '/assets/MyLittleStorage/CreatureOpenDoor.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+
+
+
 {% comment %}
+
+인벤토리
 >![사진]({{ '/assets/ItemGIF/CoolTime.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/CoolTime2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/ManaStone.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
@@ -60,11 +106,8 @@
 >![사진]({{ '/assets/ItemGIF/BackpackServer.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/SprayItem.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/SprayItem2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
-{% endcomment %}
 
-{{ include.Link }}
-
->## **AI 시스템, 크리처 컨텐츠 제작** [자세히 보기][Link_AI]{: .markdown-Link }  <br>  
+AI
 >![사진]({{ '/assets/MyLittleStorage/CreatureOpenDoor.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureHorse.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureRat.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
@@ -72,12 +115,16 @@
 >![사진]({{ '/assets/MyLittleStorage/CreatureSlime.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/MyLittleStorage/CreatureCryAngle.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
->## **세션 기반 매칭 시스템 제작** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
+게임 진행도 저장 
+>![사진]({{ '/assets/MyLittleStorage/SaveSystem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+
+세션 기반 매칭
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
->## **게임 진행도 저장 시스템 제작** [자세히 보기][Link_SaveGame]{: .markdown-Link }  <br>  
->![사진]({{ '/assets/MyLittleStorage/SaveSystem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
+
+{% endcomment %}
+
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
