@@ -2,12 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	{% comment %}
 	<title>{{ page.title }}</title>
 	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 	<meta property="og:image" content="{{ '/assets/MyLittleStorage/ProfileImage2.png' | absolute_url }}">
+	{% endcomment %}
 </head>
 <body>
 
+	{{ content }}
+	{% comment %}
 	{% include BackGroundImage.html %}
 
 	<div class="post-content">
@@ -21,6 +25,7 @@
 		<p>전화번호: <a href="tel:{{ site.PoneNumber }}" class="Link">{{ site.PoneNumber }}</a></p>
 		<p>GitHub: <a href="https://github.com/{{ site.github_username }}" class="Link">{{ site.github_username }}</a></p>
 	</footer>
+	{% endcomment %}
 </body>
 </html>
 

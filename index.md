@@ -10,6 +10,7 @@ subtitle:
   - "써드파티"
 ---
 
+{% comment %}
 {% capture LinkCapture %}
 
 [Link_InventorySystem_Develop]: 2025/06/27/InventorySystem_Develop.html  
@@ -26,5 +27,13 @@ subtitle:
 {% endcapture %}
 
 {% include index_content.md Link=LinkCapture %}
+{% endcomment %}
+
+  <iframe
+    src="https://glowing-silk-3b6.notion.site/ebd//1b4bbbfac3bd804aafcac9d38d91ba80"
+    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+    frameborder="0"
+  ></iframe>
+
 
 
