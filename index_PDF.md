@@ -10,29 +10,24 @@ subtitle:
   - "써드파티"
 mermaid: true
 target_posts:
-  - "인벤토리 시스템 제작"
-  - "AI 시스템 제작"
-  - "언리얼 매칭 시스템 제작"
-  - "언리얼 게임 관전하기"
-  - "언리얼 게임 진행도 저장하기"
-  - "머티리얼 노드 에디터 제작"
-  - "그래픽스 렌더링 엔진 제작"
+  - "인벤토리 시스템, 아이템 컨텐츠 제작"
+  - "세션 기반 매칭 시스템 제작"
+  - "게임 진행도 저장 시스템 제작"
+  - "AI 시스템, 크리처 컨텐츠 제작"
+  - "에디터/툴 제작"
+  - "그래픽스 렌더링 라이브러리 제작"
   - "턴제관리 시스템 제작"
-  - "엄폐시스템 제작"
 ---
 
 {% capture LinkCapture %}
 
-[Link_InventorySystem_Develop]: #인벤토리-시스템-제작
-[Link_AI]: #ai-시스템-제작
-[Link_UnrealMatching]: #언리얼-매칭-시스템-제작
-[Link_Spectator]: #언리얼-게임-관전하기
-[Link_SaveGame]: #언리얼-게임-진행도-저장하기
-[Link_MaterialEditor]: #머티리얼-노드-에디터-제작
-[Link_GrapicsRendering]: #그래픽스-렌더링-엔진-제작
+[Link_InventorySystem_Develop]: #인벤토리-시스템,-아이템-컨텐츠 제작
+[Link_UnrealMatching]: #세션-기반-매칭-시스템-제작
+[Link_SaveGame]: #게임-진행도-저장-시스템-제작
+[Link_AI]: #AI-시스템,-크리처-컨텐츠-제작
+[Link_MaterialEditor]: #에디터-툴-제작
+[Link_GrapicsRendering]: #그래픽스-렌더링-라이브러리-제작
 [Link_TurnManager]: #턴제관리-시스템-제작
-[Link_CoverSystem]: #엄폐시스템-제작
-[Link_Animation]: #애니메이션-시스템-제작
 
 {% endcapture %}
 

@@ -1,29 +1,38 @@
 {% capture paragraph %}
 
+<div style="display: flex;">
+  <div style="margin: 0px 0px 0px 20px;">
+  
 ![사진]({{ '/assets/MyLittleStorage/ProfileImage.jpg' | relative_url }}){: style="width: 200px; height: auto;" loading="lazy" } 
+
+  </div>
+  <div style="flex: 1;">
+         
+  </div>
+  <div style="margin: 0px 20px 0px 0px;">
+  
 
 ### **즐거운 게임을 즐겁게, 재밌는 게임을 재밌게 만들고 싶은 프로그래머입니다.**
 
-## 연혁
+**C, C++, C#, WINAPI, Direct11, Unreal Engine, SVN, FMod**
+
 - **2000.07.14: 출생** 
 - **2020.01.26 ~ 2021.08.01: 육군 병장 만기제대**
 - **2021.08.01 ~ 2024.03.01: 학점은행제 게임프로그래밍과 수료**
-- **2024.03.01 ~ 현재: 게임인재원**
+- **2024.03.01 ~ 현재: 게임인재원**  
+  
 
-## 기술
-**C, C++, C#, WINAPI, Direct11, Unreal Engine, SVN, FMod**
+</div>
 
 {% endcapture %}
 {% include paragraph2.html content=paragraph %}
 
 
-{% capture paragraph %}
 {{ include.Link }}
 
 <div style="display: flex;" align="center">
   <div style="flex: 1;">
 
-# 팀프로젝트
 # **F Rank Hunter**
 언리얼엔진을 사용한 멀티플레이 헌터물 3D생존 게임입니다.  
 
@@ -37,19 +46,14 @@
   </div>
 </div>
 
----
-
-# 게임플레이
-
 > ## **인벤토리 시스템, 아이템 컨텐츠 제작** [자세히 보기][Link_InventorySystem_Develop]{: .markdown-Link }  <br>  
 >
-> 멀티플레이 생존게임에 필요한 **인벤토리 플러그인**과 **GAS 기반 아이템 컨텐츠 시스템**을 구축했습니다.  
+> 멀티플레이 생존게임에 필요한 **인벤토리 플러그인**과 **GAS 기반 아이템 컨텐츠**를 제작했습니다.  
 > 플레이어는 아이템을 **드랍**, **상호작용**, **장착**하는 과정을 통해 활용할 수 있으며, 아이템을 휴대할 수 있는 **가방 시스템**도 함께 구현했습니다.  
 > 또한 아이템 관련 **UI 구성 요소**와 반복 테스트를 위한 **테스트 환경**도 직접 제작해 개발 효율을 높였습니다.  
 >
 >  <br>
 >![사진]({{ '/assets/ItemGIF/SprayItem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
-
 
 >## **세션 기반 매칭 시스템 제작** [자세히 보기][Link_UnrealMatching]{: .markdown-Link }  <br>  
 >
@@ -59,7 +63,6 @@
 >![사진]({{ '/assets/ItemGIF/Title1.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 >![사진]({{ '/assets/ItemGIF/Title2.gif' | relative_url }}){: style="width: 49%; height: auto;" loading="lazy" } 
 
-
 >## **게임 진행도 저장 시스템 제작** [자세히 보기][Link_SaveGame]{: .markdown-Link }  <br>  
 > 
 > 멀티게임에서 호스트의 생성된 게임 진행도를 저장하고 불러오는 시스템을 제작하였습니다.  
@@ -67,10 +70,6 @@
 > 
 >  <br>
 >![사진]({{ '/assets/MyLittleStorage/SaveSystem.gif' | relative_url }}){: style="width: 100%; height: auto;" loading="lazy" } 
-
-<br><br><br>  
-
----
 
 # AI 
 
@@ -121,17 +120,9 @@ AI
 
 {% endcomment %}
 
-
-
-{% endcapture %}
-{% include paragraph2.html content=paragraph %}
-
-{% capture paragraph %}
-
 <div style="display: flex;" align="center">
   <div style="flex: 1;">
 
-# 팀프로젝트
 # **Potion Atelier**
 자체엔진 탑다운뷰 3D 타이쿤 게임입니다.  
 
@@ -182,17 +173,11 @@ AI
 {% endcomment %}
 
 
-{% endcapture %}
-{% include paragraph2.html content=paragraph %}
-
-
-
 {% capture paragraph %}
 
 <div style="display: flex;" align="center">
   <div style="flex: 1;">
 
-# 팀프로젝트
 # **Rail Way To Hell**
 D2D 퍼즐 게임입니다.  
 
@@ -263,3 +248,5 @@ D2D 퍼즐 게임입니다.
 {% include paragraph2.html content=paragraph %}
 
 {% endcomment %}
+
+

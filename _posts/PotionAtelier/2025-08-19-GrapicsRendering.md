@@ -1,5 +1,5 @@
 ﻿---
-title: "그래픽스 렌더링 엔진 제작"
+title: "그래픽스 렌더링 라이브러리 제작"
 date: 2025-08-19 00:00:00
 layout: post
 subtitle: 

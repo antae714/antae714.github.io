@@ -1,5 +1,5 @@
 ﻿---
-title: "머티리얼 노드 에디터 제작"
+title: "에디터/툴 제작"
 date: 2025-07-26 00:00:00
 layout: post
 subtitle: 
